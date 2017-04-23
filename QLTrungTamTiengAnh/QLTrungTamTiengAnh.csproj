@@ -55,7 +55,17 @@
     </Compile>
     <Compile Include="Model\ConnectToSQL.cs" />
     <Compile Include="Model\KhachHangMod.cs" />
+    <Compile Include="Object\HocPhiHVObj.cs" />
+    <Compile Include="Object\HocPhiObj.cs" />
+    <Compile Include="Object\HocVienObj.cs" />
+    <Compile Include="Object\KetQuaObj.cs" />
     <Compile Include="Object\KhachHangObj.cs" />
+    <Compile Include="Object\LopObj.cs" />
+    <Compile Include="Object\NhanVienObj.cs" />
+    <Compile Include="Object\PhieuDangKyObj.cs" />
+    <Compile Include="Object\PhieuThuObj.cs" />
+    <Compile Include="Object\QuaTrinhObj.cs" />
+    <Compile Include="Object\TroGiangObj.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
