@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    class LopObj
+    public class LopObj
     {
         string maLop, maTroGiang, lichHoc;
         int level;

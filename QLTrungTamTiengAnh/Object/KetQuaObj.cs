@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    class KetQuaObj
+    public class KetQuaObj
     {
         string maHocVien;
         int diemLevel1, diemLevel2, diemLevel3, xepLoai;

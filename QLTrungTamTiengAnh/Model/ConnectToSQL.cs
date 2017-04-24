@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QLBanHang.Model
+namespace QLTrungTamTiengAnh.Model
 {
     class ConnectToSQL
     {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    class QuaTrinhObj
+    public class QuaTrinhObj
     {
         string maKhachHang, maNhanVien;
         DateTime ngayBatDau;

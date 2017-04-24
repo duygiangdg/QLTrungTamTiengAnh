@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    class HocPhiObj
+    public class HocPhiObj
     {
         int level;
         long hocPhi;
