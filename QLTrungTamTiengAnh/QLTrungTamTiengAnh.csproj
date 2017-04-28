@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\Setting.cs" />
+    <Compile Include="Model\DBHelper.cs" />
     <Compile Include="View\TextLabel.cs">
       <SubType>Component</SubType>
     </Compile>

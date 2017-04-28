@@ -2,6 +2,8 @@
 using System.Data;
 using QLTrungTamTiengAnh.Model;
 using System.Windows.Forms;
+using QLTrungTamTiengAnh.Object;
+using System.Collections.Generic;
 
 namespace QLTrungTamTiengAnh.View
 {
@@ -20,10 +22,7 @@ namespace QLTrungTamTiengAnh.View
         private void capNhatDanhSach()
         {
             DataTable khachHangTable = KhachHangMod.Instance.GetData();
-            foreach (DataRow row in khachHangTable.Rows)
-            {
-                dgvDSKhachHang.Rows.Add(row.ItemArray);
-            }
+            dgvDSKhachHang.DataSource = khachHangTable;
         }
 
         private void btnThemKhachHang_ItemClick(object sender, EventArgs e)
@@ -38,16 +37,15 @@ namespace QLTrungTamTiengAnh.View
             form.ShowDialog();
         }
 
-        private void btnXoaKhachHang_ItemClick(object sender, EventArgs e)
+        private void btnXemChiTiet_ItemClick(object sender, EventArgs e)
         {
             FormThongTinKhachHang form = new FormThongTinKhachHang();
             form.ShowDialog();
         }
 
-        private void btnXemChiTiet_ItemClick(object sender, EventArgs e)
+        private void btnXoaKhachHang_ItemClick(object sender, EventArgs e)
         {
-            FormThongTinKhachHang form = new FormThongTinKhachHang();
-            form.ShowDialog();
+
         }
     }
 }
