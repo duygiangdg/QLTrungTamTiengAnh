@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Model
 {
-    class ConnectToSQL
+    class SqlConnector
     {
         #region Availible
 
@@ -50,7 +50,7 @@ namespace QLTrungTamTiengAnh.Model
 
         #region Contructor
 
-        public ConnectToSQL()
+        public SqlConnector()
         {
             StrCon = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLTrungTamTiengAnh;User ID=sa; Password=123";
             Conn = new SqlConnection(StrCon);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormThongTinKhachHang : FormDetail
+    public partial class FormDetail : DevComponents.DotNetBar.Office2007Form
     {
-        public FormThongTinKhachHang()
+        public FormDetail()
         {
             InitializeComponent();
         }

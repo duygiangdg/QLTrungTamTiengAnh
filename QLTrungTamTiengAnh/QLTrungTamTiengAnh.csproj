@@ -50,6 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Control\Setting.cs" />
+    <Compile Include="View\TextLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\FormDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDetail.Designer.cs">
+      <DependentUpon>FormDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormThongTinKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,7 +71,7 @@
     <Compile Include="View\FormTrangChinh.Designer.cs">
       <DependentUpon>FormTrangChinh.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\ConnectToSQL.cs" />
+    <Compile Include="Model\SqlConnector.cs" />
     <Compile Include="Model\KhachHangMod.cs" />
     <Compile Include="Object\HocPhiHVObj.cs" />
     <Compile Include="Object\HocPhiObj.cs" />
@@ -86,6 +95,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\FormDetail.resx">
+      <DependentUpon>FormDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormThongTinKhachHang.resx">
       <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>

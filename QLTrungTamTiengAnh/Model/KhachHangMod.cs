@@ -11,7 +11,7 @@ namespace QLTrungTamTiengAnh.Model
 {
     public class KhachHangMod
     {
-        ConnectToSQL con = new ConnectToSQL();
+        SqlConnector con = new SqlConnector();
         SqlCommand cmd = new SqlCommand();
         public static KhachHangMod Instance = new KhachHangMod();
 
