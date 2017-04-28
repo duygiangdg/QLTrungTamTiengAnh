@@ -20,34 +20,22 @@ namespace QLTrungTamTiengAnh.View
         private void capNhatDanhSach()
         {
             DataTable khachHangTable = KhachHangMod.Instance.GetData();
-            foreach (DataRow row in khachHangTable.Rows)
-            {
-                dgvDSKhachHang.Rows.Add(row.ItemArray);
-            }
+            dgvDSKhachHang.DataSource = khachHangTable;
         }
 
-        private void btnThemKhachHang_ItemClick(object sender, EventArgs e)
+        private void btnThemKhachHang_MouseClick(object sender, MouseEventArgs e)
         {
-            FormThongTinKhachHang form = new FormThongTinKhachHang();
-            form.ShowDialog();
+            (new FormThongTinKhachHang()).ShowDialog();
         }
 
-        private void btnSuaKhachHang_ItemClick(object sender, EventArgs e)
+        private void btnSuaKhachHang_MouseClick(object sender, MouseEventArgs e)
         {
-            FormThongTinKhachHang form = new FormThongTinKhachHang();
-            form.ShowDialog();
+
         }
 
-        private void btnXoaKhachHang_ItemClick(object sender, EventArgs e)
+        private void btnXemChiTiet_MouseClick(object sender, MouseEventArgs e)
         {
-            FormThongTinKhachHang form = new FormThongTinKhachHang();
-            form.ShowDialog();
-        }
 
-        private void btnXemChiTiet_ItemClick(object sender, EventArgs e)
-        {
-            FormThongTinKhachHang form = new FormThongTinKhachHang();
-            form.ShowDialog();
         }
     }
 }
