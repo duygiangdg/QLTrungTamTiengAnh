@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    public class PhieuDangKyObj
+    public class PhieuDangKy
     {
         string soDangKy, maKhachHang;
         int level, mucGiamHP;
         DateTime ngayDangKy, ngayHen;
 
-        public PhieuDangKyObj(string soDangKy, string maKhachHang, int level, int mucGiamHP, DateTime ngayDangKy, DateTime ngayHen)
+        public PhieuDangKy(string soDangKy, string maKhachHang, int level, int mucGiamHP, DateTime ngayDangKy, DateTime ngayHen)
         {
             this.soDangKy = soDangKy;
             this.maKhachHang = maKhachHang;

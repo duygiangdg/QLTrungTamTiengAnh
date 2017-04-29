@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLTrungTamTiengAnh.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,9 +14,40 @@ namespace QLTrungTamTiengAnh.View
 {
     public partial class FormDetail : DevComponents.DotNetBar.Office2007Form
     {
+        public const int MODE_VIEW = 1;
+        public const int MODE_EDIT = 0;
+        private String extra;
+        private int mode = 0;
         public FormDetail()
         {
-            InitializeComponent();
+            InitializeDetailForm();
+        }
+
+        private void FormDetail_Load(object sender, EventArgs e)
+        {
+            if (extra != null)
+            {
+                DataTable khachHangTable = KhachHangMod.Instance.GetData();
+                object obj = DataHelper.ConvertDataToArray(khachHangTable, "QLTrungTamTiengAnh.Object.KhachHang")[0];
+                BindData(obj);
+                if (mode == MODE_VIEW)
+                {
+                    this.btnLuu.Text = "Sửa";
+                    DisableTextInput();
+                }
+            }
+        }
+
+        public FormDetail PutExtra(string extra)
+        {
+            this.extra = extra;
+            return this;
+        }
+
+        public FormDetail SetMode(int mode)
+        {
+            this.mode = mode;
+            return this;
         }
 
         protected bool ValidateTextInput()
@@ -72,6 +104,57 @@ namespace QLTrungTamTiengAnh.View
                     }
                 }
             }
+        }
+
+        protected void ClearForm()
+        {
+            foreach (var control in this.groupPanel1.Controls)
+            {
+                if (control.GetType() == typeof(TextLabel))
+                {
+                    ((TextLabel)control).ClearText();
+                }
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (this.mode == MODE_VIEW)
+            {
+                if (this.extra == null)
+                {
+                    ClearForm();
+                }
+                EnableTextInput();
+                this.btnLuu.Text = "Lưu";
+                this.mode = MODE_EDIT;
+            }
+            else
+            {
+                if (ValidateTextInput())
+                {
+                    DisableTextInput();
+                    if (this.extra == null)
+                    {
+                        this.btnLuu.Text = "Tạo Mới";
+                    }
+                    else
+                    {
+                        this.btnLuu.Text = "Sửa";
+                    }
+                    this.mode = MODE_VIEW;
+                }
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    public class HocPhiObj
+    public class HocPhi
     {
         int level;
         long hocPhi;
 
-        public HocPhiObj(int level, long hocPhi)
+        public HocPhi(int level, long hocPhi)
         {
             this.level = level;
             this.hocPhi = hocPhi;

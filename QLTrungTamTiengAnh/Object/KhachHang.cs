@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    public class KhachHangObj
+    public class KhachHang
     {
         string maKhachHang, tenKhachHang, diaChi, soDienThoai, email, truong, chuyenNganh;
         DateTime ngaySinh;
@@ -115,12 +115,12 @@ namespace QLTrungTamTiengAnh.Object
             }
         }
 
-        public KhachHangObj()
+        public KhachHang()
         {
 
         }
 
-        public KhachHangObj(string maKhachHang, string tenKhachHang, string diaChi, string soDienThoai, 
+        public KhachHang(string maKhachHang, string tenKhachHang, string diaChi, string soDienThoai, 
             string email, string truong, string chuyenNganh, DateTime ngaySinh)
         {
             this.maKhachHang = maKhachHang;

@@ -25,11 +25,12 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        protected virtual void InitializeComponent()
+        private void InitializeComponent()
         {
             this.btnLuu = new DevComponents.DotNetBar.ButtonX();
             this.btnHuy = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.btnXoa = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // btnLuu
@@ -42,6 +43,7 @@
             this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnLuu.TabIndex = 2;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -53,6 +55,7 @@
             this.btnHuy.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnHuy.TabIndex = 2;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // groupPanel1
             // 
@@ -92,6 +95,18 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 0;
             // 
+            // btnXoa
+            // 
+            this.btnXoa.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnXoa.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnXoa.Location = new System.Drawing.Point(175, 284);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(107, 29);
+            this.btnXoa.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnXoa.TabIndex = 2;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // FormDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +114,7 @@
             this.ClientSize = new System.Drawing.Size(562, 329);
             this.Controls.Add(this.groupPanel1);
             this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnLuu);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -110,13 +126,20 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thông Tin Chi Tiết";
+            this.Load += new System.EventHandler(this.FormDetail_Load);
             this.ResumeLayout(false);
 
+        }
+
+        protected void InitializeDetailForm()
+        {
+            InitializeComponent();
         }
 
         #endregion
         protected DevComponents.DotNetBar.ButtonX btnLuu;
         protected DevComponents.DotNetBar.ButtonX btnHuy;
         protected DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
+        protected DevComponents.DotNetBar.ButtonX btnXoa;
     }
 }

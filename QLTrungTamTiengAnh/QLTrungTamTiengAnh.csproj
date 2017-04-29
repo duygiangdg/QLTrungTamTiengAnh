@@ -49,7 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\DBHelper.cs" />
+    <Compile Include="Model\DataHelper.cs" />
     <Compile Include="Control\Setting.cs" />
     <Compile Include="View\TextLabel.cs">
       <SubType>Component</SubType>
@@ -74,17 +74,17 @@
     </Compile>
     <Compile Include="Model\SqlConnector.cs" />
     <Compile Include="Model\KhachHangMod.cs" />
-    <Compile Include="Object\HocPhiHVObj.cs" />
-    <Compile Include="Object\HocPhiObj.cs" />
-    <Compile Include="Object\HocVienObj.cs" />
-    <Compile Include="Object\KetQuaObj.cs" />
-    <Compile Include="Object\KhachHangObj.cs" />
-    <Compile Include="Object\LopObj.cs" />
-    <Compile Include="Object\NhanVienObj.cs" />
-    <Compile Include="Object\PhieuDangKyObj.cs" />
-    <Compile Include="Object\PhieuThuObj.cs" />
-    <Compile Include="Object\QuaTrinhObj.cs" />
-    <Compile Include="Object\TroGiangObj.cs" />
+    <Compile Include="Object\HocPhiHV.cs" />
+    <Compile Include="Object\HocPhi.cs" />
+    <Compile Include="Object\HocVien.cs" />
+    <Compile Include="Object\KetQua.cs" />
+    <Compile Include="Object\KhachHang.cs" />
+    <Compile Include="Object\Lop.cs" />
+    <Compile Include="Object\NhanVien.cs" />
+    <Compile Include="Object\PhieuDangKy.cs" />
+    <Compile Include="Object\PhieuThu.cs" />
+    <Compile Include="Object\QuaTrinh.cs" />
+    <Compile Include="Object\TroGiang.cs" />
     <Compile Include="Control\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

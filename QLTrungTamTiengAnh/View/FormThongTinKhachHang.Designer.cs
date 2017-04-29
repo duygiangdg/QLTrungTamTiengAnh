@@ -36,17 +36,8 @@
             this.textLabel6 = new QLTrungTamTiengAnh.View.TextLabel();
             this.textLabel7 = new QLTrungTamTiengAnh.View.TextLabel();
             this.textLabel8 = new QLTrungTamTiengAnh.View.TextLabel();
-            this.btnDangKyHoc = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // groupPanel1
             // 
@@ -175,30 +166,13 @@
             this.textLabel8.Size = new System.Drawing.Size(200, 39);
             this.textLabel8.TabIndex = 0;
             // 
-            // btnDangKyHoc
-            // 
-            this.btnDangKyHoc.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnDangKyHoc.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnDangKyHoc.Location = new System.Drawing.Point(176, 284);
-            this.btnDangKyHoc.Name = "btnDangKyHoc";
-            this.btnDangKyHoc.Size = new System.Drawing.Size(107, 29);
-            this.btnDangKyHoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnDangKyHoc.TabIndex = 3;
-            this.btnDangKyHoc.Text = "Đăng Ký Học";
-            this.btnDangKyHoc.Click += new System.EventHandler(this.btnDangKyHoc_Click);
-            // 
             // FormThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 329);
-            this.Controls.Add(this.btnDangKyHoc);
             this.Name = "FormThongTinKhachHang";
             this.Text = "Thông Tin Khách Hàng";
-            this.Controls.SetChildIndex(this.btnLuu, 0);
-            this.Controls.SetChildIndex(this.btnHuy, 0);
-            this.Controls.SetChildIndex(this.groupPanel1, 0);
-            this.Controls.SetChildIndex(this.btnDangKyHoc, 0);
             this.groupPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -214,6 +188,5 @@
         private TextLabel textLabel5;
         private TextLabel textLabel3;
         private TextLabel textLabel1;
-        private DevComponents.DotNetBar.ButtonX btnDangKyHoc;
     }
 }

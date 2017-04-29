@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Model
 {
-    class DBHelper
+    class DataHelper
     {
         public static DataTable ConvertArrayToData(object[] objs)
         {

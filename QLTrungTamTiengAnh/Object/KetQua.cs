@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    public class KetQuaObj
+    public class KetQua
     {
         string maHocVien;
         int diemLevel1, diemLevel2, diemLevel3, xepLoai;
 
-        public KetQuaObj(string maHocVien, int diemLevel1, int diemLevel2, int diemLevel3, int xepLoai)
+        public KetQua(string maHocVien, int diemLevel1, int diemLevel2, int diemLevel3, int xepLoai)
         {
             this.maHocVien = maHocVien;
             this.diemLevel1 = diemLevel1;

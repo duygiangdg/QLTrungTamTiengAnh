@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    public class HocVienObj
+    public class HocVien
     {
         string maHocVien, tenHocVien, diaChi, soDienThoai, email, maLop;
         DateTime ngaySinh;
 
-        public HocVienObj(string maHocVien, string tenHocVien, string diaChi, string soDienThoai, string email, string maLop, DateTime ngaySinh)
+        public HocVien(string maHocVien, string tenHocVien, string diaChi, string soDienThoai, string email, string maLop, DateTime ngaySinh)
         {
             this.maHocVien = maHocVien;
             this.tenHocVien = tenHocVien;

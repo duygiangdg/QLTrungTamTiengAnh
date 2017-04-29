@@ -87,14 +87,14 @@ namespace QLTrungTamTiengAnh.Model
         }
 
         // Nhap vao ma khach hang, tra ve khach hang tuong ung
-        public KhachHangObj getItem(string maKhachHang)
+        public KhachHang getItem(string maKhachHang)
         {
             // ToDo: tra ve khach hang tu database, null neu khong ton tai
-            return new KhachHangObj();
+            return new KhachHang();
         }
 
         // Them mot khach hang vao database
-        public bool AddItem(KhachHangObj khachHangObj)
+        public bool AddItem(KhachHang khachHangObj)
         {
             cmd.CommandText = "insert into tb_KHACHHANG values ('"
                 + khachHangObj.MaKhachHang + "','"
@@ -124,7 +124,7 @@ namespace QLTrungTamTiengAnh.Model
         }
 
         // Cap nhat thong tin khach hang
-        public bool UpdateItem(KhachHangObj khachHangObj)
+        public bool UpdateItem(KhachHang khachHangObj)
         {
             // ToDo: chinh sua thong tin khach hang, 
             // tra ve true neu thanh cong, false neu that bai
@@ -140,7 +140,7 @@ namespace QLTrungTamTiengAnh.Model
         }
 
         // Xoa khach hang khoi database
-        public bool DeleteItem(KhachHangObj khachHangObj)
+        public bool DeleteItem(KhachHang khachHangObj)
         {
             DeleteItem(khachHangObj.MaKhachHang);
             return false;

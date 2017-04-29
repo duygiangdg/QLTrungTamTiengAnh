@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    public class TroGiangObj
+    public class TroGiang
     {
         string maTroGiang, tenTroGiang, diaChi, soDienThoai, email, truong, chuyenNganh;
         int chucVu;

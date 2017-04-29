@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    public class LopObj
+    public class Lop
     {
         string maLop, maTroGiang, lichHoc;
         int level;
         bool daKetThuc;
 
-        public LopObj(string maLop, string maTroGiang, string lichHoc, int level, bool daKetThuc)
+        public Lop(string maLop, string maTroGiang, string lichHoc, int level, bool daKetThuc)
         {
             this.maLop = maLop;
             this.maTroGiang = maTroGiang;

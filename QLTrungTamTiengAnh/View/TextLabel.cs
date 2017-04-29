@@ -97,44 +97,49 @@ namespace QLTrungTamTiengAnh.View
         {
             string[] constrainArray = Constrains.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            if (constrainArray.Contains(CONSTRAIN_NOT_EMPTY) && this.textBox.Text.Trim().Equals(""))
+            if (this.textBox.Text.Trim().Equals(""))
             {
-                this.textLabel.Text = label + " không được để trống";
-                this.textLabel.ForeColor = System.Drawing.Color.Red;
-                return false;
-            }
-
-            if (constrainArray.Contains(CONSTRAIN_INTEGER))
-            {
-                try
+                if (constrainArray.Contains(CONSTRAIN_NOT_EMPTY))
                 {
-                    long.Parse(this.textBox.Text.Trim());
-                }
-                catch
-                {
-                    this.textLabel.Text = label + " không hợp lệ";
+                    this.textLabel.Text = label + " không được để trống";
                     this.textLabel.ForeColor = System.Drawing.Color.Red;
                     return false;
                 }
             }
-
-            if (constrainArray.Contains(CONSTRAIN_DATETIME))
+            else
             {
-                try
-                {
-                    DateTime.ParseExact(this.textBox.Text.Trim(), "dd/MM/yyyy", null);
-                }
-                catch
+                if (constrainArray.Contains(CONSTRAIN_INTEGER))
                 {
                     try
                     {
-                        DateTime.ParseExact(this.textBox.Text.Trim(), "dd-MM-yyyy", null);
+                        long.Parse(this.textBox.Text.Trim());
                     }
                     catch
                     {
                         this.textLabel.Text = label + " không hợp lệ";
                         this.textLabel.ForeColor = System.Drawing.Color.Red;
                         return false;
+                    }
+                }
+
+                if (constrainArray.Contains(CONSTRAIN_DATETIME))
+                {
+                    try
+                    {
+                        DateTime.ParseExact(this.textBox.Text.Trim(), "dd/MM/yyyy", null);
+                    }
+                    catch
+                    {
+                        try
+                        {
+                            DateTime.ParseExact(this.textBox.Text.Trim(), "dd-MM-yyyy", null);
+                        }
+                        catch
+                        {
+                            this.textLabel.Text = label + " không hợp lệ";
+                            this.textLabel.ForeColor = System.Drawing.Color.Red;
+                            return false;
+                        }
                     }
                 }
             }
@@ -151,6 +156,11 @@ namespace QLTrungTamTiengAnh.View
                 return;
             }
             this.textBox.Text = text;
+        }
+
+        public void ClearText()
+        {
+            this.textBox.Clear();
         }
     }
 }
