@@ -19,8 +19,17 @@ namespace QLTrungTamTiengAnh.View
 
         private void capNhatDanhSach()
         {
-            DataTable khachHangTable = KhachHangMod.Instance.GetData();
+            DataTable khachHangTable = DBHelper.GetData("tb_KhachHang");
             dgvDSKhachHang.DataSource = khachHangTable;
+
+            DataTable hocVienTable = DBHelper.GetData("tb_HocVien");
+            dgvDSHocVien.DataSource = hocVienTable;
+
+            DataTable troGiangTable = DBHelper.GetData("tb_TroGiang");
+            dgvDSTroGiang.DataSource = troGiangTable;
+
+            DataTable lopTable = DBHelper.GetData("vw_Lop");
+            dgvDSLop.DataSource = lopTable;
         }
 
         private void btnSuaKhachHang_Click(object sender, EventArgs e)
@@ -65,6 +74,22 @@ namespace QLTrungTamTiengAnh.View
             {
                 index = 5;
             }
+            else if (this.ribMenu.SelectedRibbonTabItem == ribbonTabItem6)
+            {
+                index = 6;
+            }
+            else if (this.ribMenu.SelectedRibbonTabItem == ribbonTabItem7)
+            {
+                index = 7;
+            }
+            else if (this.ribMenu.SelectedRibbonTabItem == ribbonTabItem8)
+            {
+                index = 8;
+            }
+            else if (this.ribMenu.SelectedRibbonTabItem == ribbonTabItem9)
+            {
+                index = 9;
+            }
 
             if (this.tabDanhSach.SelectedTabIndex > -1)
             {
@@ -77,6 +102,11 @@ namespace QLTrungTamTiengAnh.View
                     this.tabDanhSach.SelectPreviousTab();
                 }
             }
+        }
+
+        private void applicationButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -20,54 +20,8 @@ namespace QLTrungTamTiengAnh.Model
         // Tra ve du lieu cua toan bo khach hang kieu DataTable, null neu that bai
         public DataTable GetData()
         {
-            // Fake data
-            DataTable fakeData = new DataTable();
-            fakeData.Columns.Add(new DataColumn("MaKhachHang", typeof(string)));
-            fakeData.Columns.Add(new DataColumn("TenKhachHang", typeof(string)));
-            fakeData.Columns.Add(new DataColumn("NgaySinh", typeof(DateTime)));
-            fakeData.Columns.Add(new DataColumn("DiaChi", typeof(string)));
-            fakeData.Columns.Add(new DataColumn("SoDienThoai", typeof(string)));
-            fakeData.Columns.Add(new DataColumn("Email", typeof(string)));
-            fakeData.Columns.Add(new DataColumn("Truong", typeof(string)));
-            fakeData.Columns.Add(new DataColumn("ChuyenNganh", typeof(string)));
-
-            DataRow dr0 = fakeData.NewRow();
-            dr0[0] = "KH01";
-            dr0[1] = "Mai Thanh Chung";
-            dr0[2] = new DateTime();
-            dr0[3] = "Home";
-            dr0[4] = "0123456789";
-            dr0[5] = "maithanhchung@gmail.com";
-            dr0[6] = "DHBKHN";
-            dr0[7] = "Toan Tin Ung Dung";
-            fakeData.Rows.Add(dr0);
-
-            DataRow dr1 = fakeData.NewRow();
-            dr1[0] = "KH02";
-            dr1[1] = "Vu Van Bo";
-            dr1[2] = new DateTime();
-            dr1[3] = "Home";
-            dr1[4] = "0123456789";
-            dr1[5] = "vuvanbo@gmail.com";
-            dr1[6] = "DHBKHN";
-            dr1[7] = "Toan Tin Ung Dung";
-            fakeData.Rows.Add(dr1);
-
-            DataRow dr2 = fakeData.NewRow();
-            dr2[0] = "KH03";
-            dr2[1] = "Nguyen Duy Giang";
-            dr2[2] = new DateTime();
-            dr2[3] = "Home";
-            dr2[4] = "0123456789";
-            dr2[5] = "nguyenduygiang@gmail.com";
-            dr2[6] = "DHBKHN";
-            dr2[7] = "Toan Tin Ung Dung";
-            fakeData.Rows.Add(dr2);
-
-            return fakeData;
-
             DataTable dt = new DataTable();
-            cmd.CommandText = "select * from tb_KHACHHANG";
+            cmd.CommandText = "select * from tb_KhachHang";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             try

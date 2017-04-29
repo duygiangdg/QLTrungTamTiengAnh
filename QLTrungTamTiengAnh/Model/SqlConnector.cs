@@ -52,7 +52,7 @@ namespace QLTrungTamTiengAnh.Model
 
         public SqlConnector()
         {
-            StrCon = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLTrungTamTiengAnh;User ID=sa; Password=123";
+            StrCon = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DBQLTrungTamTiengAnh;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             Conn = new SqlConnection(StrCon);
         }
 
@@ -88,28 +88,6 @@ namespace QLTrungTamTiengAnh.Model
                 return false;
             }
             return true;
-        }
-
-        public DataTable getThongTin()
-        {
-            DataTable dt = new DataTable();
-            SqlCommand Cmd = new SqlCommand();
-            Cmd = new SqlCommand();
-            Cmd.CommandType = CommandType.Text;
-            Cmd.CommandText = "select * from ThongTin";
-            Cmd.Connection = Conn;
-            try
-            {
-                OpenConn();
-                SqlDataAdapter sda = new SqlDataAdapter(Cmd);
-                sda.Fill(dt);
-                CloseConn();
-            }
-            catch (Exception ex)
-            {
-                error = ex.Message;
-            }
-            return dt;
         }
 
         #endregion
