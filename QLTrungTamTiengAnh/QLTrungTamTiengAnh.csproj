@@ -74,7 +74,6 @@
       <DependentUpon>FormTrangChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\SqlConnector.cs" />
-    <Compile Include="Model\KhachHangMod.cs" />
     <Compile Include="Object\HocPhiHV.cs" />
     <Compile Include="Object\HocPhi.cs" />
     <Compile Include="Object\HocVien.cs" />
@@ -137,6 +136,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\register.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

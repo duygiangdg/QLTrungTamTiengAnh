@@ -36,7 +36,7 @@ namespace QLTrungTamTiengAnh.Model
                 DataRow row = table.NewRow();
                 for (int cellIndex = 0; cellIndex < table.Columns.Count; cellIndex++)
                 {
-                    String colName = table.Columns[cellIndex].ColumnName;
+                    string colName = table.Columns[cellIndex].ColumnName;
                     row[cellIndex] = type.GetProperty(colName).GetValue(obj);
                 }
             }
@@ -44,33 +44,36 @@ namespace QLTrungTamTiengAnh.Model
             return table;
         }
 
-        public static object[] ConvertDataToArray(DataTable table, String className)
+        public static object[] ConvertDataToArray(DataTable table, string className)
         {
             Type type = Type.GetType(className, true);
-            int propCount = table.Columns.Count;
+            int colCount = table.Columns.Count;
             int objCount = table.Rows.Count;
             object[] array = new object[objCount];
-            String[] propNames = new String[propCount];
+            string[] colNames = new string[colCount];
 
-            for (int propIndex = 0; propIndex < propCount; propIndex++)
+            for (int colIndex = 0; colIndex < colCount; colIndex++)
             {
-                propNames[propIndex] = table.Columns[propIndex].ColumnName;
+                colNames[colIndex] = table.Columns[colIndex].ColumnName;
             }
 
             for (int objIndex = 0; objIndex < objCount; objIndex++)
             {
                 object[] values = table.Rows[objIndex].ItemArray;
                 var instance = Activator.CreateInstance(type);
-                for (int propIndex = 0; propIndex < propCount; propIndex++)
+                for (int colIndex = 0; colIndex < colCount; colIndex++)
                 {
-                    PropertyInfo prop = type.GetProperty(propNames[propIndex]);
-                    if (values[propIndex].GetType() == typeof(DBNull))
+                    PropertyInfo prop = type.GetProperty(colNames[colIndex]);
+                    if (prop != null)
                     {
-                        prop.SetValue(instance, null);
-                    }
-                    else
-                    {
-                        prop.SetValue(instance, values[propIndex]);
+                        if (values[colIndex].GetType() == typeof(DBNull))
+                        {
+                            prop.SetValue(instance, null);
+                        }
+                        else
+                        {
+                            prop.SetValue(instance, values[colIndex]);
+                        }
                     }
                 }
                 array[objIndex] = instance;

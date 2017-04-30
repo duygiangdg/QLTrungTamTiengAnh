@@ -8,7 +8,7 @@ namespace QLTrungTamTiengAnh.Object
 {
     public class KhachHang
     {
-        string maKhachHang, tenKhachHang, diaChi, soDienThoai, email, truong, chuyenNganh;
+        string maKhachHang, tenKhachHang,  diaChi, soDienThoai, email, truong, chuyenNganh;
         DateTime ngaySinh;
 
         public string ChuyenNganh

@@ -27,7 +27,7 @@ namespace QLTrungTamTiengAnh.View
         {
             if (extra != null)
             {
-                DataTable khachHangTable = DBHelper.GetData("vw_KhachHang");
+                DataTable khachHangTable = DBHelper.GetData("tb_KhachHang");
                 object obj = DataHelper.ConvertDataToArray(khachHangTable, "QLTrungTamTiengAnh.Object.KhachHang")[0];
                 BindData(obj);
                 if (mode == MODE_VIEW)
@@ -92,6 +92,7 @@ namespace QLTrungTamTiengAnh.View
         protected void BindData(object obj)
         {
             Type type = obj.GetType();
+
             foreach (var control in this.groupPanel1.Controls)
             {
                 if (control.GetType() == typeof(TextLabel))
@@ -107,6 +108,34 @@ namespace QLTrungTamTiengAnh.View
                     }
                 }
             }
+        }
+
+        protected object CreateObject(string className)
+        {
+            Type type = Type.GetType(className, true);
+            var instance = Activator.CreateInstance(type);
+
+            foreach (var control in this.groupPanel1.Controls)
+            {
+                if (control.GetType() == typeof(TextLabel))
+                {
+                    TextLabel textLabel = (TextLabel)control;
+                    PropertyInfo property = type.GetProperty(textLabel.PropertyName);
+                    if (property != null && !textLabel.GetText().Trim().Equals(""))
+                    {
+                        if (property.PropertyType == typeof(string))
+                        {
+                            property.SetValue(instance, textLabel.GetText());
+                        }
+                        else if (property.PropertyType == typeof(DateTime))
+                        {
+                            property.SetValue(instance, DateTime.ParseExact(textLabel.GetText().Trim(), "dd/MM/yyyy", null));
+                        }
+                    }
+                }
+            }
+
+            return instance;
         }
 
         protected void ClearForm()

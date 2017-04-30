@@ -35,6 +35,8 @@ namespace QLTrungTamTiengAnh.View
             {
                 if (ValidateTextInput())
                 {
+                    var instance = CreateObject("QLTrungTamTiengAnh.Object.KhachHang");
+                    DBHelper.AddItem(instance, "tb_KhachHang");
                     DisableTextInput();
                     if (this.extra == null)
                     {

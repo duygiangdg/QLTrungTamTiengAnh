@@ -158,6 +158,11 @@ namespace QLTrungTamTiengAnh.View
             this.textBox.Text = text;
         }
 
+        public string GetText()
+        {
+            return this.textBox.Text;
+        }
+
         public void ClearText()
         {
             this.textBox.Clear();
