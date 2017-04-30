@@ -16,8 +16,8 @@ namespace QLTrungTamTiengAnh.View
     {
         public const int MODE_VIEW = 1;
         public const int MODE_EDIT = 0;
-        private String extra;
-        private int mode = 0;
+        protected String extra;
+        protected int mode = 0;
         public FormDetail()
         {
             InitializeDetailForm();
@@ -27,7 +27,7 @@ namespace QLTrungTamTiengAnh.View
         {
             if (extra != null)
             {
-                DataTable khachHangTable = KhachHangMod.Instance.GetData();
+                DataTable khachHangTable = DBHelper.GetData("vw_KhachHang");
                 object obj = DataHelper.ConvertDataToArray(khachHangTable, "QLTrungTamTiengAnh.Object.KhachHang")[0];
                 BindData(obj);
                 if (mode == MODE_VIEW)
@@ -100,7 +100,10 @@ namespace QLTrungTamTiengAnh.View
                     PropertyInfo property = type.GetProperty(textLabel.PropertyName);
                     if (property!=null)
                     {
-                        textLabel.SetText(property.GetValue(obj).ToString());
+                        if (property.GetValue(obj) != null)
+                        {
+                            textLabel.SetText(property.GetValue(obj).ToString());
+                        }
                     }
                 }
             }
@@ -113,41 +116,6 @@ namespace QLTrungTamTiengAnh.View
                 if (control.GetType() == typeof(TextLabel))
                 {
                     ((TextLabel)control).ClearText();
-                }
-            }
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if (this.mode == MODE_VIEW)
-            {
-                if (this.extra == null)
-                {
-                    ClearForm();
-                }
-                EnableTextInput();
-                this.btnLuu.Text = "Lưu";
-                this.mode = MODE_EDIT;
-            }
-            else
-            {
-                if (ValidateTextInput())
-                {
-                    DisableTextInput();
-                    if (this.extra == null)
-                    {
-                        this.btnLuu.Text = "Tạo Mới";
-                    }
-                    else
-                    {
-                        this.btnLuu.Text = "Sửa";
-                    }
-                    this.mode = MODE_VIEW;
                 }
             }
         }

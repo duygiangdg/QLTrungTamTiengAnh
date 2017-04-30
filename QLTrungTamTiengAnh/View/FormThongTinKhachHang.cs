@@ -17,5 +17,36 @@ namespace QLTrungTamTiengAnh.View
         {
             InitializeComponent();
         }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+  
+            if (this.mode == MODE_VIEW)
+            {
+                if (this.extra == null)
+                {
+                    ClearForm();
+                }
+                EnableTextInput();
+                this.btnLuu.Text = "Lưu";
+                this.mode = MODE_EDIT;
+            }
+            else
+            {
+                if (ValidateTextInput())
+                {
+                    DisableTextInput();
+                    if (this.extra == null)
+                    {
+                        this.btnLuu.Text = "Tạo Mới";
+                    }
+                    else
+                    {
+                        this.btnLuu.Text = "Sửa";
+                    }
+                    this.mode = MODE_VIEW;
+                }
+            }
+        }
     }
 }

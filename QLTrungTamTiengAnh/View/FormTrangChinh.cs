@@ -19,17 +19,20 @@ namespace QLTrungTamTiengAnh.View
 
         private void capNhatDanhSach()
         {
-            DataTable khachHangTable = DBHelper.GetData("tb_KhachHang");
+            DataTable khachHangTable = DBHelper.GetData("vw_KhachHang");
             dgvDSKhachHang.DataSource = khachHangTable;
 
-            DataTable hocVienTable = DBHelper.GetData("tb_HocVien");
+            DataTable hocVienTable = DBHelper.GetData("vw_HocVien");
             dgvDSHocVien.DataSource = hocVienTable;
 
-            DataTable troGiangTable = DBHelper.GetData("tb_TroGiang");
+            DataTable troGiangTable = DBHelper.GetData("vw_TroGiang");
             dgvDSTroGiang.DataSource = troGiangTable;
 
             DataTable lopTable = DBHelper.GetData("vw_Lop");
             dgvDSLop.DataSource = lopTable;
+
+            DataTable phieuDangKyTable = DBHelper.GetData("vw_PhieuDangKy");
+            dgvDSPhieuDangKy.DataSource = phieuDangKyTable;
         }
 
         private void btnSuaKhachHang_Click(object sender, EventArgs e)

@@ -39,6 +39,10 @@
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btnLuu
+            // 
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // groupPanel1
             // 
             this.groupPanel1.Controls.Add(this.textLabel8);

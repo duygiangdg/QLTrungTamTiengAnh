@@ -64,7 +64,14 @@ namespace QLTrungTamTiengAnh.Model
                 for (int propIndex = 0; propIndex < propCount; propIndex++)
                 {
                     PropertyInfo prop = type.GetProperty(propNames[propIndex]);
-                    prop.SetValue(instance, values[propIndex]);
+                    if (values[propIndex].GetType() == typeof(DBNull))
+                    {
+                        prop.SetValue(instance, null);
+                    }
+                    else
+                    {
+                        prop.SetValue(instance, values[propIndex]);
+                    }
                 }
                 array[objIndex] = instance;
             }
