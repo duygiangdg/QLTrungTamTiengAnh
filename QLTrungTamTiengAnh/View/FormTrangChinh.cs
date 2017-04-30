@@ -33,6 +33,18 @@ namespace QLTrungTamTiengAnh.View
 
             DataTable phieuDangKyTable = DBHelper.GetData("vw_PhieuDangKy");
             dgvDSPhieuDangKy.DataSource = phieuDangKyTable;
+
+            DataTable quaTrinhCSKHTable = DBHelper.GetData("vw_QuaTrinhCSKH");
+            dgvQuaTrinhCSKH.DataSource = quaTrinhCSKHTable;
+
+            DataTable ketQuaHocTapTable = DBHelper.GetData("vw_KetQuaHocTap");
+            dgvKetQuaHocTap.DataSource = ketQuaHocTapTable;
+
+            DataTable mucHocPhiTable = DBHelper.GetData("vw_MucHocPhi");
+            dgvMucHocPhi.DataSource = mucHocPhiTable;
+
+            DataTable phieuThuTable = DBHelper.GetData("vw_PhieuThu");
+            dgvDSPhieuThu.DataSource = phieuThuTable;
         }
 
         private void btnSuaKhachHang_Click(object sender, EventArgs e)
