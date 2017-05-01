@@ -64,6 +64,8 @@ namespace QLTrungTamTiengAnh.View
             this.textLabel = new DevComponents.DotNetBar.LabelX();
 
             // textBox
+            this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox.Border.Class = "TextBoxBorder";
             this.textBox.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBox.Location = new System.Drawing.Point(0, 19);
