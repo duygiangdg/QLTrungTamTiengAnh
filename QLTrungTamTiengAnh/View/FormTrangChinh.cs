@@ -19,37 +19,37 @@ namespace QLTrungTamTiengAnh.View
 
         private void capNhatDanhSach()
         {
-            DataTable khachHangTable = DBHelper.GetData("vw_KhachHang");
+            DataTable khachHangTable = DatabaseService.GetData("vw_KhachHang");
             dgvDSKhachHang.DataSource = khachHangTable;
 
-            DataTable hocVienTable = DBHelper.GetData("vw_HocVien");
+            DataTable hocVienTable = DatabaseService.GetData("vw_HocVien");
             dgvDSHocVien.DataSource = hocVienTable;
 
-            DataTable troGiangTable = DBHelper.GetData("vw_TroGiang");
+            DataTable troGiangTable = DatabaseService.GetData("vw_TroGiang");
             dgvDSTroGiang.DataSource = troGiangTable;
 
-            DataTable lopTable = DBHelper.GetData("vw_Lop");
+            DataTable lopTable = DatabaseService.GetData("vw_Lop");
             dgvDSLop.DataSource = lopTable;
 
-            DataTable phieuDangKyTable = DBHelper.GetData("vw_PhieuDangKy");
+            DataTable phieuDangKyTable = DatabaseService.GetData("vw_PhieuDangKy");
             dgvDSPhieuDangKy.DataSource = phieuDangKyTable;
 
-            DataTable quaTrinhCSKHTable = DBHelper.GetData("vw_QuaTrinhCSKH");
+            DataTable quaTrinhCSKHTable = DatabaseService.GetData("vw_QuaTrinhCSKH");
             dgvQuaTrinhCSKH.DataSource = quaTrinhCSKHTable;
 
-            DataTable ketQuaHocTapTable = DBHelper.GetData("vw_KetQuaHocTap");
+            DataTable ketQuaHocTapTable = DatabaseService.GetData("vw_KetQuaHocTap");
             dgvKetQuaHocTap.DataSource = ketQuaHocTapTable;
 
-            DataTable mucHocPhiTable = DBHelper.GetData("vw_MucHocPhi");
+            DataTable mucHocPhiTable = DatabaseService.GetData("vw_MucHocPhi");
             dgvMucHocPhi.DataSource = mucHocPhiTable;
 
-            DataTable phieuThuTable = DBHelper.GetData("vw_PhieuThu");
+            DataTable phieuThuTable = DatabaseService.GetData("vw_PhieuThu");
             dgvDSPhieuThu.DataSource = phieuThuTable;
         }
 
         private void btnSuaKhachHang_Click(object sender, EventArgs e)
         {
-            (new FormThongTinKhachHang()).PutExtra("test").SetMode(FormDetail.MODE_EDIT).ShowDialog();
+            (new FormThongTinKhachHang()).PutExtra(GetMaKhachHang()).SetMode(FormDetail.MODE_EDIT).ShowDialog();
         }
 
         private void btnThemKhachHang_Click(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace QLTrungTamTiengAnh.View
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            (new FormThongTinKhachHang()).PutExtra("test").SetMode(FormDetail.MODE_VIEW).ShowDialog();
+            (new FormThongTinKhachHang()).PutExtra(GetMaKhachHang()).SetMode(FormDetail.MODE_VIEW).ShowDialog();
         }
 
         private void ribDieuHuong_SelectedRibbonTabChanged(object sender, EventArgs e)
@@ -122,6 +122,23 @@ namespace QLTrungTamTiengAnh.View
         private void applicationButton1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnXoaKhachHang_Click(object sender, EventArgs e)
+        {
+            string maKhachHang = GetMaKhachHang();
+            DatabaseService.DeleteItem("tb_KhachHang", "MaKhachHang", maKhachHang);
+            capNhatDanhSach();
+        }
+
+        private string GetMaKhachHang()
+        {
+            return dgvDSKhachHang.SelectedRows[0].Cells[0].Value.ToString();
+        }
+
+        private void FormTranhChinh_Activated(object sender, EventArgs e)
+        {
+            capNhatDanhSach();
         }
     }
 }

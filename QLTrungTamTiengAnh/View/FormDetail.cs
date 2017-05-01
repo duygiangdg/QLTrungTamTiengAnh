@@ -27,9 +27,6 @@ namespace QLTrungTamTiengAnh.View
         {
             if (extra != null)
             {
-                DataTable khachHangTable = DBHelper.GetData("tb_KhachHang");
-                object obj = DataHelper.ConvertDataToArray(khachHangTable, "QLTrungTamTiengAnh.Object.KhachHang")[0];
-                BindData(obj);
                 if (mode == MODE_VIEW)
                 {
                     this.btnLuu.Text = "Sửa";

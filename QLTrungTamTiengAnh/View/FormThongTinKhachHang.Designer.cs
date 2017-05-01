@@ -177,6 +177,7 @@
             this.ClientSize = new System.Drawing.Size(562, 329);
             this.Name = "FormThongTinKhachHang";
             this.Text = "Thông Tin Khách Hàng";
+            this.Load += new System.EventHandler(this.FormThongTinKhachHang_Load);
             this.groupPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

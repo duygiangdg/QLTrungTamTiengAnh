@@ -51,7 +51,7 @@
   <ItemGroup>
     <Compile Include="Model\DataHelper.cs" />
     <Compile Include="Control\Setting.cs" />
-    <Compile Include="Model\DBHelper.cs" />
+    <Compile Include="Model\DatabaseService.cs" />
     <Compile Include="View\TextLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -148,6 +148,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a-plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\classroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\professor-with-clipboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

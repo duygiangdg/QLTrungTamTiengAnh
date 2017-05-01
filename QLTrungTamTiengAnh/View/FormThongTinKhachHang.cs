@@ -36,18 +36,28 @@ namespace QLTrungTamTiengAnh.View
                 if (ValidateTextInput())
                 {
                     var instance = CreateObject("QLTrungTamTiengAnh.Object.KhachHang");
-                    DBHelper.AddItem(instance, "tb_KhachHang");
                     DisableTextInput();
                     if (this.extra == null)
                     {
+                        DatabaseService.AddItem(instance, "tb_KhachHang");
                         this.btnLuu.Text = "Tạo Mới";
                     }
                     else
                     {
+                        DatabaseService.UpdateItem(instance, "tb_KhachHang", "MaKhachHang");
                         this.btnLuu.Text = "Sửa";
                     }
                     this.mode = MODE_VIEW;
                 }
+            }
+        }
+
+        private void FormThongTinKhachHang_Load(object sender, EventArgs e)
+        {
+            if (extra != null)
+            {
+                object obj = DatabaseService.GetItem("tb_KhachHang", "MaKhachHang", extra, "QLTrungTamTiengAnh.Object.KhachHang");
+                BindData(obj);
             }
         }
     }
