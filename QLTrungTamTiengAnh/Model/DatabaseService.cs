@@ -186,16 +186,16 @@ namespace QLTrungTamTiengAnh.Model
         public static string getCommandString(object obj)
         {
             if (obj == null) return null;
-            if (obj.GetType() == typeof(string))
+            else if (obj.GetType() == typeof(string))
             {
                 return "N'" + obj.ToString() + "'";
             }
-            if (obj.GetType() == typeof(DateTime))
+            else if (obj.GetType() == typeof(DateTime))
             {
                 DateTime dateTime = ((DateTime)obj);
                 if (dateTime == new DateTime())
                 {
-                    return null;
+                    return "NULL";
                 }
                 return "CONVERT(DATE, '" + dateTime.ToShortDateString() + "', 103)";
             }

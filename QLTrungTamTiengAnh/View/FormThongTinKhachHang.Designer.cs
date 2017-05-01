@@ -41,7 +41,12 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.TabIndex = 7;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.TabIndex = 8;
             // 
             // groupPanel1
             // 
@@ -84,6 +89,7 @@
             // 
             // textLabel1
             // 
+            this.textLabel1.Actived = false;
             this.textLabel1.BackColor = System.Drawing.Color.Transparent;
             this.textLabel1.Constrains = "";
             this.textLabel1.Label = "Mã Khách Hàng";
@@ -91,10 +97,11 @@
             this.textLabel1.Name = "textLabel1";
             this.textLabel1.PropertyName = "MaKhachHang";
             this.textLabel1.Size = new System.Drawing.Size(200, 39);
-            this.textLabel1.TabIndex = 0;
+            this.textLabel1.TabIndex = 9;
             // 
             // textLabel2
             // 
+            this.textLabel2.Actived = true;
             this.textLabel2.BackColor = System.Drawing.Color.Transparent;
             this.textLabel2.Constrains = "NotEmpty";
             this.textLabel2.Label = "Tên Khách Hàng";
@@ -106,6 +113,7 @@
             // 
             // textLabel3
             // 
+            this.textLabel3.Actived = true;
             this.textLabel3.BackColor = System.Drawing.Color.Transparent;
             this.textLabel3.Constrains = "DateTime";
             this.textLabel3.Label = "Ngày Sinh";
@@ -113,10 +121,11 @@
             this.textLabel3.Name = "textLabel3";
             this.textLabel3.PropertyName = "NgaySinh";
             this.textLabel3.Size = new System.Drawing.Size(200, 39);
-            this.textLabel3.TabIndex = 0;
+            this.textLabel3.TabIndex = 1;
             // 
             // textLabel4
             // 
+            this.textLabel4.Actived = true;
             this.textLabel4.BackColor = System.Drawing.Color.Transparent;
             this.textLabel4.Constrains = "";
             this.textLabel4.Label = "Địa Chỉ";
@@ -124,10 +133,11 @@
             this.textLabel4.Name = "textLabel4";
             this.textLabel4.PropertyName = "DiaChi";
             this.textLabel4.Size = new System.Drawing.Size(200, 39);
-            this.textLabel4.TabIndex = 0;
+            this.textLabel4.TabIndex = 2;
             // 
             // textLabel5
             // 
+            this.textLabel5.Actived = true;
             this.textLabel5.BackColor = System.Drawing.Color.Transparent;
             this.textLabel5.Constrains = "Integer";
             this.textLabel5.Label = "Số Điện Thoại";
@@ -135,10 +145,11 @@
             this.textLabel5.Name = "textLabel5";
             this.textLabel5.PropertyName = "SoDienThoai";
             this.textLabel5.Size = new System.Drawing.Size(200, 39);
-            this.textLabel5.TabIndex = 0;
+            this.textLabel5.TabIndex = 3;
             // 
             // textLabel6
             // 
+            this.textLabel6.Actived = true;
             this.textLabel6.BackColor = System.Drawing.Color.Transparent;
             this.textLabel6.Constrains = "";
             this.textLabel6.Label = "Email";
@@ -146,10 +157,11 @@
             this.textLabel6.Name = "textLabel6";
             this.textLabel6.PropertyName = "Email";
             this.textLabel6.Size = new System.Drawing.Size(200, 39);
-            this.textLabel6.TabIndex = 0;
+            this.textLabel6.TabIndex = 4;
             // 
             // textLabel7
             // 
+            this.textLabel7.Actived = true;
             this.textLabel7.BackColor = System.Drawing.Color.Transparent;
             this.textLabel7.Constrains = "";
             this.textLabel7.Label = "Trường";
@@ -157,10 +169,11 @@
             this.textLabel7.Name = "textLabel7";
             this.textLabel7.PropertyName = "Truong";
             this.textLabel7.Size = new System.Drawing.Size(200, 39);
-            this.textLabel7.TabIndex = 0;
+            this.textLabel7.TabIndex = 5;
             // 
             // textLabel8
             // 
+            this.textLabel8.Actived = true;
             this.textLabel8.BackColor = System.Drawing.Color.Transparent;
             this.textLabel8.Constrains = "";
             this.textLabel8.Label = "Chuyên Ngành";
@@ -168,7 +181,7 @@
             this.textLabel8.Name = "textLabel8";
             this.textLabel8.PropertyName = "ChuyenNganh";
             this.textLabel8.Size = new System.Drawing.Size(200, 39);
-            this.textLabel8.TabIndex = 0;
+            this.textLabel8.TabIndex = 6;
             // 
             // FormThongTinKhachHang
             // 
