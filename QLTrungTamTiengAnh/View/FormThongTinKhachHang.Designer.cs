@@ -89,7 +89,7 @@
             // 
             // textLabel1
             // 
-            this.textLabel1.Actived = false;
+            this.textLabel1.Editable = false;
             this.textLabel1.BackColor = System.Drawing.Color.Transparent;
             this.textLabel1.Constrains = "";
             this.textLabel1.Label = "Mã Khách Hàng";
@@ -101,7 +101,7 @@
             // 
             // textLabel2
             // 
-            this.textLabel2.Actived = true;
+            this.textLabel2.Editable = true;
             this.textLabel2.BackColor = System.Drawing.Color.Transparent;
             this.textLabel2.Constrains = "NotEmpty";
             this.textLabel2.Label = "Tên Khách Hàng";
@@ -113,7 +113,7 @@
             // 
             // textLabel3
             // 
-            this.textLabel3.Actived = true;
+            this.textLabel3.Editable = true;
             this.textLabel3.BackColor = System.Drawing.Color.Transparent;
             this.textLabel3.Constrains = "DateTime";
             this.textLabel3.Label = "Ngày Sinh";
@@ -125,7 +125,7 @@
             // 
             // textLabel4
             // 
-            this.textLabel4.Actived = true;
+            this.textLabel4.Editable = true;
             this.textLabel4.BackColor = System.Drawing.Color.Transparent;
             this.textLabel4.Constrains = "";
             this.textLabel4.Label = "Địa Chỉ";
@@ -137,7 +137,7 @@
             // 
             // textLabel5
             // 
-            this.textLabel5.Actived = true;
+            this.textLabel5.Editable = true;
             this.textLabel5.BackColor = System.Drawing.Color.Transparent;
             this.textLabel5.Constrains = "Integer";
             this.textLabel5.Label = "Số Điện Thoại";
@@ -149,7 +149,7 @@
             // 
             // textLabel6
             // 
-            this.textLabel6.Actived = true;
+            this.textLabel6.Editable = true;
             this.textLabel6.BackColor = System.Drawing.Color.Transparent;
             this.textLabel6.Constrains = "";
             this.textLabel6.Label = "Email";
@@ -161,7 +161,7 @@
             // 
             // textLabel7
             // 
-            this.textLabel7.Actived = true;
+            this.textLabel7.Editable = true;
             this.textLabel7.BackColor = System.Drawing.Color.Transparent;
             this.textLabel7.Constrains = "";
             this.textLabel7.Label = "Trường";
@@ -173,7 +173,7 @@
             // 
             // textLabel8
             // 
-            this.textLabel8.Actived = true;
+            this.textLabel8.Editable = true;
             this.textLabel8.BackColor = System.Drawing.Color.Transparent;
             this.textLabel8.Constrains = "";
             this.textLabel8.Label = "Chuyên Ngành";

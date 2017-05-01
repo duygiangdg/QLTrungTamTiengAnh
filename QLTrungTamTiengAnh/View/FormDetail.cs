@@ -71,7 +71,7 @@ namespace QLTrungTamTiengAnh.View
                 if (control.GetType() == typeof(TextLabel))
                 {
                     TextLabel textLabel = ((TextLabel)control);
-                    if (textLabel.Actived) textLabel.Enabled = true;
+                    if (textLabel.Editable) textLabel.Enabled = true;
                 }
             }
         }

@@ -15,7 +15,7 @@ namespace QLTrungTamTiengAnh.View
         private string label = "Label";
         private string constrains = "";
         private string propertyName = "";
-        private bool actived = true;
+        private bool editable = true;
         private DevComponents.DotNetBar.Controls.TextBoxX textBox;
         private DevComponents.DotNetBar.LabelX textLabel;
 
@@ -59,17 +59,17 @@ namespace QLTrungTamTiengAnh.View
             }
         }
 
-        public bool Actived
+        public bool Editable
         {
             get
             {
-                return actived;
+                return editable;
             }
 
             set
             {
-                actived = value;
-                this.textBox.Enabled = actived;
+                editable = value;
+                this.textBox.Enabled = editable;
             }
         }
 
