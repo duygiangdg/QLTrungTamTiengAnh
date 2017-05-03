@@ -1,4 +1,5 @@
-﻿using QLTrungTamTiengAnh.Model;
+﻿using QLTrungTamTiengAnh.Component;
+using QLTrungTamTiengAnh.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

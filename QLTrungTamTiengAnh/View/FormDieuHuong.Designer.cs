@@ -50,14 +50,14 @@
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dgvDSKhachHang = new QLTrungTamTiengAnh.Component.MDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabControlPanel2.SuspendLayout();
             this.panelEx1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelEx2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -300,7 +300,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.expandablePanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelEx2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dataGridViewX1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dgvDSKhachHang, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 91);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -387,9 +387,11 @@
             this.textBoxX1.Size = new System.Drawing.Size(534, 20);
             this.textBoxX1.TabIndex = 1;
             // 
-            // dataGridViewX1
+            // dgvDSKhachHang
             // 
-            this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSKhachHang.AllowUserToAddRows = false;
+            this.dgvDSKhachHang.AllowUserToDeleteRows = false;
+            this.dgvDSKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -397,13 +399,16 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewX1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.dataGridViewX1.Location = new System.Drawing.Point(209, 43);
-            this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.Size = new System.Drawing.Size(603, 369);
-            this.dataGridViewX1.TabIndex = 2;
+            this.dgvDSKhachHang.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDSKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.dgvDSKhachHang.Location = new System.Drawing.Point(209, 43);
+            this.dgvDSKhachHang.MultiSelect = false;
+            this.dgvDSKhachHang.Name = "dgvDSKhachHang";
+            this.dgvDSKhachHang.ReadOnly = true;
+            this.dgvDSKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDSKhachHang.Size = new System.Drawing.Size(603, 369);
+            this.dgvDSKhachHang.TabIndex = 2;
             // 
             // FormDieuHuong
             // 
@@ -412,14 +417,15 @@
             this.ClientSize = new System.Drawing.Size(817, 538);
             this.Controls.Add(this.tabControl1);
             this.Name = "FormDieuHuong";
-            this.Text = "FormDieuHuong";
+            this.Text = "Phần Mềm Quản Lý Trung Tâm Tiếng Anh E-Speed";
+            this.Load += new System.EventHandler(this.FormDieuHuong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabControlPanel2.ResumeLayout(false);
             this.panelEx1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelEx2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -446,6 +452,6 @@
         private DevComponents.DotNetBar.PanelEx panelEx2;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
+        private Component.MDataGridView dgvDSKhachHang;
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace QLTrungTamTiengAnh.View
+﻿using QLTrungTamTiengAnh.Component;
+
+namespace QLTrungTamTiengAnh.View
 {
     partial class FormThongTinKhachHang
     {
@@ -28,14 +30,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textLabel1 = new QLTrungTamTiengAnh.View.TextLabel();
-            this.textLabel2 = new QLTrungTamTiengAnh.View.TextLabel();
-            this.textLabel3 = new QLTrungTamTiengAnh.View.TextLabel();
-            this.textLabel4 = new QLTrungTamTiengAnh.View.TextLabel();
-            this.textLabel5 = new QLTrungTamTiengAnh.View.TextLabel();
-            this.textLabel6 = new QLTrungTamTiengAnh.View.TextLabel();
-            this.textLabel7 = new QLTrungTamTiengAnh.View.TextLabel();
-            this.textLabel8 = new QLTrungTamTiengAnh.View.TextLabel();
+            this.textLabel1 = new TextLabel();
+            this.textLabel2 = new TextLabel();
+            this.textLabel3 = new TextLabel();
+            this.textLabel4 = new TextLabel();
+            this.textLabel5 = new TextLabel();
+            this.textLabel6 = new TextLabel();
+            this.textLabel7 = new TextLabel();
+            this.textLabel8 = new TextLabel();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
             // 

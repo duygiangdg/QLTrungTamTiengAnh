@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLTrungTamTiengAnh.View
+namespace QLTrungTamTiengAnh.Component
 {
     class TextLabel : Panel
     {

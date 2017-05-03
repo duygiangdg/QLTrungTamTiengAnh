@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLTrungTamTiengAnh.View
+namespace QLTrungTamTiengAnh.Component
 {
-    class CustomDGV : DataGridViewX
+    class MDataGridView : DataGridViewX
     {
-        public CustomDGV()
+        public MDataGridView()
         {
             this.AllowUserToAddRows = false;
             this.AllowUserToDeleteRows = false;

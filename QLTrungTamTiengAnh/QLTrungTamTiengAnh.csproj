@@ -55,7 +55,7 @@
     <Compile Include="Model\DataConverter.cs" />
     <Compile Include="Control\Setting.cs" />
     <Compile Include="Model\DataIO.cs" />
-    <Compile Include="View\CustomDGV.cs">
+    <Compile Include="Component\MDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\FormDieuHuong.cs">
@@ -64,7 +64,7 @@
     <Compile Include="View\FormDieuHuong.Designer.cs">
       <DependentUpon>FormDieuHuong.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TextLabel.cs">
+    <Compile Include="Component\TextLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\FormDetail.cs">

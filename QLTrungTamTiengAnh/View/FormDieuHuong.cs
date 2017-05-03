@@ -16,5 +16,10 @@ namespace QLTrungTamTiengAnh.View
         {
             InitializeComponent();
         }
+
+        private void FormDieuHuong_Load(object sender, EventArgs e)
+        {
+            dgvDSKhachHang.BindData("vw_KhachHang");
+        }
     }
 }
