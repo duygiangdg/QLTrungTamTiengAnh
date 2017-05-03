@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Model
 {
-    public class DatabaseService
+    public class DataIO
     {
         private static SqlConnector con = new SqlConnector();
         private static SqlCommand cmd = new SqlCommand();
@@ -51,7 +51,7 @@ namespace QLTrungTamTiengAnh.Model
                 con.OpenConn();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
-                obj = DataHelper.ConvertDataToArray(dt, className)[0];
+                obj = DataConverter.ConvertDataToArray(dt, className)[0];
                 con.CloseConn();
             }
             catch (Exception ex)

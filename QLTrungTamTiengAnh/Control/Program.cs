@@ -17,7 +17,7 @@ namespace QLTrungTamTiengAnh.Control
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTranhChinh());
+            Application.Run(new FormDieuHuong());
         }
     }
 }

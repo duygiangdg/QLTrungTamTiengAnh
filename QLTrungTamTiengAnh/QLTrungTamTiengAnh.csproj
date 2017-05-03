@@ -34,7 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
-    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
     <Reference Include="DevComponents.Instrumentation, Version=14.0.0.19, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,9 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\DataHelper.cs" />
+    <Compile Include="Model\DataConverter.cs" />
     <Compile Include="Control\Setting.cs" />
-    <Compile Include="Model\DatabaseService.cs" />
+    <Compile Include="Model\DataIO.cs" />
+    <Compile Include="View\CustomDGV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\FormDieuHuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDieuHuong.Designer.cs">
+      <DependentUpon>FormDieuHuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TextLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -66,12 +78,6 @@
     </Compile>
     <Compile Include="View\FormThongTinKhachHang.Designer.cs">
       <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FormTrangChinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormTrangChinh.Designer.cs">
-      <DependentUpon>FormTrangChinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\SqlConnector.cs" />
     <Compile Include="Object\HocPhiHV.cs" />
@@ -100,11 +106,11 @@
     <EmbeddedResource Include="View\FormDetail.resx">
       <DependentUpon>FormDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDieuHuong.resx">
+      <DependentUpon>FormDieuHuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormThongTinKhachHang.resx">
       <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormTrangChinh.resx">
-      <DependentUpon>FormTrangChinh.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -39,12 +39,12 @@ namespace QLTrungTamTiengAnh.View
                     DisableTextInput();
                     if (this.extra == null)
                     {
-                        DatabaseService.AddItem(instance, "tb_KhachHang");
+                        DataIO.AddItem(instance, "tb_KhachHang");
                         this.btnLuu.Text = "Tạo Mới";
                     }
                     else
                     {
-                        DatabaseService.UpdateItem(instance, "tb_KhachHang", "MaKhachHang");
+                        DataIO.UpdateItem(instance, "tb_KhachHang", "MaKhachHang");
                         this.btnLuu.Text = "Sửa";
                     }
                     this.mode = MODE_VIEW;
@@ -56,7 +56,7 @@ namespace QLTrungTamTiengAnh.View
         {
             if (extra != null)
             {
-                object obj = DatabaseService.GetItem("tb_KhachHang", "MaKhachHang", extra, "QLTrungTamTiengAnh.Object.KhachHang");
+                object obj = DataIO.GetItem("tb_KhachHang", "MaKhachHang", extra, "QLTrungTamTiengAnh.Object.KhachHang");
                 BindData(obj);
             }
         }
