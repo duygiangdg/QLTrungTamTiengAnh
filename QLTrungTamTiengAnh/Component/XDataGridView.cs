@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.Component
 {
-    class MDataGridView : DataGridViewX
+    class XDataGridView : DataGridViewX
     {
-        public MDataGridView()
+        public XDataGridView()
         {
-            this.AllowUserToAddRows = false;
-            this.AllowUserToDeleteRows = false;
-            this.MultiSelect = false;
-            this.ReadOnly = true;
-            this.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+
         }
         public void BindData(string tableName)
         {

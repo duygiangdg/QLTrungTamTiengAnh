@@ -55,7 +55,7 @@
     <Compile Include="Model\DataConverter.cs" />
     <Compile Include="Control\Setting.cs" />
     <Compile Include="Model\DataIO.cs" />
-    <Compile Include="Component\MDataGridView.cs">
+    <Compile Include="Component\XDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="View\FormDieuHuong.cs">
@@ -72,6 +72,24 @@
     </Compile>
     <Compile Include="View\FormDetail.Designer.cs">
       <DependentUpon>FormDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDanhSachHocVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDanhSachHocVien.Designer.cs">
+      <DependentUpon>FormDanhSachHocVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDanhSachKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDanhSachKhachHang.Designer.cs">
+      <DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormHocPhi.Designer.cs">
+      <DependentUpon>FormHocPhi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormThongTinKhachHang.cs">
       <SubType>Form</SubType>
@@ -108,6 +126,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormDieuHuong.resx">
       <DependentUpon>FormDieuHuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDanhSachHocVien.resx">
+      <DependentUpon>FormDanhSachHocVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDanhSachKhachHang.resx">
+      <DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormHocPhi.resx">
+      <DependentUpon>FormHocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormThongTinKhachHang.resx">
       <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
