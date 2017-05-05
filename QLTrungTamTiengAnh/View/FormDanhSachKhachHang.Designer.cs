@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDanhSachKhachHang));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
@@ -39,10 +38,10 @@
             this.dgvDSKhachHang = new QLTrungTamTiengAnh.Component.XDataGridView();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
+            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
@@ -235,36 +234,6 @@
             // 
             this.ribbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // buttonItem5
-            // 
-            this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem5.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem5.Image = global::QLTrungTamTiengAnh.Properties.Resources.register;
-            this.buttonItem5.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.Text = "Đăng Ký   Học";
-            // 
-            // buttonItem6
-            // 
-            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem6.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem6.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem6.Image")));
-            this.buttonItem6.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.Text = "Xem Nhật   Ký";
-            // 
-            // buttonItem7
-            // 
-            this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem7.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem7.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem7.Image")));
-            this.buttonItem7.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem7.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem7.Name = "buttonItem7";
-            this.buttonItem7.Text = "Gửi         Email";
-            // 
             // ribbonBar1
             // 
             this.ribbonBar1.AutoOverflowEnabled = true;
@@ -297,6 +266,36 @@
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
+            // buttonItem5
+            // 
+            this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem5.FixedSize = new System.Drawing.Size(65, 65);
+            this.buttonItem5.Image = global::QLTrungTamTiengAnh.Properties.Resources.register;
+            this.buttonItem5.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.Text = "Đăng Ký   Học";
+            // 
+            // buttonItem6
+            // 
+            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem6.FixedSize = new System.Drawing.Size(65, 65);
+            this.buttonItem6.Image = global::QLTrungTamTiengAnh.Properties.Resources.note;
+            this.buttonItem6.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.Text = "Xem Nhật   Ký";
+            // 
+            // buttonItem7
+            // 
+            this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem7.FixedSize = new System.Drawing.Size(65, 65);
+            this.buttonItem7.Image = global::QLTrungTamTiengAnh.Properties.Resources.gmail;
+            this.buttonItem7.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.buttonItem7.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem7.Name = "buttonItem7";
+            this.buttonItem7.Text = "Gửi         Email";
+            // 
             // buttonItem1
             // 
             this.buttonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
@@ -311,7 +310,7 @@
             // 
             this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem2.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem2.Image = ((System.Drawing.Image)(resources.GetObject("buttonItem2.Image")));
+            this.buttonItem2.Image = global::QLTrungTamTiengAnh.Properties.Resources.profile;
             this.buttonItem2.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem2.Name = "buttonItem2";

@@ -238,7 +238,6 @@
             // 
             this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem5.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem5.Image = global::QLTrungTamTiengAnh.Properties.Resources.register;
             this.buttonItem5.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem5.Name = "buttonItem5";
@@ -248,7 +247,6 @@
             // 
             this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem6.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem6.Image = global::QLTrungTamTiengAnh.Properties.Resources.profile;
             this.buttonItem6.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem6.Name = "buttonItem6";
@@ -258,7 +256,6 @@
             // 
             this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem7.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem7.Image = global::QLTrungTamTiengAnh.Properties.Resources.profile;
             this.buttonItem7.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem7.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem7.Name = "buttonItem7";
@@ -300,7 +297,6 @@
             // 
             this.buttonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem1.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem1.Image = global::QLTrungTamTiengAnh.Properties.Resources.add_user;
             this.buttonItem1.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem1.Name = "buttonItem1";
@@ -310,7 +306,6 @@
             // 
             this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem2.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem2.Image = global::QLTrungTamTiengAnh.Properties.Resources.profile;
             this.buttonItem2.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem2.Name = "buttonItem2";
@@ -320,7 +315,6 @@
             // 
             this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem3.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem3.Image = global::QLTrungTamTiengAnh.Properties.Resources.edit_user;
             this.buttonItem3.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem3.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem3.Name = "buttonItem3";
@@ -330,7 +324,6 @@
             // 
             this.buttonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem4.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem4.Image = global::QLTrungTamTiengAnh.Properties.Resources.delete_user;
             this.buttonItem4.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem4.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem4.Name = "buttonItem4";

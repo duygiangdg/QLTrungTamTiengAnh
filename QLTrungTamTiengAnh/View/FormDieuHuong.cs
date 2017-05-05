@@ -49,7 +49,7 @@ namespace QLTrungTamTiengAnh.View
 
         private void btnThemKhachHang_Click(object sender, EventArgs e)
         {
-            CreateTab(new FormThongTinKhachHang());
+            CreateTab(new FormThemKhachHang());
         }
 
         private void btnDSKhachHang_Click(object sender, EventArgs e)
@@ -65,6 +65,11 @@ namespace QLTrungTamTiengAnh.View
         private void btnHocPhi_Click(object sender, EventArgs e)
         {
             CreateTab(new FormHocPhi());
+        }
+
+        private void btnDiaChi_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormDanhMucDiaChi());
         }
     }
 }

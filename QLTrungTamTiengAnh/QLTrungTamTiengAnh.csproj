@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,11 +67,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBQLTrungTamTiengAnhDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBQLTrungTamTiengAnhDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Model\DataConverter.cs" />
     <Compile Include="Control\Setting.cs" />
     <Compile Include="Model\DataIO.cs" />
     <Compile Include="Component\XDataGridView.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QLBANHANGDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBANHANGDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDanhMucDiaChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDanhMucDiaChi.Designer.cs">
+      <DependentUpon>FormDanhMucDiaChi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormDieuHuong.cs">
       <SubType>Form</SubType>
@@ -91,6 +122,12 @@
     <Compile Include="View\FormHocPhi.Designer.cs">
       <DependentUpon>FormHocPhi.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormThemKhachHang.Designer.cs">
+      <DependentUpon>FormThemKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormThongTinKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +158,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\FormDanhMucDiaChi.resx">
+      <DependentUpon>FormDanhMucDiaChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDetail.resx">
       <DependentUpon>FormDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,9 +176,23 @@
     <EmbeddedResource Include="View\FormHocPhi.resx">
       <DependentUpon>FormHocPhi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormThemKhachHang.resx">
+      <DependentUpon>FormThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormThongTinKhachHang.resx">
       <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DBQLTrungTamTiengAnhDataSet.xsc">
+      <DependentUpon>DBQLTrungTamTiengAnhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBQLTrungTamTiengAnhDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBQLTrungTamTiengAnhDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBQLTrungTamTiengAnhDataSet.xss">
+      <DependentUpon>DBQLTrungTamTiengAnhDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -153,46 +207,54 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user.png" />
+    <None Include="QLBANHANGDataSet.xsc">
+      <DependentUpon>QLBANHANGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBANHANGDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBANHANGDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBANHANGDataSet.xss">
+      <DependentUpon>QLBANHANGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\add_user.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\delete_user.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user %282%29.png" />
+    <None Include="Resources\edit_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\map.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\profile.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\funnel.png" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\register.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\delete.png" />
+    <None Include="Resources\note.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\edit.png" />
+    <None Include="Resources\gmail.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\search.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\a-plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\classroom.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\professor-with-clipboard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\upload.png" />
+    <None Include="Resources\map_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

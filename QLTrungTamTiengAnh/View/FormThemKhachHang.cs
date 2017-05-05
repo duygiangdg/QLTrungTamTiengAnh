@@ -1,5 +1,4 @@
-﻿using DevComponents.DotNetBar;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,13 +10,11 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormHocPhi : Form
+    public partial class FormThemKhachHang : Form
     {
-        public FormHocPhi()
+        public FormThemKhachHang()
         {
             InitializeComponent();
-            dgvHocPhi.BindData("vw_MucHocPhi");
-            dgvKhuyenMai.BindData("vw_KhuyenMai");
         }
     }
 }
