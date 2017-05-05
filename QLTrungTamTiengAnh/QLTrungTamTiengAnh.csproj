@@ -67,21 +67,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBQLTrungTamTiengAnhDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DBQLTrungTamTiengAnhDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Model\DataConverter.cs" />
     <Compile Include="Control\Setting.cs" />
     <Compile Include="Model\DataIO.cs" />
     <Compile Include="Component\XDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="QLBANHANGDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLBANHANGDataSet.xsd</DependentUpon>
+    <Compile Include="View\FormDangKyHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDangKyHoc.Designer.cs">
+      <DependentUpon>FormDangKyHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormDanhMucDiaChi.cs">
       <SubType>Form</SubType>
@@ -104,17 +100,17 @@
     <Compile Include="View\FormDetail.Designer.cs">
       <DependentUpon>FormDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormDanhSachHocVien.cs">
+    <Compile Include="View\FormQLHocVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormDanhSachHocVien.Designer.cs">
-      <DependentUpon>FormDanhSachHocVien.cs</DependentUpon>
+    <Compile Include="View\FormQLHocVien.Designer.cs">
+      <DependentUpon>FormQLHocVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormDanhSachKhachHang.cs">
+    <Compile Include="View\FormQLKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormDanhSachKhachHang.Designer.cs">
-      <DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
+    <Compile Include="View\FormQLKhachHang.Designer.cs">
+      <DependentUpon>FormQLKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormHocPhi.cs">
       <SubType>Form</SubType>
@@ -158,6 +154,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\FormDangKyHoc.resx">
+      <DependentUpon>FormDangKyHoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDanhMucDiaChi.resx">
       <DependentUpon>FormDanhMucDiaChi.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,11 +166,11 @@
     <EmbeddedResource Include="View\FormDieuHuong.resx">
       <DependentUpon>FormDieuHuong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormDanhSachHocVien.resx">
-      <DependentUpon>FormDanhSachHocVien.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormQLHocVien.resx">
+      <DependentUpon>FormQLHocVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormDanhSachKhachHang.resx">
-      <DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormQLKhachHang.resx">
+      <DependentUpon>FormQLKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormHocPhi.resx">
       <DependentUpon>FormHocPhi.cs</DependentUpon>
@@ -182,17 +181,6 @@
     <EmbeddedResource Include="View\FormThongTinKhachHang.resx">
       <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DBQLTrungTamTiengAnhDataSet.xsc">
-      <DependentUpon>DBQLTrungTamTiengAnhDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="DBQLTrungTamTiengAnhDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DBQLTrungTamTiengAnhDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="DBQLTrungTamTiengAnhDataSet.xss">
-      <DependentUpon>DBQLTrungTamTiengAnhDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -207,17 +195,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLBANHANGDataSet.xsc">
-      <DependentUpon>QLBANHANGDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLBANHANGDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLBANHANGDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLBANHANGDataSet.xss">
-      <DependentUpon>QLBANHANGDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\add_user.png" />
   </ItemGroup>
   <ItemGroup>

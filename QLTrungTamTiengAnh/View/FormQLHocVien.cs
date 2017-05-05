@@ -1,5 +1,4 @@
-﻿using QLTrungTamTiengAnh.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,16 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormDanhMucDiaChi : Form
+    public partial class FormQLHocVien : Form
     {
-        public FormDanhMucDiaChi()
+        public FormQLHocVien()
         {
             InitializeComponent();
         }
 
-        private void FormDanhMucDiaChi_Load(object sender, EventArgs e)
+        private void FormDanhSachHocVien_Load(object sender, EventArgs e)
         {
-
+            dgvDSHocVien.BindData("vw_HocVien");
         }
     }
 }

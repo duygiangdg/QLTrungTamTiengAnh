@@ -47,29 +47,14 @@ namespace QLTrungTamTiengAnh.View
             form.Show();
         }
 
-        private void btnThemKhachHang_Click(object sender, EventArgs e)
+        private void btnQLKhachHang_Click(object sender, EventArgs e)
         {
-            CreateTab(new FormThemKhachHang());
+            CreateTab(new FormQLKhachHang());
         }
 
-        private void btnDSKhachHang_Click(object sender, EventArgs e)
+        private void btnQLHocVien_Click(object sender, EventArgs e)
         {
-            CreateTab(new FormDanhSachKhachHang());
-        }
-
-        private void btnDSHocVien_Click(object sender, EventArgs e)
-        {
-            CreateTab(new FormDanhSachHocVien());
-        }
-
-        private void btnHocPhi_Click(object sender, EventArgs e)
-        {
-            CreateTab(new FormHocPhi());
-        }
-
-        private void btnDiaChi_Click(object sender, EventArgs e)
-        {
-            CreateTab(new FormDanhMucDiaChi());
+            CreateTab(new FormQLHocVien());
         }
     }
 }

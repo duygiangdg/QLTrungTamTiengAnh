@@ -10,16 +10,21 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormDanhSachHocVien : Form
+    public partial class FormQLKhachHang : Form
     {
-        public FormDanhSachHocVien()
+        public FormQLKhachHang()
         {
             InitializeComponent();
         }
 
-        private void FormDanhSachHocVien_Load(object sender, EventArgs e)
+        private void FormDanhSachKhachHang_Load(object sender, EventArgs e)
         {
-            dgvDSHocVien.BindData("vw_HocVien");
+            dgvDSKhachHang.BindData("vw_KhachHang");
+        }
+
+        private void expandablePanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

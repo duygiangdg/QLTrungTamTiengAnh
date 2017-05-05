@@ -1,6 +1,6 @@
 ﻿namespace QLTrungTamTiengAnh.View
 {
-    partial class FormDanhSachKhachHang
+    partial class FormQLHocVien
     {
         /// <summary>
         /// Required designer variable.
@@ -31,24 +31,24 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.dgvDSHocVien = new QLTrungTamTiengAnh.Component.XDataGridView();
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dgvDSKhachHang = new QLTrungTamTiengAnh.Component.XDataGridView();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
-            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem7 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).BeginInit();
             this.panelEx2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).BeginInit();
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,16 +60,46 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.dgvDSHocVien, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.expandablePanel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelEx2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.dgvDSKhachHang, 1, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(1, 96);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(801, 456);
-            this.tableLayoutPanel1.TabIndex = 7;
+            this.tableLayoutPanel1.TabIndex = 9;
+            // 
+            // dgvDSHocVien
+            // 
+            this.dgvDSHocVien.AllowUserToAddRows = false;
+            this.dgvDSHocVien.AllowUserToDeleteRows = false;
+            this.dgvDSHocVien.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDSHocVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDSHocVien.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDSHocVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvDSHocVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSHocVien.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvDSHocVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSHocVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvDSHocVien.HighlightSelectedColumnHeaders = false;
+            this.dgvDSHocVien.Location = new System.Drawing.Point(209, 43);
+            this.dgvDSHocVien.MultiSelect = false;
+            this.dgvDSHocVien.Name = "dgvDSHocVien";
+            this.dgvDSHocVien.ReadOnly = true;
+            this.dgvDSHocVien.RowHeadersVisible = false;
+            this.dgvDSHocVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDSHocVien.Size = new System.Drawing.Size(589, 410);
+            this.dgvDSHocVien.TabIndex = 3;
             // 
             // expandablePanel1
             // 
@@ -152,36 +182,6 @@
             this.labelX1.Text = "Tìm Kiếm";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // dgvDSKhachHang
-            // 
-            this.dgvDSKhachHang.AllowUserToAddRows = false;
-            this.dgvDSKhachHang.AllowUserToDeleteRows = false;
-            this.dgvDSKhachHang.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvDSKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDSKhachHang.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDSKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvDSKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSKhachHang.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDSKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvDSKhachHang.HighlightSelectedColumnHeaders = false;
-            this.dgvDSKhachHang.Location = new System.Drawing.Point(209, 43);
-            this.dgvDSKhachHang.MultiSelect = false;
-            this.dgvDSKhachHang.Name = "dgvDSKhachHang";
-            this.dgvDSKhachHang.ReadOnly = true;
-            this.dgvDSKhachHang.RowHeadersVisible = false;
-            this.dgvDSKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSKhachHang.Size = new System.Drawing.Size(589, 410);
-            this.dgvDSKhachHang.TabIndex = 2;
-            // 
             // panelEx1
             // 
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
@@ -201,7 +201,7 @@
             this.panelEx1.Style.BorderWidth = 2;
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
-            this.panelEx1.TabIndex = 6;
+            this.panelEx1.TabIndex = 8;
             // 
             // ribbonBar2
             // 
@@ -233,6 +233,33 @@
             // 
             // 
             this.ribbonBar2.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // buttonItem5
+            // 
+            this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem5.FixedSize = new System.Drawing.Size(65, 65);
+            this.buttonItem5.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.Text = "Đăng Ký   Học";
+            // 
+            // buttonItem6
+            // 
+            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem6.FixedSize = new System.Drawing.Size(65, 65);
+            this.buttonItem6.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.Text = "Xem Nhật   Ký";
+            // 
+            // buttonItem7
+            // 
+            this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.buttonItem7.FixedSize = new System.Drawing.Size(65, 65);
+            this.buttonItem7.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.buttonItem7.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.buttonItem7.Name = "buttonItem7";
+            this.buttonItem7.Text = "Gửi         Email";
             // 
             // ribbonBar1
             // 
@@ -266,41 +293,10 @@
             // 
             this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
-            // buttonItem5
-            // 
-            this.buttonItem5.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem5.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem5.Image = global::QLTrungTamTiengAnh.Properties.Resources.register;
-            this.buttonItem5.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem5.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem5.Name = "buttonItem5";
-            this.buttonItem5.Text = "Đăng Ký   Học";
-            // 
-            // buttonItem6
-            // 
-            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem6.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem6.Image = global::QLTrungTamTiengAnh.Properties.Resources.note;
-            this.buttonItem6.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.Text = "Xem Nhật   Ký";
-            // 
-            // buttonItem7
-            // 
-            this.buttonItem7.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem7.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem7.Image = global::QLTrungTamTiengAnh.Properties.Resources.gmail;
-            this.buttonItem7.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem7.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem7.Name = "buttonItem7";
-            this.buttonItem7.Text = "Gửi         Email";
-            // 
             // buttonItem1
             // 
             this.buttonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem1.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem1.Image = global::QLTrungTamTiengAnh.Properties.Resources.add_user;
             this.buttonItem1.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem1.Name = "buttonItem1";
@@ -310,7 +306,6 @@
             // 
             this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem2.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem2.Image = global::QLTrungTamTiengAnh.Properties.Resources.profile;
             this.buttonItem2.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem2.Name = "buttonItem2";
@@ -320,7 +315,6 @@
             // 
             this.buttonItem3.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem3.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem3.Image = global::QLTrungTamTiengAnh.Properties.Resources.edit_user;
             this.buttonItem3.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem3.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem3.Name = "buttonItem3";
@@ -330,26 +324,24 @@
             // 
             this.buttonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
             this.buttonItem4.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem4.Image = global::QLTrungTamTiengAnh.Properties.Resources.delete_user;
             this.buttonItem4.ImageFixedSize = new System.Drawing.Size(30, 30);
             this.buttonItem4.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.buttonItem4.Name = "buttonItem4";
             this.buttonItem4.Text = "Xóa Hồ      Sơ";
             // 
-            // FormDanhSachKhachHang
+            // FormDanhSachHocVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(802, 551);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelEx1);
-            this.Name = "FormDanhSachKhachHang";
-            this.Text = "Danh Sách Khách Hàng";
-            this.Load += new System.EventHandler(this.FormDanhSachKhachHang_Load);
+            this.Name = "FormDanhSachHocVien";
+            this.Text = "Danh Sách Học Viên";
+            this.Load += new System.EventHandler(this.FormDanhSachHocVien_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).EndInit();
             this.panelEx2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).EndInit();
             this.panelEx1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -362,7 +354,6 @@
         private DevComponents.DotNetBar.PanelEx panelEx2;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private Component.XDataGridView dgvDSKhachHang;
         private DevComponents.DotNetBar.PanelEx panelEx1;
         private DevComponents.DotNetBar.RibbonBar ribbonBar2;
         private DevComponents.DotNetBar.ButtonItem buttonItem5;
@@ -373,5 +364,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem buttonItem4;
+        private Component.XDataGridView dgvDSHocVien;
     }
 }

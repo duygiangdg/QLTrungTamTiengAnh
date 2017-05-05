@@ -37,6 +37,7 @@
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.lvTinhThanh = new DevComponents.DotNetBar.Controls.ListViewEx();
+            this.tbTinhThanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
@@ -53,19 +54,15 @@
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.lvXaPhuong = new DevComponents.DotNetBar.Controls.ListViewEx();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.dBQLTrungTamTiengAnhDataSet = new QLTrungTamTiengAnh.DBQLTrungTamTiengAnhDataSet();
-            this.tbTinhThanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tb_TinhThanhTableAdapter = new QLTrungTamTiengAnh.DBQLTrungTamTiengAnhDataSetTableAdapters.tb_TinhThanhTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbTinhThanhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dBQLTrungTamTiengAnhDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTinhThanhBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -172,7 +169,6 @@
             // 
             this.lvTinhThanh.Border.Class = "ListViewBorder";
             this.lvTinhThanh.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lvTinhThanh.DataBindings.Add(new System.Windows.Forms.Binding("Tag", this.tbTinhThanhBindingSource, "TenTinhThanh", true));
             this.lvTinhThanh.Location = new System.Drawing.Point(17, 29);
             this.lvTinhThanh.Name = "lvTinhThanh";
             this.lvTinhThanh.Size = new System.Drawing.Size(233, 371);
@@ -420,20 +416,6 @@
             this.labelX3.Text = "Xã/ Phường/ Thôn";
             this.labelX3.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // dBQLTrungTamTiengAnhDataSet
-            // 
-            this.dBQLTrungTamTiengAnhDataSet.DataSetName = "DBQLTrungTamTiengAnhDataSet";
-            this.dBQLTrungTamTiengAnhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tbTinhThanhBindingSource
-            // 
-            this.tbTinhThanhBindingSource.DataMember = "tb_TinhThanh";
-            this.tbTinhThanhBindingSource.DataSource = this.dBQLTrungTamTiengAnhDataSet;
-            // 
-            // tb_TinhThanhTableAdapter
-            // 
-            this.tb_TinhThanhTableAdapter.ClearBeforeFill = true;
-            // 
             // FormDanhMucDiaChi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -447,12 +429,11 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbTinhThanhBindingSource)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dBQLTrungTamTiengAnhDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbTinhThanhBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -482,8 +463,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.Controls.ListViewEx lvXaPhuong;
-        private DBQLTrungTamTiengAnhDataSet dBQLTrungTamTiengAnhDataSet;
         private System.Windows.Forms.BindingSource tbTinhThanhBindingSource;
-        private DBQLTrungTamTiengAnhDataSetTableAdapters.tb_TinhThanhTableAdapter tb_TinhThanhTableAdapter;
     }
 }
