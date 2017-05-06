@@ -67,11 +67,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Component\IInput.cs" />
+    <Compile Include="Component\InputRegion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component\XComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component\XDateTimeInput.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component\XTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Model\DataConverter.cs" />
     <Compile Include="Control\Setting.cs" />
     <Compile Include="Model\DataIO.cs" />
     <Compile Include="Component\XDataGridView.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="View\FormCTKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCTKhachHang.Designer.cs">
+      <DependentUpon>FormCTKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormDangKyHoc.cs">
       <SubType>Form</SubType>
@@ -94,11 +113,23 @@
     <Compile Include="Component\TextLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="View\FormDetail.cs">
+    <Compile Include="View\FormInput.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormDetail.Designer.cs">
-      <DependentUpon>FormDetail.cs</DependentUpon>
+    <Compile Include="View\FormInput.Designer.cs">
+      <DependentUpon>FormInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQLGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQLGiangVien.Designer.cs">
+      <DependentUpon>FormQLGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQLHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQLHocPhan.Designer.cs">
+      <DependentUpon>FormQLHocPhan.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormQLHocVien.cs">
       <SubType>Form</SubType>
@@ -118,17 +149,11 @@
     <Compile Include="View\FormHocPhi.Designer.cs">
       <DependentUpon>FormHocPhi.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\FormThemKhachHang.cs">
+    <Compile Include="View\FormQLLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\FormThemKhachHang.Designer.cs">
-      <DependentUpon>FormThemKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FormThongTinKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormThongTinKhachHang.Designer.cs">
-      <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
+    <Compile Include="View\FormQLLopHoc.Designer.cs">
+      <DependentUpon>FormQLLopHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\SqlConnector.cs" />
     <Compile Include="Object\HocPhiHV.cs" />
@@ -154,17 +179,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\FormCTKhachHang.resx">
+      <DependentUpon>FormCTKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDangKyHoc.resx">
       <DependentUpon>FormDangKyHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormDanhMucDiaChi.resx">
       <DependentUpon>FormDanhMucDiaChi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormDetail.resx">
-      <DependentUpon>FormDetail.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDieuHuong.resx">
       <DependentUpon>FormDieuHuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormInput.resx">
+      <DependentUpon>FormInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQLGiangVien.resx">
+      <DependentUpon>FormQLGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQLHocPhan.resx">
+      <DependentUpon>FormQLHocPhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormQLHocVien.resx">
       <DependentUpon>FormQLHocVien.cs</DependentUpon>
@@ -175,11 +209,8 @@
     <EmbeddedResource Include="View\FormHocPhi.resx">
       <DependentUpon>FormHocPhi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\FormThemKhachHang.resx">
-      <DependentUpon>FormThemKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormThongTinKhachHang.resx">
-      <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="View\FormQLLopHoc.resx">
+      <DependentUpon>FormQLLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

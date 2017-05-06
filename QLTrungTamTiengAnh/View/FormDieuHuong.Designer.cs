@@ -50,9 +50,9 @@
             this.btnQLHocVien = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnQLKhachHang = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnQLHocPhan = new System.Windows.Forms.Button();
+            this.btnQLLopHoc = new System.Windows.Forms.Button();
+            this.btnQLGiangVien = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btnDiaChi = new System.Windows.Forms.Button();
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
@@ -314,9 +314,9 @@
             this.panel4.Controls.Add(this.btnQLHocVien);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnQLKhachHang);
-            this.panel4.Controls.Add(this.button15);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.button2);
+            this.panel4.Controls.Add(this.btnQLHocPhan);
+            this.panel4.Controls.Add(this.btnQLLopHoc);
+            this.panel4.Controls.Add(this.btnQLGiangVien);
             this.panel4.Controls.Add(this.button7);
             this.panel4.Controls.Add(this.btnDiaChi);
             this.panel4.Location = new System.Drawing.Point(12, 35);
@@ -365,47 +365,50 @@
             this.btnQLKhachHang.UseVisualStyleBackColor = false;
             this.btnQLKhachHang.Click += new System.EventHandler(this.btnQLKhachHang_Click);
             // 
-            // button15
+            // btnQLHocPhan
             // 
-            this.button15.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(372, 35);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(90, 185);
-            this.button15.TabIndex = 12;
-            this.button15.Text = "Quản Lý Học Phần";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button15.UseVisualStyleBackColor = false;
+            this.btnQLHocPhan.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnQLHocPhan.FlatAppearance.BorderSize = 0;
+            this.btnQLHocPhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLHocPhan.ForeColor = System.Drawing.Color.White;
+            this.btnQLHocPhan.Location = new System.Drawing.Point(372, 35);
+            this.btnQLHocPhan.Name = "btnQLHocPhan";
+            this.btnQLHocPhan.Size = new System.Drawing.Size(90, 185);
+            this.btnQLHocPhan.TabIndex = 12;
+            this.btnQLHocPhan.Text = "Quản Lý Học Phần";
+            this.btnQLHocPhan.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnQLHocPhan.UseVisualStyleBackColor = false;
+            this.btnQLHocPhan.Click += new System.EventHandler(this.btnQLHocPhan_Click);
             // 
-            // button1
+            // btnQLLopHoc
             // 
-            this.button1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(186, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 90);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Quản Lý Lớp Học";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnQLLopHoc.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnQLLopHoc.FlatAppearance.BorderSize = 0;
+            this.btnQLLopHoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLLopHoc.ForeColor = System.Drawing.Color.White;
+            this.btnQLLopHoc.Location = new System.Drawing.Point(186, 130);
+            this.btnQLLopHoc.Name = "btnQLLopHoc";
+            this.btnQLLopHoc.Size = new System.Drawing.Size(180, 90);
+            this.btnQLLopHoc.TabIndex = 12;
+            this.btnQLLopHoc.Text = "Quản Lý Lớp Học";
+            this.btnQLLopHoc.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnQLLopHoc.UseVisualStyleBackColor = false;
+            this.btnQLLopHoc.Click += new System.EventHandler(this.btnQLLopHoc_Click);
             // 
-            // button2
+            // btnQLGiangVien
             // 
-            this.button2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(186, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 90);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Quản Lý Giảng Viên";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnQLGiangVien.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnQLGiangVien.FlatAppearance.BorderSize = 0;
+            this.btnQLGiangVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQLGiangVien.ForeColor = System.Drawing.Color.White;
+            this.btnQLGiangVien.Location = new System.Drawing.Point(186, 35);
+            this.btnQLGiangVien.Name = "btnQLGiangVien";
+            this.btnQLGiangVien.Size = new System.Drawing.Size(180, 90);
+            this.btnQLGiangVien.TabIndex = 13;
+            this.btnQLGiangVien.Text = "Quản Lý Giảng Viên";
+            this.btnQLGiangVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btnQLGiangVien.UseVisualStyleBackColor = false;
+            this.btnQLGiangVien.Click += new System.EventHandler(this.btnQLGiangVien_Click);
             // 
             // button7
             // 
@@ -500,9 +503,9 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnQLHocVien;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnQLHocPhan;
+        private System.Windows.Forms.Button btnQLLopHoc;
+        private System.Windows.Forms.Button btnQLGiangVien;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnDiaChi;
     }

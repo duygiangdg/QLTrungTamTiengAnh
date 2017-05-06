@@ -21,5 +21,20 @@ namespace QLTrungTamTiengAnh.View
         {
             dgvDSHocVien.BindData("vw_HocVien");
         }
+
+        private void btnThemHoSo_Click(object sender, EventArgs e)
+        {
+            FormDieuHuong.Instance.CreateTab(new FormDangKyHoc());
+        }
+
+        private void btnXemHoSo_Click(object sender, EventArgs e)
+        {
+            FormDieuHuong.Instance.CreateTab(new FormDangKyHoc());
+        }
+
+        private void btnSuaHoSo_Click(object sender, EventArgs e)
+        {
+            FormDieuHuong.Instance.CreateTab(new FormDangKyHoc());
+        }
     }
 }

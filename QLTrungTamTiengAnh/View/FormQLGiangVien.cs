@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormThemKhachHang : Form
+    public partial class FormQLGiangVien : Form
     {
-        public FormThemKhachHang()
+        public FormQLGiangVien()
         {
             InitializeComponent();
         }
