@@ -13,7 +13,8 @@ namespace QLTrungTamTiengAnh.Component
         string Type { get; set; }
         string DisplayedName { get; set; }
         string PropertyName { get; set; }
-        object Value { get; set; }
+        object GetValue();
+        void SetValue(object obj);
         bool CheckInput();
     }
 }

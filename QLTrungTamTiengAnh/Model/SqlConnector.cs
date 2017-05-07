@@ -52,7 +52,7 @@ namespace QLTrungTamTiengAnh.Model
 
         public SqlConnector()
         {
-            StrCon = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DBQLTrungTamTiengAnh;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            StrCon = @"Data Source=118.70.128.125;Initial Catalog=EnglishCenter;Integrated Security=False;User ID=duygiang;Password=abc@123;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             Conn = new SqlConnection(StrCon);
         }
 

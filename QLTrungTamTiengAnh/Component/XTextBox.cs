@@ -82,17 +82,14 @@ namespace QLTrungTamTiengAnh.Component
             }
         }
 
-        public object Value
+        public object GetValue()
         {
-            get
-            {
-                return Text;
-            }
+            return Text;
+        }
 
-            set
-            {
-                Text = (string)value;
-            }
+        public void SetValue(object obj)
+        {
+            Text = (string)obj;
         }
 
         public bool CheckInput()

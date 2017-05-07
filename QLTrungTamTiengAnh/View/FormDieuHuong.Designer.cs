@@ -53,8 +53,6 @@
             this.btnQLHocPhan = new System.Windows.Forms.Button();
             this.btnQLLopHoc = new System.Windows.Forms.Button();
             this.btnQLGiangVien = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnDiaChi = new System.Windows.Forms.Button();
             this.tabItem1 = new DevComponents.DotNetBar.TabItem(this.components);
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
@@ -97,6 +95,7 @@
             this.tabControlPanel1.Controls.Add(this.panel2);
             this.tabControlPanel1.Controls.Add(this.panel5);
             this.tabControlPanel1.Controls.Add(this.panel3);
+            this.tabControlPanel1.Controls.Add(this.btnQLHocPhan);
             this.tabControlPanel1.Controls.Add(this.panel4);
             this.tabControlPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlPanel1.Location = new System.Drawing.Point(0, 31);
@@ -122,7 +121,7 @@
             this.panel2.Controls.Add(this.button6);
             this.panel2.Location = new System.Drawing.Point(515, 36);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(376, 229);
+            this.panel2.Size = new System.Drawing.Size(373, 229);
             this.panel2.TabIndex = 12;
             // 
             // label2
@@ -252,7 +251,7 @@
             this.panel3.Controls.Add(this.btnHocPhi);
             this.panel3.Location = new System.Drawing.Point(12, 384);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(469, 231);
+            this.panel3.Size = new System.Drawing.Size(374, 231);
             this.panel3.TabIndex = 12;
             // 
             // label3
@@ -314,14 +313,11 @@
             this.panel4.Controls.Add(this.btnQLHocVien);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnQLKhachHang);
-            this.panel4.Controls.Add(this.btnQLHocPhan);
             this.panel4.Controls.Add(this.btnQLLopHoc);
             this.panel4.Controls.Add(this.btnQLGiangVien);
-            this.panel4.Controls.Add(this.button7);
-            this.panel4.Controls.Add(this.btnDiaChi);
             this.panel4.Location = new System.Drawing.Point(12, 35);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(469, 321);
+            this.panel4.Size = new System.Drawing.Size(374, 321);
             this.panel4.TabIndex = 12;
             // 
             // btnQLHocVien
@@ -330,7 +326,7 @@
             this.btnQLHocVien.FlatAppearance.BorderSize = 0;
             this.btnQLHocVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLHocVien.ForeColor = System.Drawing.Color.White;
-            this.btnQLHocVien.Location = new System.Drawing.Point(186, 226);
+            this.btnQLHocVien.Location = new System.Drawing.Point(0, 130);
             this.btnQLHocVien.Name = "btnQLHocVien";
             this.btnQLHocVien.Size = new System.Drawing.Size(180, 90);
             this.btnQLHocVien.TabIndex = 21;
@@ -356,7 +352,7 @@
             this.btnQLKhachHang.FlatAppearance.BorderSize = 0;
             this.btnQLKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btnQLKhachHang.Location = new System.Drawing.Point(0, 226);
+            this.btnQLKhachHang.Location = new System.Drawing.Point(0, 35);
             this.btnQLKhachHang.Name = "btnQLKhachHang";
             this.btnQLKhachHang.Size = new System.Drawing.Size(180, 90);
             this.btnQLKhachHang.TabIndex = 21;
@@ -371,9 +367,9 @@
             this.btnQLHocPhan.FlatAppearance.BorderSize = 0;
             this.btnQLHocPhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQLHocPhan.ForeColor = System.Drawing.Color.White;
-            this.btnQLHocPhan.Location = new System.Drawing.Point(372, 35);
+            this.btnQLHocPhan.Location = new System.Drawing.Point(12, 261);
             this.btnQLHocPhan.Name = "btnQLHocPhan";
-            this.btnQLHocPhan.Size = new System.Drawing.Size(90, 185);
+            this.btnQLHocPhan.Size = new System.Drawing.Size(180, 90);
             this.btnQLHocPhan.TabIndex = 12;
             this.btnQLHocPhan.Text = "Quản Lý Học Phần";
             this.btnQLHocPhan.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -409,35 +405,6 @@
             this.btnQLGiangVien.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnQLGiangVien.UseVisualStyleBackColor = false;
             this.btnQLGiangVien.Click += new System.EventHandler(this.btnQLGiangVien_Click);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(0, 130);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(180, 90);
-            this.button7.TabIndex = 14;
-            this.button7.Text = "Trường Học";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // btnDiaChi
-            // 
-            this.btnDiaChi.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnDiaChi.FlatAppearance.BorderSize = 0;
-            this.btnDiaChi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDiaChi.ForeColor = System.Drawing.Color.White;
-            this.btnDiaChi.Image = global::QLTrungTamTiengAnh.Properties.Resources.map_64;
-            this.btnDiaChi.Location = new System.Drawing.Point(0, 35);
-            this.btnDiaChi.Name = "btnDiaChi";
-            this.btnDiaChi.Size = new System.Drawing.Size(180, 90);
-            this.btnDiaChi.TabIndex = 15;
-            this.btnDiaChi.Text = "Địa Chỉ";
-            this.btnDiaChi.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btnDiaChi.UseVisualStyleBackColor = false;
             // 
             // tabItem1
             // 
@@ -506,7 +473,5 @@
         private System.Windows.Forms.Button btnQLHocPhan;
         private System.Windows.Forms.Button btnQLLopHoc;
         private System.Windows.Forms.Button btnQLGiangVien;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btnDiaChi;
     }
 }

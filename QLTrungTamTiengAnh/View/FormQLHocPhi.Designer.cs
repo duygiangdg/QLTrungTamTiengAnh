@@ -1,6 +1,6 @@
 ﻿namespace QLTrungTamTiengAnh.View
 {
-    partial class FormHocPhi
+    partial class FormQLHocPhi
     {
         /// <summary>
         /// Required designer variable.

@@ -1,5 +1,4 @@
-﻿using QLTrungTamTiengAnh.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormDanhMucDiaChi : Form
+    public partial class FormThoiKhoaBieu : Form
     {
-        public FormDanhMucDiaChi()
+        public FormThoiKhoaBieu()
         {
             InitializeComponent();
-        }
-
-        private void FormDanhMucDiaChi_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

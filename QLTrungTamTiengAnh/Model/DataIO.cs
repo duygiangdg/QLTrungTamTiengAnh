@@ -14,6 +14,30 @@ namespace QLTrungTamTiengAnh.Model
         private static SqlConnector con = new SqlConnector();
         private static SqlCommand cmd = new SqlCommand();
 
+        public static DataTable GetCustom(string query)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = query;
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+
+            try
+            {
+                con.OpenConn();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                con.CloseConn();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+
+            return dt;
+        }
+
         public static DataTable GetData(string tableName)
         {
             DataTable dt = new DataTable();
@@ -188,6 +212,7 @@ namespace QLTrungTamTiengAnh.Model
             if (obj == null) return null;
             else if (obj.GetType() == typeof(string))
             {
+                if (obj.ToString().Trim().Equals("")) return "NULL";
                 return "N'" + obj.ToString() + "'";
             }
             else if (obj.GetType() == typeof(DateTime))

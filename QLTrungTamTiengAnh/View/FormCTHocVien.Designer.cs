@@ -1,6 +1,6 @@
 ﻿namespace QLTrungTamTiengAnh.View
 {
-    partial class FormDangKyHoc
+    partial class FormCTHocVien
     {
         /// <summary>
         /// Required designer variable.

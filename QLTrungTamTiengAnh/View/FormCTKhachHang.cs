@@ -1,4 +1,5 @@
 ﻿using QLTrungTamTiengAnh.Model;
+using QLTrungTamTiengAnh.Object;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,18 @@ namespace QLTrungTamTiengAnh.View
 
         private void FormCTKhachHang_Load(object sender, EventArgs e)
         {
+            DataTable dtTinhThanh = DataIO.GetCustom("SELECT DISTINCT TinhThanh FROM tb_KhachHang WHERE TinhThanh IS NOT NULL");
+            cbbTinhThanh.DataSource = dtTinhThanh;
+            cbbTinhThanh.DisplayMember = "TinhThanh";
+
+            DataTable dtQuanHuyen = DataIO.GetCustom("SELECT DISTINCT QuanHuyen FROM tb_KhachHang WHERE QuanHuyen IS NOT NULL");
+            cbbQuanHuyen.DataSource = dtQuanHuyen;
+            cbbQuanHuyen.DisplayMember = "QuanHuyen";
+
+            DataTable dtXaPhuong = DataIO.GetCustom("SELECT DISTINCT XaPhuong FROM tb_KhachHang WHERE XaPhuong IS NOT NULL");
+            cbbXaPhuong.DataSource = dtXaPhuong;
+            cbbXaPhuong.DisplayMember = "XaPhuong";
+
             if (extra != null)
             {
                 object obj = DataIO.GetItem("tb_KhachHang", "MaKhachHang", extra, "QLTrungTamTiengAnh.Object.KhachHang");
@@ -35,6 +48,7 @@ namespace QLTrungTamTiengAnh.View
                 DisableInput();
                 if (this.extra == null)
                 {
+                    ((KhachHang)instance).MaKhachHang = null;
                     DataIO.AddItem(instance, "tb_KhachHang");
                     this.btnLuu.Enabled = false;
                 }

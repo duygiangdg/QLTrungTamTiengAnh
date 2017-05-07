@@ -14,7 +14,6 @@ namespace QLTrungTamTiengAnh.Component
         string type = "Text";
         string displayedName = null;
         string propertyName = "";
-        object value = null;
 
         public bool AutoInput
         {
@@ -82,17 +81,14 @@ namespace QLTrungTamTiengAnh.Component
             }
         }
 
-        public object Value
+        public object GetValue()
         {
-            get
-            {
-                return value;
-            }
+            return Text;
+        }
 
-            set
-            {
-                this.value = value;
-            }
+        public void SetValue(object obj)
+        {
+            Text = (string)obj;
         }
 
         public bool CheckInput()

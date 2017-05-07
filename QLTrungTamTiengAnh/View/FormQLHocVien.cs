@@ -24,17 +24,17 @@ namespace QLTrungTamTiengAnh.View
 
         private void btnThemHoSo_Click(object sender, EventArgs e)
         {
-            FormDieuHuong.Instance.CreateTab(new FormDangKyHoc());
+            FormDieuHuong.Instance.CreateTab(new FormCTHocVien());
         }
 
         private void btnXemHoSo_Click(object sender, EventArgs e)
         {
-            FormDieuHuong.Instance.CreateTab(new FormDangKyHoc());
+            FormDieuHuong.Instance.CreateTab(new FormCTHocVien());
         }
 
         private void btnSuaHoSo_Click(object sender, EventArgs e)
         {
-            FormDieuHuong.Instance.CreateTab(new FormDangKyHoc());
+            FormDieuHuong.Instance.CreateTab(new FormCTHocVien());
         }
     }
 }

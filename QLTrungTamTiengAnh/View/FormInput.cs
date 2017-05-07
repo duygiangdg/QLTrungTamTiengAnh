@@ -97,7 +97,7 @@ namespace QLTrungTamTiengAnh.View
                     {
                         if (property.GetValue(obj) != null)
                         {
-                            iInput.Value = property.GetValue(obj);
+                            iInput.SetValue(property.GetValue(obj));
                         }
                     }
                 }
@@ -117,7 +117,7 @@ namespace QLTrungTamTiengAnh.View
                     PropertyInfo property = type.GetProperty(iInput.PropertyName);
                     if (property != null)
                     {
-                        property.SetValue(obj, iInput.Value);
+                        property.SetValue(obj, iInput.GetValue());
                     }
                 }
                 else UpdateObject(obj, controlInside);
