@@ -22,9 +22,9 @@ namespace QLTrungTamTiengAnh.Model
         {
             // Fake data
             DataTable fakeData = new DataTable();
-            fakeData.Columns.Add(new DataColumn("MaKH", typeof(string)));
-            fakeData.Columns.Add(new DataColumn("TenKH", typeof(string)));
-            fakeData.Columns.Add(new DataColumn("NgaySinh", typeof(string)));
+            fakeData.Columns.Add(new DataColumn("MaKhachHang", typeof(string)));
+            fakeData.Columns.Add(new DataColumn("TenKhachHang", typeof(string)));
+            fakeData.Columns.Add(new DataColumn("NgaySinh", typeof(DateTime)));
             fakeData.Columns.Add(new DataColumn("DiaChi", typeof(string)));
             fakeData.Columns.Add(new DataColumn("SoDienThoai", typeof(string)));
             fakeData.Columns.Add(new DataColumn("Email", typeof(string)));
@@ -34,7 +34,7 @@ namespace QLTrungTamTiengAnh.Model
             DataRow dr0 = fakeData.NewRow();
             dr0[0] = "KH01";
             dr0[1] = "Mai Thanh Chung";
-            dr0[2] = "1996";
+            dr0[2] = new DateTime();
             dr0[3] = "Home";
             dr0[4] = "0123456789";
             dr0[5] = "maithanhchung@gmail.com";
@@ -45,7 +45,7 @@ namespace QLTrungTamTiengAnh.Model
             DataRow dr1 = fakeData.NewRow();
             dr1[0] = "KH02";
             dr1[1] = "Vu Van Bo";
-            dr1[2] = "1996";
+            dr1[2] = new DateTime();
             dr1[3] = "Home";
             dr1[4] = "0123456789";
             dr1[5] = "vuvanbo@gmail.com";
@@ -56,7 +56,7 @@ namespace QLTrungTamTiengAnh.Model
             DataRow dr2 = fakeData.NewRow();
             dr2[0] = "KH03";
             dr2[1] = "Nguyen Duy Giang";
-            dr2[2] = "1996";
+            dr2[2] = new DateTime();
             dr2[3] = "Home";
             dr2[4] = "0123456789";
             dr2[5] = "nguyenduygiang@gmail.com";
