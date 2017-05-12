@@ -101,6 +101,18 @@
     <Compile Include="View\FormHoSoKhachHang.Designer.cs">
       <DependentUpon>FormHoSoKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormPhieuChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPhieuChi.Designer.cs">
+      <DependentUpon>FormPhieuChi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPhieuThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPhieuThu.Designer.cs">
+      <DependentUpon>FormPhieuThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormThongTinLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
