@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormQLKhachHang : Form
+    public partial class FormDanhSachKhachHang : Form
     {
-        public FormQLKhachHang()
+        public FormDanhSachKhachHang()
         {
             InitializeComponent();
         }
@@ -25,7 +25,7 @@ namespace QLTrungTamTiengAnh.View
 
         private void btnThemHoSo_Click(object sender, EventArgs e)
         {
-            FormDieuHuong.Instance.CreateTab(new FormCTKhachHang());
+            FormDieuHuong.Instance.CreateTab(new FormHoSoKhachHang());
         }
 
         private void btnXemHoSo_Click(object sender, EventArgs e)
@@ -33,8 +33,7 @@ namespace QLTrungTamTiengAnh.View
             if (dgvDSKhachHang.SelectedRows.Count == 1)
             {
                 string maKhachHang = dgvDSKhachHang.SelectedRows[0].Cells[0].Value.ToString();
-                FormCTKhachHang form = new FormCTKhachHang();
-                form.PutExtra(maKhachHang, FormInput.MODE_VIEW);
+                FormHoSoKhachHang form = new FormHoSoKhachHang();
                 FormDieuHuong.Instance.CreateTab(form);
             }
             else
@@ -48,24 +47,13 @@ namespace QLTrungTamTiengAnh.View
             if (dgvDSKhachHang.SelectedRows.Count == 1)
             {
                 string maKhachHang = dgvDSKhachHang.SelectedRows[0].Cells[0].Value.ToString();
-                FormCTKhachHang form = new FormCTKhachHang();
-                form.PutExtra(maKhachHang, FormInput.MODE_EDIT);
+                FormHoSoKhachHang form = new FormHoSoKhachHang();
                 FormDieuHuong.Instance.CreateTab(form);
             }
             else
             {
                 MessageBox.Show("Hãy chọn một khách hàng trong bảng để cập nhật hồ sơ");
             }
-        }
-
-        private void btnDangKyHoc_Click(object sender, EventArgs e)
-        {
-            FormDieuHuong.Instance.CreateTab(new FormCTHocVien());
-        }
-
-        private void btnGuiEmail_Click(object sender, EventArgs e)
-        {
-            (new FormGuiEmail()).ShowDialog();
         }
 
         private void btnXoaHoSo_Click(object sender, EventArgs e)
@@ -93,7 +81,8 @@ namespace QLTrungTamTiengAnh.View
 
         private void RefreshData()
         {
-            dgvDSKhachHang.BindData("vw_KhachHang");
+            DataTable dt = DataIO.GetData("SELECT * FROM vw_KhachHang");
+            dgvDSKhachHang.DataSource = dt;
         }
     }
 }

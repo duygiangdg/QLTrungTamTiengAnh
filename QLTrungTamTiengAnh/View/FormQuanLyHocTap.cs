@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormCTGiangVien : FormInput
+    public partial class FormQuanLyHocTap : Form
     {
-        public FormCTGiangVien()
+        public FormQuanLyHocTap()
         {
             InitializeComponent();
+        }
+
+        private void FormQuanLyHocTap_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

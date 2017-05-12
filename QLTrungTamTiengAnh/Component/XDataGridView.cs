@@ -14,11 +14,34 @@ namespace QLTrungTamTiengAnh.Component
     {
         public XDataGridView()
         {
-
+            this.DataBindingComplete += delegate (object o, DataGridViewBindingCompleteEventArgs e)
+            {
+                BalanceColumnWeights();
+            };
         }
-        public void BindData(string tableName)
+
+        public void Search(string query)
         {
-            DataTable table = DataIO.GetData(tableName);
+            CurrencyManager currencyManager = (CurrencyManager)BindingContext[this.DataSource];
+            currencyManager.SuspendBinding();
+            foreach (DataGridViewRow row in this.Rows)
+            {
+                row.Visible = false;
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    if (cell.Value.ToString().ToUpper().IndexOf(query.ToUpper()) > -1)
+                    {
+                        row.Visible = true;
+                        break;
+                    }
+                }
+            }
+            currencyManager.ResumeBinding();
+        }
+
+        private void BalanceColumnWeights()
+        {
+            DataTable table = (DataTable)DataSource;
             int rowCount = table.Rows.Count;
             int colCount = table.Columns.Count;
 
@@ -66,25 +89,6 @@ namespace QLTrungTamTiengAnh.Component
                     this.Columns[colIndex].FillWeight = colWeight[colIndex] + baseWeight * turnNumber;
                 }
             }
-        }
-
-        public void Search(string query)
-        {
-            CurrencyManager currencyManager = (CurrencyManager)BindingContext[this.DataSource];
-            currencyManager.SuspendBinding();
-            foreach (DataGridViewRow row in this.Rows)
-            {
-                row.Visible = false;
-                foreach (DataGridViewCell cell in row.Cells)
-                {
-                    if (cell.Value.ToString().ToUpper().IndexOf(query.ToUpper()) > -1)
-                    {
-                        row.Visible = true;
-                        break;
-                    }
-                }
-            }
-            currencyManager.ResumeBinding();
         }
     }
 }

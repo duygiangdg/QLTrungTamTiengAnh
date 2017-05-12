@@ -1,6 +1,6 @@
 ﻿namespace QLTrungTamTiengAnh.View
 {
-    partial class FormCTKhachHang
+    partial class FormHoSoKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -68,45 +68,40 @@
             this.cbbDanToc = new QLTrungTamTiengAnh.Component.XComboBox();
             this.cbbQuocTich = new QLTrungTamTiengAnh.Component.XComboBox();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.groupPanel3 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.textBoxX20 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX17 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX14 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX19 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX16 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX13 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX18 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX15 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX12 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.labelX27 = new DevComponents.DotNetBar.LabelX();
+            this.labelX24 = new DevComponents.DotNetBar.LabelX();
+            this.labelX20 = new DevComponents.DotNetBar.LabelX();
+            this.labelX26 = new DevComponents.DotNetBar.LabelX();
+            this.labelX23 = new DevComponents.DotNetBar.LabelX();
+            this.labelX25 = new DevComponents.DotNetBar.LabelX();
+            this.labelX19 = new DevComponents.DotNetBar.LabelX();
+            this.labelX21 = new DevComponents.DotNetBar.LabelX();
+            this.labelX22 = new DevComponents.DotNetBar.LabelX();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).BeginInit();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
+            this.groupPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupPanel3);
             this.panel1.Controls.Add(this.groupPanel2);
             this.panel1.Controls.Add(this.groupPanel1);
-            this.panel1.Size = new System.Drawing.Size(848, 513);
-            this.panel1.Controls.SetChildIndex(this.buttonX1, 0);
-            this.panel1.Controls.SetChildIndex(this.btnLuu, 0);
-            this.panel1.Controls.SetChildIndex(this.buttonX3, 0);
-            this.panel1.Controls.SetChildIndex(this.checkBoxX1, 0);
-            this.panel1.Controls.SetChildIndex(this.groupPanel1, 0);
-            this.panel1.Controls.SetChildIndex(this.groupPanel2, 0);
-            // 
-            // checkBoxX1
-            // 
-            // 
-            // 
-            // 
-            this.checkBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX1.Location = new System.Drawing.Point(215, 467);
-            // 
-            // buttonX3
-            // 
-            this.buttonX3.Location = new System.Drawing.Point(749, 467);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(24, 467);
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.Location = new System.Drawing.Point(121, 467);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.None;
+            this.panel1.Size = new System.Drawing.Size(848, 635);
             // 
             // pictureBox1
             // 
@@ -618,7 +613,7 @@
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Controls.Add(this.pictureBox1);
             this.groupPanel1.DrawTitleBox = false;
-            this.groupPanel1.Location = new System.Drawing.Point(24, 23);
+            this.groupPanel1.Location = new System.Drawing.Point(24, 15);
             this.groupPanel1.Name = "groupPanel1";
             this.groupPanel1.Size = new System.Drawing.Size(800, 257);
             // 
@@ -658,7 +653,7 @@
             // 
             // 
             this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.Location = new System.Drawing.Point(36, 46);
+            this.labelX13.Location = new System.Drawing.Point(36, 42);
             this.labelX13.Name = "labelX13";
             this.labelX13.Size = new System.Drawing.Size(75, 23);
             this.labelX13.TabIndex = 1;
@@ -671,7 +666,7 @@
             // 
             // 
             this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX17.Location = new System.Drawing.Point(36, 75);
+            this.labelX17.Location = new System.Drawing.Point(36, 71);
             this.labelX17.Name = "labelX17";
             this.labelX17.Size = new System.Drawing.Size(75, 23);
             this.labelX17.TabIndex = 1;
@@ -684,7 +679,7 @@
             // 
             // 
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.Location = new System.Drawing.Point(36, 17);
+            this.labelX11.Location = new System.Drawing.Point(36, 13);
             this.labelX11.Name = "labelX11";
             this.labelX11.Size = new System.Drawing.Size(75, 23);
             this.labelX11.TabIndex = 7;
@@ -699,7 +694,7 @@
             this.textBoxX10.Border.Class = "TextBoxBorder";
             this.textBoxX10.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX10.DisplayedName = null;
-            this.textBoxX10.Location = new System.Drawing.Point(92, 49);
+            this.textBoxX10.Location = new System.Drawing.Point(92, 45);
             this.textBoxX10.Name = "textBoxX10";
             this.textBoxX10.PropertyName = "HoKhau";
             this.textBoxX10.Required = false;
@@ -716,7 +711,7 @@
             this.textBoxX11.Border.Class = "TextBoxBorder";
             this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX11.DisplayedName = null;
-            this.textBoxX11.Location = new System.Drawing.Point(92, 78);
+            this.textBoxX11.Location = new System.Drawing.Point(92, 74);
             this.textBoxX11.Name = "textBoxX11";
             this.textBoxX11.PropertyName = "GhiChu";
             this.textBoxX11.Required = false;
@@ -731,7 +726,7 @@
             // 
             // 
             this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.Location = new System.Drawing.Point(289, 17);
+            this.labelX12.Location = new System.Drawing.Point(289, 13);
             this.labelX12.Name = "labelX12";
             this.labelX12.Size = new System.Drawing.Size(75, 23);
             this.labelX12.TabIndex = 6;
@@ -745,7 +740,7 @@
             this.cbbDanToc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbbDanToc.FormattingEnabled = true;
             this.cbbDanToc.ItemHeight = 14;
-            this.cbbDanToc.Location = new System.Drawing.Point(92, 20);
+            this.cbbDanToc.Location = new System.Drawing.Point(92, 16);
             this.cbbDanToc.Name = "cbbDanToc";
             this.cbbDanToc.PropertyName = "DanToc";
             this.cbbDanToc.Required = false;
@@ -762,7 +757,7 @@
             this.cbbQuocTich.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbbQuocTich.FormattingEnabled = true;
             this.cbbQuocTich.ItemHeight = 14;
-            this.cbbQuocTich.Location = new System.Drawing.Point(348, 17);
+            this.cbbQuocTich.Location = new System.Drawing.Point(348, 13);
             this.cbbQuocTich.Name = "cbbQuocTich";
             this.cbbQuocTich.PropertyName = "QuocTich";
             this.cbbQuocTich.Required = false;
@@ -784,9 +779,9 @@
             this.groupPanel2.Controls.Add(this.labelX17);
             this.groupPanel2.Controls.Add(this.labelX13);
             this.groupPanel2.DrawTitleBox = false;
-            this.groupPanel2.Location = new System.Drawing.Point(24, 297);
+            this.groupPanel2.Location = new System.Drawing.Point(24, 284);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(800, 140);
+            this.groupPanel2.Size = new System.Drawing.Size(800, 135);
             // 
             // 
             // 
@@ -817,20 +812,347 @@
             this.groupPanel2.TabIndex = 25;
             this.groupPanel2.Text = "Thông Tin Thêm";
             // 
-            // FormCTKhachHang
+            // groupPanel3
+            // 
+            this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel3.Controls.Add(this.textBoxX20);
+            this.groupPanel3.Controls.Add(this.textBoxX17);
+            this.groupPanel3.Controls.Add(this.textBoxX14);
+            this.groupPanel3.Controls.Add(this.textBoxX19);
+            this.groupPanel3.Controls.Add(this.textBoxX16);
+            this.groupPanel3.Controls.Add(this.textBoxX13);
+            this.groupPanel3.Controls.Add(this.textBoxX18);
+            this.groupPanel3.Controls.Add(this.textBoxX15);
+            this.groupPanel3.Controls.Add(this.textBoxX12);
+            this.groupPanel3.Controls.Add(this.labelX27);
+            this.groupPanel3.Controls.Add(this.labelX24);
+            this.groupPanel3.Controls.Add(this.labelX20);
+            this.groupPanel3.Controls.Add(this.labelX26);
+            this.groupPanel3.Controls.Add(this.labelX23);
+            this.groupPanel3.Controls.Add(this.labelX25);
+            this.groupPanel3.Controls.Add(this.labelX19);
+            this.groupPanel3.Controls.Add(this.labelX21);
+            this.groupPanel3.Controls.Add(this.labelX22);
+            this.groupPanel3.DrawTitleBox = false;
+            this.groupPanel3.Location = new System.Drawing.Point(24, 432);
+            this.groupPanel3.Name = "groupPanel3";
+            this.groupPanel3.Size = new System.Drawing.Size(800, 135);
+            // 
+            // 
+            // 
+            this.groupPanel3.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel3.Style.BackColorGradientAngle = 90;
+            this.groupPanel3.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel3.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderBottomWidth = 1;
+            this.groupPanel3.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel3.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderLeftWidth = 1;
+            this.groupPanel3.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderRightWidth = 1;
+            this.groupPanel3.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel3.Style.BorderTopWidth = 1;
+            this.groupPanel3.Style.CornerDiameter = 4;
+            this.groupPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel3.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel3.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel3.TabIndex = 20;
+            this.groupPanel3.Text = "Thông Tin Phụ Huynh";
+            // 
+            // textBoxX20
+            // 
+            this.textBoxX20.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX20.Border.Class = "TextBoxBorder";
+            this.textBoxX20.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX20.DisplayedName = null;
+            this.textBoxX20.Location = new System.Drawing.Point(538, 75);
+            this.textBoxX20.Name = "textBoxX20";
+            this.textBoxX20.PropertyName = "CoQuanMe";
+            this.textBoxX20.Required = false;
+            this.textBoxX20.Size = new System.Drawing.Size(212, 20);
+            this.textBoxX20.TabIndex = 8;
+            this.textBoxX20.Type = "Text";
+            // 
+            // textBoxX17
+            // 
+            this.textBoxX17.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX17.Border.Class = "TextBoxBorder";
+            this.textBoxX17.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX17.DisplayedName = null;
+            this.textBoxX17.Location = new System.Drawing.Point(538, 47);
+            this.textBoxX17.Name = "textBoxX17";
+            this.textBoxX17.PropertyName = "CoQuanBo";
+            this.textBoxX17.Required = false;
+            this.textBoxX17.Size = new System.Drawing.Size(212, 20);
+            this.textBoxX17.TabIndex = 8;
+            this.textBoxX17.Type = "Text";
+            // 
+            // textBoxX14
+            // 
+            this.textBoxX14.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX14.Border.Class = "TextBoxBorder";
+            this.textBoxX14.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX14.DisplayedName = null;
+            this.textBoxX14.Location = new System.Drawing.Point(538, 18);
+            this.textBoxX14.Name = "textBoxX14";
+            this.textBoxX14.PropertyName = "DiaChiNLL";
+            this.textBoxX14.Required = false;
+            this.textBoxX14.Size = new System.Drawing.Size(212, 20);
+            this.textBoxX14.TabIndex = 8;
+            this.textBoxX14.Type = "Text";
+            // 
+            // textBoxX19
+            // 
+            this.textBoxX19.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX19.Border.Class = "TextBoxBorder";
+            this.textBoxX19.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX19.DisplayedName = null;
+            this.textBoxX19.Location = new System.Drawing.Point(369, 75);
+            this.textBoxX19.Name = "textBoxX19";
+            this.textBoxX19.PropertyName = "NgheNghiepMe";
+            this.textBoxX19.Required = false;
+            this.textBoxX19.Size = new System.Drawing.Size(106, 20);
+            this.textBoxX19.TabIndex = 8;
+            this.textBoxX19.Type = "Text";
+            // 
+            // textBoxX16
+            // 
+            this.textBoxX16.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX16.Border.Class = "TextBoxBorder";
+            this.textBoxX16.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX16.DisplayedName = null;
+            this.textBoxX16.Location = new System.Drawing.Point(369, 47);
+            this.textBoxX16.Name = "textBoxX16";
+            this.textBoxX16.PropertyName = "NgheNghiepBo";
+            this.textBoxX16.Required = false;
+            this.textBoxX16.Size = new System.Drawing.Size(106, 20);
+            this.textBoxX16.TabIndex = 8;
+            this.textBoxX16.Type = "Text";
+            // 
+            // textBoxX13
+            // 
+            this.textBoxX13.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX13.Border.Class = "TextBoxBorder";
+            this.textBoxX13.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX13.DisplayedName = null;
+            this.textBoxX13.Location = new System.Drawing.Point(369, 18);
+            this.textBoxX13.Name = "textBoxX13";
+            this.textBoxX13.PropertyName = "DienThoaiNLL";
+            this.textBoxX13.Required = false;
+            this.textBoxX13.Size = new System.Drawing.Size(106, 20);
+            this.textBoxX13.TabIndex = 8;
+            this.textBoxX13.Type = "Text";
+            // 
+            // textBoxX18
+            // 
+            this.textBoxX18.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX18.Border.Class = "TextBoxBorder";
+            this.textBoxX18.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX18.DisplayedName = null;
+            this.textBoxX18.Location = new System.Drawing.Point(116, 75);
+            this.textBoxX18.Name = "textBoxX18";
+            this.textBoxX18.PropertyName = "HoTenMe";
+            this.textBoxX18.Required = false;
+            this.textBoxX18.Size = new System.Drawing.Size(165, 20);
+            this.textBoxX18.TabIndex = 8;
+            this.textBoxX18.Type = "Text";
+            // 
+            // textBoxX15
+            // 
+            this.textBoxX15.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX15.Border.Class = "TextBoxBorder";
+            this.textBoxX15.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX15.DisplayedName = null;
+            this.textBoxX15.Location = new System.Drawing.Point(116, 44);
+            this.textBoxX15.Name = "textBoxX15";
+            this.textBoxX15.PropertyName = "HoTenBo";
+            this.textBoxX15.Required = false;
+            this.textBoxX15.Size = new System.Drawing.Size(165, 20);
+            this.textBoxX15.TabIndex = 8;
+            this.textBoxX15.Type = "Text";
+            // 
+            // textBoxX12
+            // 
+            this.textBoxX12.AutoInput = false;
+            // 
+            // 
+            // 
+            this.textBoxX12.Border.Class = "TextBoxBorder";
+            this.textBoxX12.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX12.DisplayedName = null;
+            this.textBoxX12.Location = new System.Drawing.Point(116, 15);
+            this.textBoxX12.Name = "textBoxX12";
+            this.textBoxX12.PropertyName = "NguoiLienLac";
+            this.textBoxX12.Required = false;
+            this.textBoxX12.Size = new System.Drawing.Size(165, 20);
+            this.textBoxX12.TabIndex = 8;
+            this.textBoxX12.Type = "Text";
+            // 
+            // labelX27
+            // 
+            this.labelX27.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX27.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX27.Location = new System.Drawing.Point(481, 72);
+            this.labelX27.Name = "labelX27";
+            this.labelX27.Size = new System.Drawing.Size(73, 23);
+            this.labelX27.TabIndex = 7;
+            this.labelX27.Text = "Cơ quan:";
+            // 
+            // labelX24
+            // 
+            this.labelX24.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX24.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX24.Location = new System.Drawing.Point(481, 44);
+            this.labelX24.Name = "labelX24";
+            this.labelX24.Size = new System.Drawing.Size(73, 23);
+            this.labelX24.TabIndex = 7;
+            this.labelX24.Text = "Cơ quan:";
+            // 
+            // labelX20
+            // 
+            this.labelX20.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX20.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX20.Location = new System.Drawing.Point(481, 15);
+            this.labelX20.Name = "labelX20";
+            this.labelX20.Size = new System.Drawing.Size(73, 23);
+            this.labelX20.TabIndex = 7;
+            this.labelX20.Text = "Địa chỉ:";
+            // 
+            // labelX26
+            // 
+            this.labelX26.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX26.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX26.Location = new System.Drawing.Point(288, 72);
+            this.labelX26.Name = "labelX26";
+            this.labelX26.Size = new System.Drawing.Size(75, 23);
+            this.labelX26.TabIndex = 7;
+            this.labelX26.Text = "Nghề nghiệp:";
+            // 
+            // labelX23
+            // 
+            this.labelX23.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX23.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX23.Location = new System.Drawing.Point(288, 44);
+            this.labelX23.Name = "labelX23";
+            this.labelX23.Size = new System.Drawing.Size(75, 23);
+            this.labelX23.TabIndex = 7;
+            this.labelX23.Text = "Nghề nghiệp:";
+            // 
+            // labelX25
+            // 
+            this.labelX25.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX25.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX25.Location = new System.Drawing.Point(35, 72);
+            this.labelX25.Name = "labelX25";
+            this.labelX25.Size = new System.Drawing.Size(75, 23);
+            this.labelX25.TabIndex = 7;
+            this.labelX25.Text = "Họ tên mẹ:";
+            // 
+            // labelX19
+            // 
+            this.labelX19.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX19.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX19.Location = new System.Drawing.Point(288, 15);
+            this.labelX19.Name = "labelX19";
+            this.labelX19.Size = new System.Drawing.Size(75, 23);
+            this.labelX19.TabIndex = 7;
+            this.labelX19.Text = "Số điện thoại:";
+            // 
+            // labelX21
+            // 
+            this.labelX21.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX21.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX21.Location = new System.Drawing.Point(35, 41);
+            this.labelX21.Name = "labelX21";
+            this.labelX21.Size = new System.Drawing.Size(75, 23);
+            this.labelX21.TabIndex = 7;
+            this.labelX21.Text = "Họ tên bố:";
+            // 
+            // labelX22
+            // 
+            this.labelX22.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX22.Location = new System.Drawing.Point(35, 12);
+            this.labelX22.Name = "labelX22";
+            this.labelX22.Size = new System.Drawing.Size(75, 23);
+            this.labelX22.TabIndex = 7;
+            this.labelX22.Text = "Người liên lạc:";
+            // 
+            // FormHoSoKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 514);
-            this.Name = "FormCTKhachHang";
-            this.Text = "FormChiTietKhachHang";
-            this.Load += new System.EventHandler(this.FormCTKhachHang_Load);
+            this.ClientSize = new System.Drawing.Size(848, 636);
+            this.Name = "FormHoSoKhachHang";
+            this.Text = "Hồ Sơ Khách Hàng";
+            this.Load += new System.EventHandler(this.FormHoSoKhachHang_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).EndInit();
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel1.PerformLayout();
             this.groupPanel2.ResumeLayout(false);
+            this.groupPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -877,5 +1199,24 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private DevComponents.DotNetBar.Controls.GroupPanel groupPanel3;
+        private Component.XTextBox textBoxX20;
+        private Component.XTextBox textBoxX17;
+        private Component.XTextBox textBoxX14;
+        private Component.XTextBox textBoxX19;
+        private Component.XTextBox textBoxX16;
+        private Component.XTextBox textBoxX13;
+        private Component.XTextBox textBoxX18;
+        private Component.XTextBox textBoxX15;
+        private Component.XTextBox textBoxX12;
+        private DevComponents.DotNetBar.LabelX labelX27;
+        private DevComponents.DotNetBar.LabelX labelX24;
+        private DevComponents.DotNetBar.LabelX labelX20;
+        private DevComponents.DotNetBar.LabelX labelX26;
+        private DevComponents.DotNetBar.LabelX labelX23;
+        private DevComponents.DotNetBar.LabelX labelX25;
+        private DevComponents.DotNetBar.LabelX labelX19;
+        private DevComponents.DotNetBar.LabelX labelX21;
+        private DevComponents.DotNetBar.LabelX labelX22;
     }
 }

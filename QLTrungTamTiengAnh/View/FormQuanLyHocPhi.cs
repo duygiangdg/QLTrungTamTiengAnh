@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevComponents.DotNetBar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormCTLopHoc : FormInput
+    public partial class FormQuanLyHocPhi : Form
     {
-        public FormCTLopHoc()
+        public FormQuanLyHocPhi()
         {
             InitializeComponent();
         }

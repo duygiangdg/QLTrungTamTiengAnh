@@ -14,14 +14,14 @@ namespace QLTrungTamTiengAnh.View
 {
     public partial class FormInput : Form
     {
-        public const int MODE_VIEW = 1;
-        public const int MODE_EDIT = 0;
-        protected String extra;
-        protected int mode = 0;
-
         protected FormInput()
         {
             InitializeFormInput();
+        }
+
+        private void FormInput_Load(object sender, EventArgs e)
+        {
+            panel1.Anchor = AnchorStyles.None;
         }
 
         protected bool CheckInput()
@@ -57,29 +57,6 @@ namespace QLTrungTamTiengAnh.View
             UpdateObject(instance, this);
             return instance;
         }
-
-        #region event Functions
-
-        private void FormInput_Load(object sender, EventArgs e)
-        {
-            if (extra != null)
-            {
-                if (mode == MODE_VIEW)
-                {
-                    this.btnLuu.Text = "Sửa";
-                    DisableInput();
-                }
-            }
-        }
-
-        public FormInput PutExtra(string extra, int mode)
-        {
-            this.extra = extra;
-            this.mode = mode;
-            return this;
-        }
-
-        #endregion
 
         #region private Functions
 
@@ -190,5 +167,6 @@ namespace QLTrungTamTiengAnh.View
             }
         }
         #endregion
+
     }
 }

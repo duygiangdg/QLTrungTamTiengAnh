@@ -40,36 +40,36 @@ namespace QLTrungTamTiengAnh.View
         {
             TabItem tabItem = tabControl.CreateTab(form.Text);
             form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
             form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
             tabItem.AttachedControl.Controls.Add(form);
             tabControl.SelectedTab = tabItem;
-            form.Show();
         }
 
         private void btnQLKhachHang_Click(object sender, EventArgs e)
         {
-            CreateTab(new FormQLKhachHang());
+            CreateTab(new FormDanhSachKhachHang());
         }
 
         private void btnQLHocVien_Click(object sender, EventArgs e)
         {
-            CreateTab(new FormQLHocVien());
+            CreateTab(new FormQuanLyHocTap());
         }
 
         private void btnQLHocPhan_Click(object sender, EventArgs e)
         {
-            CreateTab(new FormQLHocPhan());
+            CreateTab(new FormDanhMucHocPhan());
         }
 
         private void btnQLGiangVien_Click(object sender, EventArgs e)
         {
-            CreateTab(new FormQLGiangVien());
+            CreateTab(new FormDanhSachNhanVien());
         }
 
         private void btnQLLopHoc_Click(object sender, EventArgs e)
         {
-            CreateTab(new FormQLLopHoc());
+            CreateTab(new FormDanhSachLopHoc());
         }
     }
 }

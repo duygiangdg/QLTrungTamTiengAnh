@@ -1,6 +1,6 @@
 ﻿namespace QLTrungTamTiengAnh.View
 {
-    partial class FormCTLopHoc
+    partial class FormThongTinLopHoc
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.comboBoxEx6 = new QLTrungTamTiengAnh.Component.XComboBox();
@@ -37,10 +37,12 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.comboBoxEx4 = new QLTrungTamTiengAnh.Component.XComboBox();
             this.comboBoxEx7 = new QLTrungTamTiengAnh.Component.XComboBox();
+            this.xTextBox2 = new QLTrungTamTiengAnh.Component.XTextBox();
             this.textBoxX1 = new QLTrungTamTiengAnh.Component.XTextBox();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.groupPanel4 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -71,8 +73,6 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
-            this.labelX12 = new DevComponents.DotNetBar.LabelX();
-            this.xTextBox2 = new QLTrungTamTiengAnh.Component.XTextBox();
             this.panel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -90,32 +90,8 @@
             this.panel1.Controls.Add(this.groupPanel2);
             this.panel1.Controls.Add(this.groupPanel1);
             this.panel1.Size = new System.Drawing.Size(843, 706);
-            this.panel1.Controls.SetChildIndex(this.buttonX1, 0);
-            this.panel1.Controls.SetChildIndex(this.btnLuu, 0);
-            this.panel1.Controls.SetChildIndex(this.buttonX3, 0);
-            this.panel1.Controls.SetChildIndex(this.checkBoxX1, 0);
             this.panel1.Controls.SetChildIndex(this.groupPanel1, 0);
             this.panel1.Controls.SetChildIndex(this.groupPanel2, 0);
-            // 
-            // checkBoxX1
-            // 
-            // 
-            // 
-            // 
-            this.checkBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX1.Location = new System.Drawing.Point(218, 659);
-            // 
-            // buttonX3
-            // 
-            this.buttonX3.Location = new System.Drawing.Point(739, 659);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(27, 659);
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.Location = new System.Drawing.Point(124, 659);
             // 
             // groupPanel1
             // 
@@ -270,6 +246,24 @@
             this.comboBoxEx7.TabStop = false;
             this.comboBoxEx7.Type = "Text";
             // 
+            // xTextBox2
+            // 
+            this.xTextBox2.AutoInput = true;
+            // 
+            // 
+            // 
+            this.xTextBox2.Border.Class = "TextBoxBorder";
+            this.xTextBox2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.xTextBox2.DisplayedName = null;
+            this.xTextBox2.Location = new System.Drawing.Point(319, 9);
+            this.xTextBox2.Name = "xTextBox2";
+            this.xTextBox2.PropertyName = "MaKhachHang";
+            this.xTextBox2.Required = false;
+            this.xTextBox2.Size = new System.Drawing.Size(181, 20);
+            this.xTextBox2.TabIndex = 0;
+            this.xTextBox2.TabStop = false;
+            this.xTextBox2.Type = "Text";
+            // 
             // textBoxX1
             // 
             this.textBoxX1.AutoInput = true;
@@ -326,6 +320,19 @@
             this.labelX2.Size = new System.Drawing.Size(65, 23);
             this.labelX2.TabIndex = 1;
             this.labelX2.Text = "Trợ Giảng:";
+            // 
+            // labelX12
+            // 
+            this.labelX12.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.Location = new System.Drawing.Point(266, 6);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(75, 23);
+            this.labelX12.TabIndex = 1;
+            this.labelX12.Text = "Tên Lớp:";
             // 
             // labelX1
             // 
@@ -424,14 +431,14 @@
             // xDataGridView1
             // 
             this.xDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.xDataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.xDataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.xDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.xDataGridView1.Location = new System.Drawing.Point(21, 10);
             this.xDataGridView1.Name = "xDataGridView1";
@@ -910,44 +917,13 @@
             this.labelX11.TabIndex = 13;
             this.labelX11.Text = "Tình/ thành phố:";
             // 
-            // labelX12
-            // 
-            this.labelX12.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX12.Location = new System.Drawing.Point(266, 6);
-            this.labelX12.Name = "labelX12";
-            this.labelX12.Size = new System.Drawing.Size(75, 23);
-            this.labelX12.TabIndex = 1;
-            this.labelX12.Text = "Tên Lớp:";
-            // 
-            // xTextBox2
-            // 
-            this.xTextBox2.AutoInput = true;
-            // 
-            // 
-            // 
-            this.xTextBox2.Border.Class = "TextBoxBorder";
-            this.xTextBox2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.xTextBox2.DisplayedName = null;
-            this.xTextBox2.Location = new System.Drawing.Point(319, 9);
-            this.xTextBox2.Name = "xTextBox2";
-            this.xTextBox2.PropertyName = "MaKhachHang";
-            this.xTextBox2.Required = false;
-            this.xTextBox2.Size = new System.Drawing.Size(181, 20);
-            this.xTextBox2.TabIndex = 0;
-            this.xTextBox2.TabStop = false;
-            this.xTextBox2.Type = "Text";
-            // 
-            // FormCTLopHoc
+            // FormThongTinLopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 706);
-            this.Name = "FormCTLopHoc";
-            this.Text = "FormCTLopHoc";
+            this.Name = "FormThongTinLopHoc";
+            this.Text = "Thông Tin Lớp Học";
             this.panel1.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             this.groupPanel1.PerformLayout();

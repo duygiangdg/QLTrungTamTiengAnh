@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormQLLopHoc : Form
+    public partial class FormThongTinLopHoc : FormInput
     {
-        public FormQLLopHoc()
+        public FormThongTinLopHoc()
         {
             InitializeComponent();
         }
