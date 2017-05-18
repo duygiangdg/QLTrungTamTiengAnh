@@ -145,4 +145,34 @@
   <data name="map_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\map_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="class_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\class_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="customer_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\customer_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="job_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\job_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="resume_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\resume_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="schedule_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\schedule_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="staff_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\staff_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="study_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\study_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="study_result_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\study_result_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="subject_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\subject_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="test_schdule_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\test_schdule_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

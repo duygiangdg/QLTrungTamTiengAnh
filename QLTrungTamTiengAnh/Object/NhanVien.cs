@@ -8,8 +8,9 @@ namespace QLTrungTamTiengAnh.Object
 {
     public class NhanVien
     {
-        string maNhanVien, tenNhanVien, diaChi, soDienThoai, email;
-        int chucVu;
+        string maNhanVien, maChucVu, hoTen, noiSinh, dienThoai, email, diaChi, tinhThanh, quanHuyen, 
+            xaPhuong, noiTotNghiep, chuyenNganh, danToc, quocTich, hoKhau, ghiChu;
+        bool gioiTinh;
         DateTime ngaySinh;
 
         public string MaNhanVien
@@ -25,42 +26,55 @@ namespace QLTrungTamTiengAnh.Object
             }
         }
 
-        public string TenNhanVien
+        public string MaChucVu
         {
             get
             {
-                return tenNhanVien;
+                return maChucVu;
             }
 
             set
             {
-                tenNhanVien = value;
+                maChucVu = value;
             }
         }
 
-        public string DiaChi
+        public string HoTen
         {
             get
             {
-                return diaChi;
+                return hoTen;
             }
 
             set
             {
-                diaChi = value;
+                hoTen = value;
             }
         }
 
-        public string SoDienThoai
+        public string NoiSinh
         {
             get
             {
-                return soDienThoai;
+                return noiSinh;
             }
 
             set
             {
-                soDienThoai = value;
+                noiSinh = value;
+            }
+        }
+
+        public string DienThoai
+        {
+            get
+            {
+                return dienThoai;
+            }
+
+            set
+            {
+                dienThoai = value;
             }
         }
 
@@ -77,16 +91,146 @@ namespace QLTrungTamTiengAnh.Object
             }
         }
 
-        public int ChucVu
+        public string DiaChi
         {
             get
             {
-                return chucVu;
+                return diaChi;
             }
 
             set
             {
-                chucVu = value;
+                diaChi = value;
+            }
+        }
+
+        public string TinhThanh
+        {
+            get
+            {
+                return tinhThanh;
+            }
+
+            set
+            {
+                tinhThanh = value;
+            }
+        }
+
+        public string QuanHuyen
+        {
+            get
+            {
+                return quanHuyen;
+            }
+
+            set
+            {
+                quanHuyen = value;
+            }
+        }
+
+        public string XaPhuong
+        {
+            get
+            {
+                return xaPhuong;
+            }
+
+            set
+            {
+                xaPhuong = value;
+            }
+        }
+
+        public string NoiTotNghiep
+        {
+            get
+            {
+                return noiTotNghiep;
+            }
+
+            set
+            {
+                noiTotNghiep = value;
+            }
+        }
+
+        public string ChuyenNganh
+        {
+            get
+            {
+                return chuyenNganh;
+            }
+
+            set
+            {
+                chuyenNganh = value;
+            }
+        }
+
+        public string DanToc
+        {
+            get
+            {
+                return danToc;
+            }
+
+            set
+            {
+                danToc = value;
+            }
+        }
+
+        public string QuocTich
+        {
+            get
+            {
+                return quocTich;
+            }
+
+            set
+            {
+                quocTich = value;
+            }
+        }
+
+        public string HoKhau
+        {
+            get
+            {
+                return hoKhau;
+            }
+
+            set
+            {
+                hoKhau = value;
+            }
+        }
+
+        public string GhiChu
+        {
+            get
+            {
+                return ghiChu;
+            }
+
+            set
+            {
+                ghiChu = value;
+            }
+        }
+
+        public bool GioiTinh
+        {
+            get
+            {
+                return gioiTinh;
+            }
+
+            set
+            {
+                gioiTinh = value;
             }
         }
 

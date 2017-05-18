@@ -26,9 +26,9 @@ namespace QLTrungTamTiengAnh.View
             {
                 SmtpClient mailclient = new SmtpClient("smtp.gmail.com", 587);
                 mailclient.EnableSsl = true;
-                mailclient.Credentials = new NetworkCredential(txtNguoiGui.Text, txtMatKhau.Text);
+                mailclient.Credentials = new NetworkCredential("espeedenglishcenter@gmail.com", "espeed@123");
 
-                MailMessage message = new MailMessage(txtNguoiGui.Text, txtNguoiNhan.Text);
+                MailMessage message = new MailMessage("espeedenglishcenter@gmail.com", txtNguoiNhan.Text);
                 message.Subject = txtChuDe.Text;
                 message.Body = txtNoiDung.Text;
 

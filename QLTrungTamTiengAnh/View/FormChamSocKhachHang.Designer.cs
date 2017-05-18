@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.ribbonBar2 = new DevComponents.DotNetBar.RibbonBar();
             this.btnDangKyHoc = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnXemNhatKy = new DevComponents.DotNetBar.ButtonItem();
             this.btnGuiEmail = new DevComponents.DotNetBar.ButtonItem();
             this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
@@ -102,7 +102,7 @@
             this.ribbonBar2.ContainerControlProcessDialogKey = true;
             this.ribbonBar2.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnDangKyHoc,
-            this.buttonItem6,
+            this.btnXemNhatKy,
             this.btnGuiEmail});
             this.ribbonBar2.Location = new System.Drawing.Point(2, 1);
             this.ribbonBar2.Name = "ribbonBar2";
@@ -128,16 +128,18 @@
             this.btnDangKyHoc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnDangKyHoc.Name = "btnDangKyHoc";
             this.btnDangKyHoc.Text = "Đăng Ký   Học";
+            this.btnDangKyHoc.Click += new System.EventHandler(this.btnDangKyHoc_Click);
             // 
-            // buttonItem6
+            // btnXemNhatKy
             // 
-            this.buttonItem6.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem6.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem6.Image = global::QLTrungTamTiengAnh.Properties.Resources.note;
-            this.buttonItem6.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem6.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem6.Name = "buttonItem6";
-            this.buttonItem6.Text = "Xem          Nhật Ký";
+            this.btnXemNhatKy.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnXemNhatKy.FixedSize = new System.Drawing.Size(65, 65);
+            this.btnXemNhatKy.Image = global::QLTrungTamTiengAnh.Properties.Resources.note;
+            this.btnXemNhatKy.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnXemNhatKy.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnXemNhatKy.Name = "btnXemNhatKy";
+            this.btnXemNhatKy.Text = "Xem          Nhật Ký";
+            this.btnXemNhatKy.Click += new System.EventHandler(this.btnXemNhatKy_Click);
             // 
             // btnGuiEmail
             // 
@@ -148,6 +150,7 @@
             this.btnGuiEmail.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
             this.btnGuiEmail.Name = "btnGuiEmail";
             this.btnGuiEmail.Text = "Gửi         Email";
+            this.btnGuiEmail.Click += new System.EventHandler(this.btnGuiEmail_Click);
             // 
             // buttonX2
             // 
@@ -386,26 +389,26 @@
             this.dgvDSKhachHang.AllowUserToAddRows = false;
             this.dgvDSKhachHang.AllowUserToDeleteRows = false;
             this.dgvDSKhachHang.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvDSKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDSKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSKhachHang.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSKhachHang.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSKhachHang.EnableHeadersVisualStyles = false;
             this.dgvDSKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
@@ -414,14 +417,14 @@
             this.dgvDSKhachHang.MultiSelect = false;
             this.dgvDSKhachHang.Name = "dgvDSKhachHang";
             this.dgvDSKhachHang.ReadOnly = true;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSKhachHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSKhachHang.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDSKhachHang.RowHeadersVisible = false;
             this.dgvDSKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDSKhachHang.Size = new System.Drawing.Size(589, 485);
@@ -651,6 +654,7 @@
             this.DoubleBuffered = true;
             this.Name = "FormChamSocKhachHang";
             this.Text = "Chăm Sóc Khách Hàng";
+            this.Load += new System.EventHandler(this.FormChamSocKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSKhachHang)).EndInit();
@@ -667,7 +671,7 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.RibbonBar ribbonBar2;
         private DevComponents.DotNetBar.ButtonItem btnDangKyHoc;
-        private DevComponents.DotNetBar.ButtonItem buttonItem6;
+        private DevComponents.DotNetBar.ButtonItem btnXemNhatKy;
         private DevComponents.DotNetBar.ButtonItem btnGuiEmail;
         private DevComponents.DotNetBar.ButtonX buttonX2;
         private DevComponents.DotNetBar.ButtonX buttonX1;

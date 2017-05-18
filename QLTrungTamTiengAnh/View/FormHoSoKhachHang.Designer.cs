@@ -51,9 +51,9 @@
             this.cbbTruong = new QLTrungTamTiengAnh.Component.XComboBox();
             this.comboBoxEx7 = new QLTrungTamTiengAnh.Component.XComboBox();
             this.cbbTinhThanh = new QLTrungTamTiengAnh.Component.XComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radNam = new System.Windows.Forms.RadioButton();
             this.cbbQuanHuyen = new QLTrungTamTiengAnh.Component.XComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radNu = new System.Windows.Forms.RadioButton();
             this.labelX16 = new DevComponents.DotNetBar.LabelX();
             this.dateTimeInput1 = new QLTrungTamTiengAnh.Component.XDateTimeInput();
             this.labelX18 = new DevComponents.DotNetBar.LabelX();
@@ -87,6 +87,8 @@
             this.labelX19 = new DevComponents.DotNetBar.LabelX();
             this.labelX21 = new DevComponents.DotNetBar.LabelX();
             this.labelX22 = new DevComponents.DotNetBar.LabelX();
+            this.btnLuu = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).BeginInit();
@@ -97,6 +99,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.buttonX2);
+            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.groupPanel3);
             this.panel1.Controls.Add(this.groupPanel2);
             this.panel1.Controls.Add(this.groupPanel1);
@@ -440,18 +445,18 @@
             this.cbbTinhThanh.TabIndex = 16;
             this.cbbTinhThanh.Type = "Text";
             // 
-            // radioButton1
+            // radNam
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(538, 51);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(47, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.radNam.AutoSize = true;
+            this.radNam.BackColor = System.Drawing.Color.Transparent;
+            this.radNam.Checked = true;
+            this.radNam.Location = new System.Drawing.Point(538, 51);
+            this.radNam.Name = "radNam";
+            this.radNam.Size = new System.Drawing.Size(47, 17);
+            this.radNam.TabIndex = 3;
+            this.radNam.TabStop = true;
+            this.radNam.Text = "Nam";
+            this.radNam.UseVisualStyleBackColor = false;
             // 
             // cbbQuanHuyen
             // 
@@ -470,16 +475,16 @@
             this.cbbQuanHuyen.TabIndex = 17;
             this.cbbQuanHuyen.Type = "Text";
             // 
-            // radioButton2
+            // radNu
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Location = new System.Drawing.Point(601, 51);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(39, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.radNu.AutoSize = true;
+            this.radNu.BackColor = System.Drawing.Color.Transparent;
+            this.radNu.Location = new System.Drawing.Point(601, 51);
+            this.radNu.Name = "radNu";
+            this.radNu.Size = new System.Drawing.Size(39, 17);
+            this.radNu.TabIndex = 4;
+            this.radNu.Text = "Nữ";
+            this.radNu.UseVisualStyleBackColor = false;
             // 
             // labelX16
             // 
@@ -586,9 +591,9 @@
             this.groupPanel1.Controls.Add(this.labelX18);
             this.groupPanel1.Controls.Add(this.dateTimeInput1);
             this.groupPanel1.Controls.Add(this.labelX16);
-            this.groupPanel1.Controls.Add(this.radioButton2);
+            this.groupPanel1.Controls.Add(this.radNu);
             this.groupPanel1.Controls.Add(this.cbbQuanHuyen);
-            this.groupPanel1.Controls.Add(this.radioButton1);
+            this.groupPanel1.Controls.Add(this.radNam);
             this.groupPanel1.Controls.Add(this.cbbTinhThanh);
             this.groupPanel1.Controls.Add(this.comboBoxEx7);
             this.groupPanel1.Controls.Add(this.cbbTruong);
@@ -1138,6 +1143,29 @@
             this.labelX22.TabIndex = 7;
             this.labelX22.Text = "Người liên lạc:";
             // 
+            // btnLuu
+            // 
+            this.btnLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnLuu.Location = new System.Drawing.Point(24, 589);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnLuu.TabIndex = 26;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Location = new System.Drawing.Point(749, 589);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(75, 23);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 26;
+            this.buttonX2.Text = "buttonX1";
+            // 
             // FormHoSoKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1173,9 +1201,9 @@
         private DevComponents.DotNetBar.LabelX labelX18;
         private Component.XDateTimeInput dateTimeInput1;
         private DevComponents.DotNetBar.LabelX labelX16;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radNu;
         private Component.XComboBox cbbQuanHuyen;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radNam;
         private Component.XComboBox cbbTinhThanh;
         private Component.XComboBox comboBoxEx7;
         private Component.XComboBox cbbTruong;
@@ -1218,5 +1246,7 @@
         private DevComponents.DotNetBar.LabelX labelX19;
         private DevComponents.DotNetBar.LabelX labelX21;
         private DevComponents.DotNetBar.LabelX labelX22;
+        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX btnLuu;
     }
 }

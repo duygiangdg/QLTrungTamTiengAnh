@@ -122,7 +122,7 @@ namespace QLTrungTamTiengAnh.View
         {
             foreach (System.Windows.Forms.Control controlInside in control.Controls)
             {
-                if (typeof(IInput).IsAssignableFrom(control.GetType()))
+                if (typeof(IInput).IsAssignableFrom(controlInside.GetType()))
                 {
                     IInput iInput = (IInput)controlInside;
                     if (!iInput.AutoInput) controlInside.Enabled = true;

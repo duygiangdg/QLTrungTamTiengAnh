@@ -71,5 +71,25 @@ namespace QLTrungTamTiengAnh.View
         {
             CreateTab(new FormDanhSachLopHoc());
         }
+
+        private void btnQLChucVu_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormDanhSachChucVu());
+        }
+
+        private void btnCSKhachHang_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormChamSocKhachHang());
+        }
+
+        private void btnQLHocTap_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormQuanLyHocTap());
+        }
+
+        private void btnXepTKB_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormLichTuan());
+        }
     }
 }

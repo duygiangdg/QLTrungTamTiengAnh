@@ -8,17 +8,72 @@ namespace QLTrungTamTiengAnh.Object
 {
     public class Lop
     {
-        string maLop, maTroGiang, lichHoc;
-        int level;
-        bool daKetThuc;
+        string maLop, maGiaoVien, maTroGiang, maHocPhan;
+        int trangThai;
 
-        public Lop(string maLop, string maTroGiang, string lichHoc, int level, bool daKetThuc)
+        public string MaGiaoVien
         {
-            this.maLop = maLop;
-            this.maTroGiang = maTroGiang;
-            this.lichHoc = lichHoc;
-            this.level = level;
-            this.daKetThuc = daKetThuc;
+            get
+            {
+                return maGiaoVien;
+            }
+
+            set
+            {
+                maGiaoVien = value;
+            }
+        }
+
+        public string MaHocPhan
+        {
+            get
+            {
+                return maHocPhan;
+            }
+
+            set
+            {
+                maHocPhan = value;
+            }
+        }
+
+        public string MaLop
+        {
+            get
+            {
+                return maLop;
+            }
+
+            set
+            {
+                maLop = value;
+            }
+        }
+
+        public string MaTroGiang
+        {
+            get
+            {
+                return maTroGiang;
+            }
+
+            set
+            {
+                maTroGiang = value;
+            }
+        }
+
+        public int TrangThai
+        {
+            get
+            {
+                return trangThai;
+            }
+
+            set
+            {
+                trangThai = value;
+            }
         }
     }
 }

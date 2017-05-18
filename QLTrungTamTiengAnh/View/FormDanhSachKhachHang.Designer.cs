@@ -55,7 +55,7 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.panelEx2 = new DevComponents.DotNetBar.PanelEx();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtSearch = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.dgvDSKhachHang = new QLTrungTamTiengAnh.Component.XDataGridView();
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
@@ -468,7 +468,7 @@
             // 
             this.panelEx2.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.panelEx2.Controls.Add(this.textBoxX1);
+            this.panelEx2.Controls.Add(this.txtSearch);
             this.panelEx2.Controls.Add(this.labelX1);
             this.panelEx2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx2.Location = new System.Drawing.Point(209, 3);
@@ -484,20 +484,21 @@
             this.panelEx2.Style.GradientAngle = 90;
             this.panelEx2.TabIndex = 1;
             // 
-            // textBoxX1
+            // txtSearch
             // 
-            this.textBoxX1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(69, 8);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(520, 20);
-            this.textBoxX1.TabIndex = 1;
+            this.txtSearch.Border.Class = "TextBoxBorder";
+            this.txtSearch.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSearch.Location = new System.Drawing.Point(69, 8);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(520, 20);
+            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // labelX1
             // 
@@ -657,7 +658,7 @@
             this.btnXoaHoSo.Text = "Xóa           Hồ Sơ";
             this.btnXoaHoSo.Click += new System.EventHandler(this.btnXoaHoSo_Click);
             // 
-            // FormQLKhachHang
+            // FormDanhSachKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -665,7 +666,7 @@
             this.ClientSize = new System.Drawing.Size(802, 626);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panelEx1);
-            this.Name = "FormQLKhachHang";
+            this.Name = "FormDanhSachKhachHang";
             this.Text = "Danh Sách Khách Hàng";
             this.Load += new System.EventHandler(this.FormDanhSachKhachHang_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -684,7 +685,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevComponents.DotNetBar.ExpandablePanel expandablePanel1;
         private DevComponents.DotNetBar.PanelEx panelEx2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSearch;
         private DevComponents.DotNetBar.LabelX labelX1;
         private Component.XDataGridView dgvDSKhachHang;
         private DevComponents.DotNetBar.PanelEx panelEx1;

@@ -12,48 +12,56 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormHoSoKhachHang : FormInput
+    public partial class FormThongTinHocTap : FormInput
     {
         string maKhachHang;
 
-        public FormHoSoKhachHang()
+        public FormThongTinHocTap()
         {
             InitializeComponent();
         }
 
-        private void FormHoSoKhachHang_Load(object sender, EventArgs e)
-        {
-            DataTable dtTinhThanh = DataIO.GetData("SELECT DISTINCT TinhThanh FROM tb_KhachHang WHERE TinhThanh IS NOT NULL");
-            cbbTinhThanh.DataSource = dtTinhThanh;
-            cbbTinhThanh.DisplayMember = "TinhThanh";
-
-            DataTable dtQuanHuyen = DataIO.GetData("SELECT DISTINCT QuanHuyen FROM tb_KhachHang WHERE QuanHuyen IS NOT NULL");
-            cbbQuanHuyen.DataSource = dtQuanHuyen;
-            cbbQuanHuyen.DisplayMember = "QuanHuyen";
-
-            DataTable dtXaPhuong = DataIO.GetData("SELECT DISTINCT XaPhuong FROM tb_KhachHang WHERE XaPhuong IS NOT NULL");
-            cbbXaPhuong.DataSource = dtXaPhuong;
-            cbbXaPhuong.DisplayMember = "XaPhuong";
-        }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (btnLuu.Text.Equals("Tạo mới")){
+            if (btnLuu.Text.Equals("Tạo mới"))
+            {
                 EnableInput();
                 Clear();
                 btnLuu.Text = "Lưu";
             }
-            else if (btnLuu.Text.Equals("Sửa")){
+            else if (btnLuu.Text.Equals("Sửa"))
+            {
                 EnableInput();
+                radDangHoc.Enabled = true;
+                radBaoLuu.Enabled = true;
+                radKetThuc.Enabled = true;
                 btnLuu.Text = "Lưu";
             }
-            else if (btnLuu.Text.Equals("Lưu")){
+            else if (btnLuu.Text.Equals("Lưu"))
+            {
                 if (CheckInput())
                 {
                     var instance = CreateObject("QLTrungTamTiengAnh.Object.KhachHang");
                     KhachHang khachHang = (KhachHang)instance;
-                    khachHang.GioiTinh = radNam.Checked;
+                    if (radDangHoc.Checked)
+                    {
+                        khachHang.TrangThai = "Đang học";
+                    }
+                    else if (radBaoLuu.Checked){
+                        khachHang.TrangThai = "Bảo lưu";
+                    }
+                    else if (radKetThuc.Checked)
+                    {
+                        khachHang.TrangThai = "Kết thúc";
+                    }
+                    else
+                    {
+                        khachHang.TrangThai = "Chưa học";
+                    }
                     DisableInput();
+                    radDangHoc.Enabled = false;
+                    radBaoLuu.Enabled = false;
+                    radKetThuc.Enabled = false;
                     if (maKhachHang == null)
                     {
                         khachHang.MaKhachHang = null;
@@ -63,7 +71,7 @@ namespace QLTrungTamTiengAnh.View
                     else
                     {
                         DataIO.UpdateItem(khachHang, "tb_KhachHang", "MaKhachHang");
-                        btnLuu.Text = "Tạo mới";
+                        btnLuu.Enabled = false;
                     }
                 }
             }
@@ -74,14 +82,26 @@ namespace QLTrungTamTiengAnh.View
             this.maKhachHang = maKhachHang;
             KhachHang khachHang = (KhachHang)DataIO.GetItem("tb_KhachHang", "MaKhachHang", maKhachHang, "QLTrungTamTiengAnh.Object.KhachHang");
             BindData(khachHang);
-            if (khachHang.GioiTinh)
+            switch (khachHang.TrangThai)
             {
-                radNam.Checked = true;
-                radNu.Checked = false;
+                case "Chưa học":
+                    break;
+                case "Đang học":
+                    radDangHoc.Checked = true;
+                    break;
+                case "Bảo lưu":
+                    radBaoLuu.Checked = true;
+                    break;
+                case "Kết thúc":
+                    radKetThuc.Checked = true;
+                    break;
             }
             if (!editable)
             {
                 DisableInput();
+                radDangHoc.Enabled = false;
+                radBaoLuu.Enabled = false;
+                radKetThuc.Enabled = false;
                 btnLuu.Text = "Sửa";
             }
         }

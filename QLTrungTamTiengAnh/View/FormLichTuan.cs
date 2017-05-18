@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DevComponents.DotNetBar.Controls;
+using QLTrungTamTiengAnh.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +14,22 @@ namespace QLTrungTamTiengAnh.View
 {
     public partial class FormLichTuan : Form
     {
+        string[] cacMau = { "white", "yellow", "red", "blue", "green", "pink", "purple", "orange" };
+        
         public FormLichTuan()
         {
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void FormLichTuan_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void lbl1_Click(object sender, EventArgs e)
-        {
-            cbb1.DroppedDown = true;
+            DataTable dt = DataIO.GetData("SELECT MaLop, Mau FROM tb_MauLop");
+            dgvMauLop.DataSource = dt;
+            foreach (DataGridViewRow row in dgvMauLop.Rows)
+            {
+                DataGridViewComboBoxCell cell = (DataGridViewComboBoxCell)(row.Cells[1]);
+                cell.DataSource = cacMau;
+            }
         }
     }
 }

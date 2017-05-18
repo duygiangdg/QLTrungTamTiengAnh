@@ -34,6 +34,7 @@ namespace QLTrungTamTiengAnh.View
             {
                 string maKhachHang = dgvDSKhachHang.SelectedRows[0].Cells[0].Value.ToString();
                 FormHoSoKhachHang form = new FormHoSoKhachHang();
+                form.PutExtra(maKhachHang, false);
                 FormDieuHuong.Instance.CreateTab(form);
             }
             else
@@ -48,6 +49,7 @@ namespace QLTrungTamTiengAnh.View
             {
                 string maKhachHang = dgvDSKhachHang.SelectedRows[0].Cells[0].Value.ToString();
                 FormHoSoKhachHang form = new FormHoSoKhachHang();
+                form.PutExtra(maKhachHang, true);
                 FormDieuHuong.Instance.CreateTab(form);
             }
             else
@@ -83,6 +85,12 @@ namespace QLTrungTamTiengAnh.View
         {
             DataTable dt = DataIO.GetData("SELECT * FROM vw_KhachHang");
             dgvDSKhachHang.DataSource = dt;
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = txtSearch.Text;
+            dgvDSKhachHang.Search(query);
         }
     }
 }

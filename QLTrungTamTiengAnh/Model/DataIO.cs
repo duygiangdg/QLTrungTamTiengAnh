@@ -200,6 +200,10 @@ namespace QLTrungTamTiengAnh.Model
                 }
                 return "CONVERT(DATE, '" + dateTime.ToShortDateString() + "', 103)";
             }
+            else if (obj.GetType() == typeof(decimal))
+            {
+                return obj.ToString();
+            }
             return null;
         }
     }

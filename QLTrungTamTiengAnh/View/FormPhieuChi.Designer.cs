@@ -58,12 +58,10 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.Controls.Add(this.buttonX2);
             this.panel1.Controls.Add(this.groupPanel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.None;
             this.panel1.Size = new System.Drawing.Size(737, 313);
-            this.panel1.Controls.SetChildIndex(this.groupPanel1, 0);
-            this.panel1.Controls.SetChildIndex(this.buttonX2, 0);
             // 
             // groupPanel1
             // 
@@ -196,6 +194,7 @@
             // 
             // 
             // 
+            this.dateTimeInput1.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
             // 
             // 
@@ -214,6 +213,8 @@
             this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dateTimeInput1.MonthCalendar.DisplayMonth = new System.DateTime(2017, 5, 1, 0, 0, 0, 0);
             this.dateTimeInput1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            this.dateTimeInput1.MonthCalendar.MarkedDates = new System.DateTime[0];
+            this.dateTimeInput1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
             // 
             // 
@@ -222,6 +223,7 @@
             this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dateTimeInput1.MonthCalendar.TodayButtonVisible = true;
+            this.dateTimeInput1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dateTimeInput1.Name = "dateTimeInput1";
             this.dateTimeInput1.Size = new System.Drawing.Size(206, 20);
             this.dateTimeInput1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
