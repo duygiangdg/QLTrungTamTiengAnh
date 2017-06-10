@@ -26,14 +26,17 @@ namespace QLTrungTamTiengAnh.View
             DataTable dtTinhThanh = DataIO.GetData("SELECT DISTINCT TinhThanh FROM tb_KhachHang WHERE TinhThanh IS NOT NULL");
             cbbTinhThanh.DataSource = dtTinhThanh;
             cbbTinhThanh.DisplayMember = "TinhThanh";
+            cbbTinhThanh.Text = "";
 
             DataTable dtQuanHuyen = DataIO.GetData("SELECT DISTINCT QuanHuyen FROM tb_KhachHang WHERE QuanHuyen IS NOT NULL");
             cbbQuanHuyen.DataSource = dtQuanHuyen;
             cbbQuanHuyen.DisplayMember = "QuanHuyen";
+            cbbQuanHuyen.Text = "";
 
             DataTable dtXaPhuong = DataIO.GetData("SELECT DISTINCT XaPhuong FROM tb_KhachHang WHERE XaPhuong IS NOT NULL");
             cbbXaPhuong.DataSource = dtXaPhuong;
             cbbXaPhuong.DisplayMember = "XaPhuong";
+            cbbXaPhuong.Text = "";
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -72,7 +75,7 @@ namespace QLTrungTamTiengAnh.View
         public void PutExtra(string maKhachHang, bool editable)
         {
             this.maKhachHang = maKhachHang;
-            KhachHang khachHang = (KhachHang)DataIO.GetItem("tb_KhachHang", "MaKhachHang", maKhachHang, "QLTrungTamTiengAnh.Object.KhachHang");
+            KhachHang khachHang = (KhachHang)DataIO.GetItem("tb_KhachHang", "MaKhachHang = '" + maKhachHang + "'", typeof(KhachHang));
             BindData(khachHang);
             if (khachHang.GioiTinh)
             {

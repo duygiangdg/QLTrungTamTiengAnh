@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Layout, Version=14.0.0.21, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar2, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -89,6 +90,7 @@
     <Compile Include="Component\XDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Model\Filter.cs" />
     <Compile Include="Object\ChucVu.cs" />
     <Compile Include="Object\HocPhan.cs" />
     <Compile Include="View\FormChamSocKhachHang.cs">

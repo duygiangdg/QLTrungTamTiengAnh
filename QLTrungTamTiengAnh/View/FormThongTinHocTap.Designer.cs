@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.xDateTimeInput1 = new QLTrungTamTiengAnh.Component.XDateTimeInput();
             this.radKetThuc = new System.Windows.Forms.RadioButton();
             this.radBaoLuu = new System.Windows.Forms.RadioButton();
             this.radDangHoc = new System.Windows.Forms.RadioButton();
@@ -51,7 +52,6 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.btnLuu = new DevComponents.DotNetBar.ButtonX();
-            this.xDateTimeInput1 = new QLTrungTamTiengAnh.Component.XDateTimeInput();
             this.panel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xDateTimeInput1)).BeginInit();
@@ -91,6 +91,7 @@
             this.groupPanel1.Controls.Add(this.labelX6);
             this.groupPanel1.Controls.Add(this.labelX3);
             this.groupPanel1.Controls.Add(this.labelX1);
+            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.DrawTitleBox = false;
             this.groupPanel1.Location = new System.Drawing.Point(35, 23);
             this.groupPanel1.Name = "groupPanel1";
@@ -124,6 +125,56 @@
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 35;
             this.groupPanel1.Text = "Thông Tin Học Tập";
+            // 
+            // xDateTimeInput1
+            // 
+            this.xDateTimeInput1.AutoInput = true;
+            // 
+            // 
+            // 
+            this.xDateTimeInput1.BackgroundStyle.Class = "DateTimeInputBackground";
+            this.xDateTimeInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.xDateTimeInput1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
+            this.xDateTimeInput1.ButtonDropDown.Visible = true;
+            this.xDateTimeInput1.DisplayedName = null;
+            this.xDateTimeInput1.IsPopupCalendarOpen = false;
+            this.xDateTimeInput1.Location = new System.Drawing.Point(151, 47);
+            // 
+            // 
+            // 
+            // 
+            // 
+            // 
+            this.xDateTimeInput1.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.xDateTimeInput1.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
+            this.xDateTimeInput1.MonthCalendar.ClearButtonVisible = true;
+            // 
+            // 
+            // 
+            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
+            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
+            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
+            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
+            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
+            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.xDateTimeInput1.MonthCalendar.DisplayMonth = new System.DateTime(2017, 5, 1, 0, 0, 0, 0);
+            this.xDateTimeInput1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
+            // 
+            // 
+            // 
+            this.xDateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.xDateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
+            this.xDateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.xDateTimeInput1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.xDateTimeInput1.MonthCalendar.TodayButtonVisible = true;
+            this.xDateTimeInput1.Name = "xDateTimeInput1";
+            this.xDateTimeInput1.PropertyName = "NgaySinh";
+            this.xDateTimeInput1.Required = false;
+            this.xDateTimeInput1.Size = new System.Drawing.Size(187, 20);
+            this.xDateTimeInput1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.xDateTimeInput1.TabIndex = 31;
+            this.xDateTimeInput1.Type = "Text";
             // 
             // radKetThuc
             // 
@@ -441,60 +492,6 @@
             this.btnLuu.TabIndex = 36;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // xDateTimeInput1
-            // 
-            this.xDateTimeInput1.AutoInput = false;
-            // 
-            // 
-            // 
-            this.xDateTimeInput1.BackgroundStyle.Class = "DateTimeInputBackground";
-            this.xDateTimeInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.xDateTimeInput1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
-            this.xDateTimeInput1.ButtonDropDown.Visible = true;
-            this.xDateTimeInput1.DisplayedName = null;
-            this.xDateTimeInput1.IsPopupCalendarOpen = false;
-            this.xDateTimeInput1.Location = new System.Drawing.Point(151, 47);
-            // 
-            // 
-            // 
-            this.xDateTimeInput1.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.xDateTimeInput1.MonthCalendar.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.xDateTimeInput1.MonthCalendar.CalendarDimensions = new System.Drawing.Size(1, 1);
-            this.xDateTimeInput1.MonthCalendar.ClearButtonVisible = true;
-            // 
-            // 
-            // 
-            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground2;
-            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColorGradientAngle = 90;
-            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarBackground;
-            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.BarDockedBorder;
-            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.BorderTopWidth = 1;
-            this.xDateTimeInput1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.xDateTimeInput1.MonthCalendar.DisplayMonth = new System.DateTime(2017, 5, 1, 0, 0, 0, 0);
-            this.xDateTimeInput1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            this.xDateTimeInput1.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.xDateTimeInput1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
-            // 
-            // 
-            // 
-            this.xDateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.xDateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorGradientAngle = 90;
-            this.xDateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.xDateTimeInput1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.xDateTimeInput1.MonthCalendar.TodayButtonVisible = true;
-            this.xDateTimeInput1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
-            this.xDateTimeInput1.Name = "xDateTimeInput1";
-            this.xDateTimeInput1.PropertyName = "NgaySinh";
-            this.xDateTimeInput1.Required = false;
-            this.xDateTimeInput1.Size = new System.Drawing.Size(187, 20);
-            this.xDateTimeInput1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.xDateTimeInput1.TabIndex = 31;
-            this.xDateTimeInput1.Type = "Text";
             // 
             // FormThongTinHocTap
             // 

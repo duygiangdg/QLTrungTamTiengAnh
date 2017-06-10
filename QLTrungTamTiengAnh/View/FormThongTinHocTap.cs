@@ -80,7 +80,7 @@ namespace QLTrungTamTiengAnh.View
         public void PutExtra(string maKhachHang, bool editable)
         {
             this.maKhachHang = maKhachHang;
-            KhachHang khachHang = (KhachHang)DataIO.GetItem("tb_KhachHang", "MaKhachHang", maKhachHang, "QLTrungTamTiengAnh.Object.KhachHang");
+            KhachHang khachHang = (KhachHang)DataIO.GetItem("tb_KhachHang", "MaKhachHang = '" + maKhachHang + "'", typeof(KhachHang));
             BindData(khachHang);
             switch (khachHang.TrangThai)
             {

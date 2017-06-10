@@ -15,9 +15,16 @@ namespace QLTrungTamTiengAnh.View
 {
     public partial class FormGuiEmail : Office2007Form
     {
+        private List<string> receivers;
         public FormGuiEmail()
         {
             InitializeComponent();
+            receivers = new List<string>();
+        }
+
+        public void putExtra(List<string> receivers)
+        {
+            this.receivers = receivers;
         }
 
         private void btnGui_Click(object sender, EventArgs e)
@@ -28,7 +35,12 @@ namespace QLTrungTamTiengAnh.View
                 mailclient.EnableSsl = true;
                 mailclient.Credentials = new NetworkCredential("espeedenglishcenter@gmail.com", "espeed@123");
 
-                MailMessage message = new MailMessage("espeedenglishcenter@gmail.com", txtNguoiNhan.Text);
+                MailMessage message = new MailMessage();
+                message.From = new MailAddress("espeedenglishcenter@gmail.com");
+                foreach (string receiver in receivers)
+                {
+                    message.To.Add(receiver);
+                }
                 message.Subject = txtChuDe.Text;
                 message.Body = txtNoiDung.Text;
 
@@ -44,6 +56,14 @@ namespace QLTrungTamTiengAnh.View
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormGuiEmail_Load(object sender, EventArgs e)
+        {
+            foreach (string receiver in receivers)
+            {
+                txtNguoiNhan.Text += receiver + "; ";
+            }
         }
     }
 }

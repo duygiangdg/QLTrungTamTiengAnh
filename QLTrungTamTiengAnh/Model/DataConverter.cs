@@ -44,9 +44,8 @@ namespace QLTrungTamTiengAnh.Model
             return table;
         }
 
-        public static object[] ConvertDataToArray(DataTable table, string className)
+        public static object[] ConvertDataToArray(DataTable table, Type type)
         {
-            Type type = Type.GetType(className, true);
             int colCount = table.Columns.Count;
             int objCount = table.Rows.Count;
             object[] array = new object[objCount];

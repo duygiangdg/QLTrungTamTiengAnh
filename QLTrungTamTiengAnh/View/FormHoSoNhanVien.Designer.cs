@@ -98,6 +98,7 @@
             this.groupPanel2.Controls.Add(this.labelX11);
             this.groupPanel2.Controls.Add(this.labelX17);
             this.groupPanel2.Controls.Add(this.labelX13);
+            this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.DrawTitleBox = false;
             this.groupPanel2.Location = new System.Drawing.Point(29, 300);
             this.groupPanel2.Name = "groupPanel2";
@@ -286,6 +287,7 @@
             this.groupPanel1.Controls.Add(this.labelX2);
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Controls.Add(this.pictureBox1);
+            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.DrawTitleBox = false;
             this.groupPanel1.Location = new System.Drawing.Point(29, 17);
             this.groupPanel1.Name = "groupPanel1";
@@ -421,7 +423,6 @@
             this.radNu.Name = "radNu";
             this.radNu.Size = new System.Drawing.Size(39, 17);
             this.radNu.TabIndex = 5;
-            this.radNu.TabStop = true;
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = false;
             // 
@@ -446,6 +447,7 @@
             // 
             this.radNam.AutoSize = true;
             this.radNam.BackColor = System.Drawing.Color.Transparent;
+            this.radNam.Checked = true;
             this.radNam.Location = new System.Drawing.Point(538, 51);
             this.radNam.Name = "radNam";
             this.radNam.Size = new System.Drawing.Size(47, 17);
@@ -795,7 +797,7 @@
             // 
             this.btnLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnLuu.Location = new System.Drawing.Point(702, 466);
+            this.btnLuu.Location = new System.Drawing.Point(29, 460);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(80, 26);
             this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;

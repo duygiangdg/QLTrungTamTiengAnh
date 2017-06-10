@@ -38,10 +38,10 @@ namespace QLTrungTamTiengAnh.Model
             return dt;
         }
 
-        public static object GetItem(string tableName, string primaryKey, string keyValue, string className)
+        public static object GetItem(string tableName, string condition, Type type)
         {
             DataTable dt = new DataTable();
-            cmd.CommandText = "select * from " + tableName + " where " + primaryKey + "='" + keyValue + "'";
+            cmd.CommandText = "select * from " + tableName + " where " + condition;
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
             object obj = null;
@@ -51,7 +51,7 @@ namespace QLTrungTamTiengAnh.Model
                 con.OpenConn();
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 sda.Fill(dt);
-                obj = DataConverter.ConvertDataToArray(dt, className)[0];
+                obj = DataConverter.ConvertDataToArray(dt, type)[0];
                 con.CloseConn();
             }
             catch (Exception ex)
@@ -159,10 +159,10 @@ namespace QLTrungTamTiengAnh.Model
             return false;
         }
 
-        public static bool DeleteItem(string tableName, string primaryKey, string keyValue)
+        public static bool DeleteItem(string tableName, string condition)
         {
             DataTable dt = new DataTable();
-            cmd.CommandText = "delete from " + tableName + " where " + primaryKey + "='" + keyValue + "';";
+            cmd.CommandText = "delete from " + tableName + " where " + condition + ";";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.Connection;
 
@@ -190,6 +190,11 @@ namespace QLTrungTamTiengAnh.Model
             {
                 if (obj.ToString().Trim().Equals("")) return "NULL";
                 return "N'" + obj.ToString() + "'";
+            }
+            else if (obj.GetType() == typeof(bool))
+            {
+                if ((bool)obj) return "1";
+                else return "0";
             }
             else if (obj.GetType() == typeof(DateTime))
             {

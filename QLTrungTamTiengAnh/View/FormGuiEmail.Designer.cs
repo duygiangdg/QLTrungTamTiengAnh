@@ -159,6 +159,7 @@
             this.txtNguoiNhan.Location = new System.Drawing.Point(91, 52);
             this.txtNguoiNhan.Name = "txtNguoiNhan";
             this.txtNguoiNhan.PropertyName = "";
+            this.txtNguoiNhan.ReadOnly = true;
             this.txtNguoiNhan.Required = false;
             this.txtNguoiNhan.Size = new System.Drawing.Size(435, 20);
             this.txtNguoiNhan.TabIndex = 1;
@@ -206,6 +207,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gửi Email";
+            this.Load += new System.EventHandler(this.FormGuiEmail_Load);
             this.ResumeLayout(false);
 
         }

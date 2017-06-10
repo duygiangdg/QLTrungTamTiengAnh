@@ -58,7 +58,7 @@ namespace QLTrungTamTiengAnh.View
         public void PutExtra(string maNhanVien, bool editable)
         {
             this.maNhanVien = maNhanVien;
-            NhanVien nhanVien = (NhanVien)DataIO.GetItem("tb_NhanVien", "MaNhanVien", maNhanVien, "QLTrungTamTiengAnh.Object.NhanVien");
+            NhanVien nhanVien = (NhanVien)DataIO.GetItem("tb_NhanVien", "MaNhanVien = '" + maNhanVien + "'", typeof(NhanVien));
             BindData(nhanVien);
             if (nhanVien.GioiTinh)
             {
