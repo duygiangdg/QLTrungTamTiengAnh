@@ -17,5 +17,7 @@ namespace QLTrungTamTiengAnh.Control
 
         public static int Authority;
         public static int Language;
+
+        public static string UserName;
     }
 }

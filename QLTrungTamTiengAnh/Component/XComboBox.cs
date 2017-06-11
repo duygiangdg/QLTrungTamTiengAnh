@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.Component
 {
@@ -83,16 +84,33 @@ namespace QLTrungTamTiengAnh.Component
 
         public object GetValue()
         {
+            if (type.Equals("List"))
+            {
+                return SelectedValue;
+            }
             return Text;
         }
 
         public void SetValue(object obj)
         {
-            Text = (string)obj;
+            if (type.Equals("List"))
+            {
+                SelectedValue = (string)obj;
+            }
+            else
+            {
+                Text = (string)obj;
+            }
         }
 
         public bool CheckInput()
         {
+            if (Text.Trim().Equals("") && required)
+            {
+                MessageBox.Show(DisplayedName + " không được để trống!");
+                Focus();
+                return false;
+            }
             return true;
         }
     }

@@ -34,8 +34,8 @@
             this.radBaoLuu = new System.Windows.Forms.RadioButton();
             this.radDangHoc = new System.Windows.Forms.RadioButton();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
-            this.comboBoxEx4 = new QLTrungTamTiengAnh.Component.XComboBox();
-            this.comboBoxEx6 = new QLTrungTamTiengAnh.Component.XComboBox();
+            this.cbbLop = new QLTrungTamTiengAnh.Component.XComboBox();
+            this.cbbHocPhan = new QLTrungTamTiengAnh.Component.XComboBox();
             this.xTextBox4 = new QLTrungTamTiengAnh.Component.XTextBox();
             this.xTextBox2 = new QLTrungTamTiengAnh.Component.XTextBox();
             this.textBoxX2 = new QLTrungTamTiengAnh.Component.XTextBox();
@@ -74,8 +74,8 @@
             this.groupPanel1.Controls.Add(this.radBaoLuu);
             this.groupPanel1.Controls.Add(this.radDangHoc);
             this.groupPanel1.Controls.Add(this.labelX11);
-            this.groupPanel1.Controls.Add(this.comboBoxEx4);
-            this.groupPanel1.Controls.Add(this.comboBoxEx6);
+            this.groupPanel1.Controls.Add(this.cbbLop);
+            this.groupPanel1.Controls.Add(this.cbbHocPhan);
             this.groupPanel1.Controls.Add(this.xTextBox4);
             this.groupPanel1.Controls.Add(this.xTextBox2);
             this.groupPanel1.Controls.Add(this.textBoxX2);
@@ -225,39 +225,41 @@
             this.labelX11.TabIndex = 23;
             this.labelX11.Text = "Trạng thái học:";
             // 
-            // comboBoxEx4
+            // cbbLop
             // 
-            this.comboBoxEx4.AutoInput = false;
-            this.comboBoxEx4.DisplayedName = null;
-            this.comboBoxEx4.DisplayMember = "Text";
-            this.comboBoxEx4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx4.FormattingEnabled = true;
-            this.comboBoxEx4.ItemHeight = 14;
-            this.comboBoxEx4.Location = new System.Drawing.Point(473, 140);
-            this.comboBoxEx4.Name = "comboBoxEx4";
-            this.comboBoxEx4.PropertyName = "MaLop";
-            this.comboBoxEx4.Required = false;
-            this.comboBoxEx4.Size = new System.Drawing.Size(178, 20);
-            this.comboBoxEx4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx4.TabIndex = 18;
-            this.comboBoxEx4.Type = "Text";
+            this.cbbLop.AutoInput = false;
+            this.cbbLop.DisplayedName = "Lớp đăng ký";
+            this.cbbLop.DisplayMember = "Text";
+            this.cbbLop.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbLop.FormattingEnabled = true;
+            this.cbbLop.ItemHeight = 15;
+            this.cbbLop.Location = new System.Drawing.Point(473, 140);
+            this.cbbLop.Name = "cbbLop";
+            this.cbbLop.PropertyName = "MaLop";
+            this.cbbLop.Required = true;
+            this.cbbLop.Size = new System.Drawing.Size(178, 21);
+            this.cbbLop.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbLop.TabIndex = 18;
+            this.cbbLop.Type = "List";
             // 
-            // comboBoxEx6
+            // cbbHocPhan
             // 
-            this.comboBoxEx6.AutoInput = false;
-            this.comboBoxEx6.DisplayedName = null;
-            this.comboBoxEx6.DisplayMember = "Text";
-            this.comboBoxEx6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx6.FormattingEnabled = true;
-            this.comboBoxEx6.ItemHeight = 14;
-            this.comboBoxEx6.Location = new System.Drawing.Point(151, 140);
-            this.comboBoxEx6.Name = "comboBoxEx6";
-            this.comboBoxEx6.PropertyName = "MaHocPhan";
-            this.comboBoxEx6.Required = false;
-            this.comboBoxEx6.Size = new System.Drawing.Size(187, 20);
-            this.comboBoxEx6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx6.TabIndex = 14;
-            this.comboBoxEx6.Type = "Text";
+            this.cbbHocPhan.AutoInput = false;
+            this.cbbHocPhan.DisplayedName = "Học phần";
+            this.cbbHocPhan.DisplayMember = "Text";
+            this.cbbHocPhan.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbHocPhan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbHocPhan.FormattingEnabled = true;
+            this.cbbHocPhan.ItemHeight = 15;
+            this.cbbHocPhan.Location = new System.Drawing.Point(151, 140);
+            this.cbbHocPhan.Name = "cbbHocPhan";
+            this.cbbHocPhan.PropertyName = "MaHocPhan";
+            this.cbbHocPhan.Required = true;
+            this.cbbHocPhan.Size = new System.Drawing.Size(187, 21);
+            this.cbbHocPhan.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbHocPhan.TabIndex = 14;
+            this.cbbHocPhan.Type = "List";
             // 
             // xTextBox4
             // 
@@ -516,8 +518,8 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        private Component.XComboBox comboBoxEx6;
-        private Component.XComboBox comboBoxEx4;
+        private Component.XComboBox cbbHocPhan;
+        private Component.XComboBox cbbLop;
         private System.Windows.Forms.RadioButton radBaoLuu;
         private System.Windows.Forms.RadioButton radDangHoc;
         private DevComponents.DotNetBar.LabelX labelX11;

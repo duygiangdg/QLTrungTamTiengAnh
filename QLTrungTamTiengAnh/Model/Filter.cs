@@ -39,5 +39,16 @@ namespace QLTrungTamTiengAnh.Model
             }
             return whereClause;
         }
+
+        public string GetConditionClause()
+        {
+            if (IsEmpty()) return "";
+            string whereClause = conditions[0];
+            for (int index = 1; index < conditions.Count; index++)
+            {
+                whereClause += " AND " + conditions[index];
+            }
+            return whereClause;
+        }
     }
 }

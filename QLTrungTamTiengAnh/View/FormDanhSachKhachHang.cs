@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormDanhSachKhachHang : Form
+    public partial class FormDanhSachKhachHang : Form, IRefreshable
     {
         private Filter filter;
         public FormDanhSachKhachHang()
@@ -180,7 +180,7 @@ namespace QLTrungTamTiengAnh.View
             cbbNamSinh.SelectedIndex = -1;*/
         }
 
-        private void RefreshData()
+        public void RefreshData()
         {
             SetFilter();
             string selectClause = "SELECT vw_KhachHang.* FROM vw_KhachHang, tb_KhachHang";

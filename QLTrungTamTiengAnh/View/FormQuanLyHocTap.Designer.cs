@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvDSHocVien = new QLTrungTamTiengAnh.Component.XDataGridView();
             this.expandablePanel1 = new DevComponents.DotNetBar.ExpandablePanel();
@@ -62,10 +62,10 @@
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.btnDangKyHoc = new DevComponents.DotNetBar.ButtonItem();
             this.btnXemChiTiet = new DevComponents.DotNetBar.ButtonItem();
-            this.btnSuaHoSo = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnSua = new DevComponents.DotNetBar.ButtonItem();
+            this.btnHuyDangKy = new DevComponents.DotNetBar.ButtonItem();
+            this.btnBaoLuu = new DevComponents.DotNetBar.ButtonItem();
+            this.btnKetThuc = new DevComponents.DotNetBar.ButtonItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSHocVien)).BeginInit();
             this.expandablePanel1.SuspendLayout();
@@ -99,19 +99,19 @@
             this.dgvDSHocVien.AllowUserToAddRows = false;
             this.dgvDSHocVien.AllowUserToDeleteRows = false;
             this.dgvDSHocVien.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvDSHocVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvDSHocVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvDSHocVien.BackgroundColor = System.Drawing.Color.White;
             this.dgvDSHocVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDSHocVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDSHocVien.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSHocVien.DefaultCellStyle = dataGridViewCellStyle10;
             this.dgvDSHocVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSHocVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvDSHocVien.HighlightSelectedColumnHeaders = false;
@@ -623,10 +623,10 @@
             this.ribbonBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnDangKyHoc,
             this.btnXemChiTiet,
-            this.btnSuaHoSo,
-            this.buttonItem4,
-            this.buttonItem1,
-            this.buttonItem2});
+            this.btnSua,
+            this.btnHuyDangKy,
+            this.btnBaoLuu,
+            this.btnKetThuc});
             this.ribbonBar1.Location = new System.Drawing.Point(2, 1);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(408, 86);
@@ -664,45 +664,49 @@
             this.btnXemChiTiet.Text = "Xem          Chi Tiết";
             this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
-            // btnSuaHoSo
+            // btnSua
             // 
-            this.btnSuaHoSo.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.btnSuaHoSo.FixedSize = new System.Drawing.Size(65, 65);
-            this.btnSuaHoSo.Image = global::QLTrungTamTiengAnh.Properties.Resources.edit_user;
-            this.btnSuaHoSo.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.btnSuaHoSo.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnSuaHoSo.Name = "btnSuaHoSo";
-            this.btnSuaHoSo.Text = "Cập Nhật Trạng Thái";
+            this.btnSua.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnSua.FixedSize = new System.Drawing.Size(65, 65);
+            this.btnSua.Image = global::QLTrungTamTiengAnh.Properties.Resources.edit_user;
+            this.btnSua.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnSua.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Text = "Cập Nhật Trạng Thái";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // buttonItem4
+            // btnHuyDangKy
             // 
-            this.buttonItem4.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem4.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem4.Image = global::QLTrungTamTiengAnh.Properties.Resources.delete_user;
-            this.buttonItem4.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem4.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem4.Name = "buttonItem4";
-            this.buttonItem4.Text = "Hủy       Đăng Ký";
+            this.btnHuyDangKy.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnHuyDangKy.FixedSize = new System.Drawing.Size(65, 65);
+            this.btnHuyDangKy.Image = global::QLTrungTamTiengAnh.Properties.Resources.delete_user;
+            this.btnHuyDangKy.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnHuyDangKy.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnHuyDangKy.Name = "btnHuyDangKy";
+            this.btnHuyDangKy.Text = "Hủy       Đăng Ký";
+            this.btnHuyDangKy.Click += new System.EventHandler(this.btnHuyDangKy_Click);
             // 
-            // buttonItem1
+            // btnBaoLuu
             // 
-            this.buttonItem1.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem1.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem1.Image = global::QLTrungTamTiengAnh.Properties.Resources.delete_user;
-            this.buttonItem1.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem1.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "Bảo Lưu Học Tập";
+            this.btnBaoLuu.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnBaoLuu.FixedSize = new System.Drawing.Size(65, 65);
+            this.btnBaoLuu.Image = global::QLTrungTamTiengAnh.Properties.Resources.delete_user;
+            this.btnBaoLuu.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnBaoLuu.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnBaoLuu.Name = "btnBaoLuu";
+            this.btnBaoLuu.Text = "Bảo Lưu Học Tập";
+            this.btnBaoLuu.Click += new System.EventHandler(this.btnBaoLuu_Click);
             // 
-            // buttonItem2
+            // btnKetThuc
             // 
-            this.buttonItem2.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
-            this.buttonItem2.FixedSize = new System.Drawing.Size(65, 65);
-            this.buttonItem2.Image = global::QLTrungTamTiengAnh.Properties.Resources.edit_user;
-            this.buttonItem2.ImageFixedSize = new System.Drawing.Size(30, 30);
-            this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.Text = "Kết Thúc Học Phần";
+            this.btnKetThuc.ButtonStyle = DevComponents.DotNetBar.eButtonStyle.ImageAndText;
+            this.btnKetThuc.FixedSize = new System.Drawing.Size(65, 65);
+            this.btnKetThuc.Image = global::QLTrungTamTiengAnh.Properties.Resources.edit_user;
+            this.btnKetThuc.ImageFixedSize = new System.Drawing.Size(30, 30);
+            this.btnKetThuc.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnKetThuc.Name = "btnKetThuc";
+            this.btnKetThuc.Text = "Kết Thúc Học Phần";
+            this.btnKetThuc.Click += new System.EventHandler(this.btnKetThuc_Click);
             // 
             // FormQuanLyHocTap
             // 
@@ -738,8 +742,8 @@
         private DevComponents.DotNetBar.RibbonBar ribbonBar1;
         private DevComponents.DotNetBar.ButtonItem btnDangKyHoc;
         private DevComponents.DotNetBar.ButtonItem btnXemChiTiet;
-        private DevComponents.DotNetBar.ButtonItem btnSuaHoSo;
-        private DevComponents.DotNetBar.ButtonItem buttonItem4;
+        private DevComponents.DotNetBar.ButtonItem btnSua;
+        private DevComponents.DotNetBar.ButtonItem btnHuyDangKy;
         private Component.XDataGridView dgvDSHocVien;
         private DevComponents.DotNetBar.ButtonX btnLoc;
         private DevComponents.DotNetBar.ButtonX btnLamMoi;
@@ -761,7 +765,7 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.ButtonItem buttonItem1;
-        private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.ButtonItem btnBaoLuu;
+        private DevComponents.DotNetBar.ButtonItem btnKetThuc;
     }
 }

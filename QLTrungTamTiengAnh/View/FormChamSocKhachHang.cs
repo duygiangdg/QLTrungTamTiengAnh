@@ -57,7 +57,7 @@ namespace QLTrungTamTiengAnh.View
 
         private void btnXemNhatKy_Click(object sender, EventArgs e)
         {
-
+            FormDieuHuong.Instance.CreateTab(new FormNhatKyCSKH());
         }
 
         private void FormChamSocKhachHang_Load(object sender, EventArgs e)
@@ -137,13 +137,6 @@ namespace QLTrungTamTiengAnh.View
             {
                 filter.AddCondition("GioiTinh = 0");
             }
-
-            /*
-            string namSinh = cbbNamSinh.Text;
-            if (!namSinh.Equals(""))
-            {
-                filter.AddCondition("NamSinh = '" + namSinh + "'");
-            }*/
         }
 
         private void GetFilterOptions()
@@ -171,11 +164,6 @@ namespace QLTrungTamTiengAnh.View
             cbbTruong.DataSource = dtTruong;
             cbbTruong.DisplayMember = "Truong";
             cbbTruong.Text = truong;
-
-            /*DataTable dtNamSinh = DataIO.GetData("SELECT DISTINCT NamSinh FROM tb_KhachHang WHERE NamSinh IS NOT NULL AND TrangThai = N'Chưa học'");
-            cbbNamSinh.DataSource = dtNamSinh;
-            cbbNamSinh.DisplayMember = "NamSinh";
-            cbbNamSinh.SelectedIndex = -1;*/
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormThoiKhoaBieu : Form
+    public partial class FormQuanLyLop : Form
     {
-        public FormThoiKhoaBieu()
+        public FormQuanLyLop()
         {
             InitializeComponent();
         }

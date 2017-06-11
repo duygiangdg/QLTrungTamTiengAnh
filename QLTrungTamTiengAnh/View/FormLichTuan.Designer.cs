@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnLuu = new DevComponents.DotNetBar.ButtonX();
             this.lvDSLop = new DevComponents.DotNetBar.ListBoxAdv();
             this.tblLichTuan = new System.Windows.Forms.TableLayoutPanel();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
@@ -43,6 +44,8 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelItem1 = new DevComponents.DotNetBar.LabelItem();
+            this.cbbPhongHoc = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.labelX12 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +62,9 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.labelX12);
+            this.splitContainer1.Panel1.Controls.Add(this.cbbPhongHoc);
+            this.splitContainer1.Panel1.Controls.Add(this.btnLuu);
             this.splitContainer1.Panel1.Controls.Add(this.lvDSLop);
             // 
             // splitContainer1.Panel2
@@ -68,9 +74,25 @@
             this.splitContainer1.SplitterDistance = 143;
             this.splitContainer1.TabIndex = 1;
             // 
+            // btnLuu
+            // 
+            this.btnLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnLuu.Location = new System.Drawing.Point(34, 442);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnLuu.TabIndex = 1;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
             // lvDSLop
             // 
             this.lvDSLop.AllowDrop = true;
+            this.lvDSLop.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvDSLop.AutoScroll = true;
             // 
             // 
@@ -80,14 +102,13 @@
             this.lvDSLop.BackgroundStyle.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.lvDSLop.CheckStateMember = null;
             this.lvDSLop.ContainerControlProcessDialogKey = true;
-            this.lvDSLop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvDSLop.DragDropSupport = true;
             this.lvDSLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvDSLop.ItemHeight = 30;
             this.lvDSLop.Location = new System.Drawing.Point(0, 0);
             this.lvDSLop.Name = "lvDSLop";
             this.lvDSLop.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lvDSLop.Size = new System.Drawing.Size(143, 477);
+            this.lvDSLop.Size = new System.Drawing.Size(143, 366);
             this.lvDSLop.TabIndex = 0;
             this.lvDSLop.Text = "listBoxAdv1";
             this.lvDSLop.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lvDSLop_MouseDown);
@@ -303,6 +324,37 @@
             this.labelItem1.GlobalItem = false;
             this.labelItem1.Name = "labelItem1";
             // 
+            // cbbPhongHoc
+            // 
+            this.cbbPhongHoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbPhongHoc.DisplayMember = "Text";
+            this.cbbPhongHoc.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbPhongHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPhongHoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbPhongHoc.FormattingEnabled = true;
+            this.cbbPhongHoc.ItemHeight = 17;
+            this.cbbPhongHoc.Location = new System.Drawing.Point(3, 406);
+            this.cbbPhongHoc.Name = "cbbPhongHoc";
+            this.cbbPhongHoc.Size = new System.Drawing.Size(137, 23);
+            this.cbbPhongHoc.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbPhongHoc.TabIndex = 2;
+            this.cbbPhongHoc.SelectedIndexChanged += new System.EventHandler(this.cbbPhongHoc_SelectedIndexChanged);
+            // 
+            // labelX12
+            // 
+            this.labelX12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            // 
+            // 
+            // 
+            this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelX12.Location = new System.Drawing.Point(4, 379);
+            this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(75, 23);
+            this.labelX12.TabIndex = 3;
+            this.labelX12.Text = "Phòng học";
+            // 
             // FormLichTuan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,5 +390,8 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelItem labelItem1;
+        private DevComponents.DotNetBar.ButtonX btnLuu;
+        private DevComponents.DotNetBar.LabelX labelX12;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cbbPhongHoc;
     }
 }

@@ -15,10 +15,22 @@ namespace QLTrungTamTiengAnh.View
     public partial class FormThongTinHocTap : FormInput
     {
         string maKhachHang;
+        bool taoMoi = true;
 
         public FormThongTinHocTap()
         {
             InitializeComponent();
+            DataTable dtHocPhan = DataIO.GetData("SELECT MaHocPHan, TenHocPhan FROM tb_HocPhan");
+            cbbHocPhan.DataSource = dtHocPhan;
+            cbbHocPhan.DisplayMember = "TenHocPhan";
+            cbbHocPhan.ValueMember = "MaHocPhan";
+            cbbHocPhan.SelectedIndex = -1;
+
+            DataTable dtLop = DataIO.GetData("SELECT MaLop FROM tb_Lop");
+            cbbLop.DataSource = dtLop;
+            cbbLop.DisplayMember = "MaLop";
+            cbbLop.ValueMember = "MaLop";
+            cbbLop.SelectedIndex = -1;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -26,6 +38,9 @@ namespace QLTrungTamTiengAnh.View
             if (btnLuu.Text.Equals("Tạo mới"))
             {
                 EnableInput();
+                radDangHoc.Enabled = true;
+                radBaoLuu.Enabled = true;
+                radKetThuc.Enabled = true;
                 Clear();
                 btnLuu.Text = "Lưu";
             }
@@ -62,16 +77,15 @@ namespace QLTrungTamTiengAnh.View
                     radDangHoc.Enabled = false;
                     radBaoLuu.Enabled = false;
                     radKetThuc.Enabled = false;
-                    if (maKhachHang == null)
+
+                    DataIO.UpdateItem(khachHang, "tb_KhachHang", "MaKhachHang");
+                    btnLuu.Text = "Sửa";
+
+                    if (taoMoi)
                     {
-                        khachHang.MaKhachHang = null;
-                        DataIO.AddItem(khachHang, "tb_KhachHang");
-                        btnLuu.Text = "Sửa";
-                    }
-                    else
-                    {
-                        DataIO.UpdateItem(khachHang, "tb_KhachHang", "MaKhachHang");
-                        btnLuu.Enabled = false;
+                        PhieuDangKy phieuDangKy = (PhieuDangKy)CreateObject("QLTrungTamTiengAnh.Object.PhieuDangKy");
+                        phieuDangKy.SoDangKy = null;
+                        DataIO.AddItem(phieuDangKy, "tb_PhieuDangKy");
                     }
                 }
             }
@@ -84,16 +98,14 @@ namespace QLTrungTamTiengAnh.View
             BindData(khachHang);
             switch (khachHang.TrangThai)
             {
-                case "Chưa học":
-                    break;
-                case "Đang học":
-                    radDangHoc.Checked = true;
-                    break;
                 case "Bảo lưu":
                     radBaoLuu.Checked = true;
                     break;
                 case "Kết thúc":
                     radKetThuc.Checked = true;
+                    break;
+                default:
+                    radDangHoc.Checked = true;
                     break;
             }
             if (!editable)

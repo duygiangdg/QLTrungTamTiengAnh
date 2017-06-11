@@ -8,8 +8,7 @@ namespace QLTrungTamTiengAnh.Object
 {
     public class Lop
     {
-        string maLop, maGiaoVien, maTroGiang, maHocPhan;
-        int trangThai;
+        string maLop, maGiaoVien, maTroGiang, maHocPhan, trangThai;
 
         public string MaGiaoVien
         {
@@ -63,7 +62,7 @@ namespace QLTrungTamTiengAnh.Object
             }
         }
 
-        public int TrangThai
+        public string TrangThai
         {
             get
             {

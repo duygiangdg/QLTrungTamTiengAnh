@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormDanhMucHocPhan : Form
+    public partial class FormDanhMucHocPhan : Form, IRefreshable
     {
         public FormDanhMucHocPhan()
         {
@@ -24,7 +24,7 @@ namespace QLTrungTamTiengAnh.View
             RefreshData();
         }
 
-        private void RefreshData()
+        public void RefreshData()
         {
             DataTable dt = DataIO.GetData("SELECT * FROM vw_HocPhan");
             dgvDSHocPhan.DataSource = dt;

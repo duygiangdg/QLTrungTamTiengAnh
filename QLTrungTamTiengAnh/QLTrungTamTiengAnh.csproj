@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -47,6 +47,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar.Layout, Version=14.0.0.21, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.0.0.19, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
@@ -55,6 +60,25 @@
       <HintPath>D:\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
     <Reference Include="DevComponents.Instrumentation, Version=14.0.0.19, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -91,19 +115,113 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Model\Filter.cs" />
+    <Compile Include="Object\BangDiem.cs" />
     <Compile Include="Object\ChucVu.cs" />
     <Compile Include="Object\HocPhan.cs" />
+    <Compile Include="Object\KhuyenMai.cs" />
+    <Compile Include="Object\LichTuan.cs" />
+    <Compile Include="Object\NguoiDung.cs" />
+    <Compile Include="Report\ChiPhiTheoThang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ChiPhiTheoThang.Designer.cs">
+      <DependentUpon>ChiPhiTheoThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ChiTietHocPhi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ChiTietHocPhi.Designer.cs">
+      <DependentUpon>ChiTietHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DanhSachKhachHang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DanhSachKhachHang.Designer.cs">
+      <DependentUpon>DanhSachKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DoanhSoTheoThang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DoanhSoTheoThang.Designer.cs">
+      <DependentUpon>DoanhSoTheoThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DoanhThuTheoNam.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DoanhThuTheoNam.Designer.cs">
+      <DependentUpon>DoanhThuTheoNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\DoanhThuTheoThang.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DoanhThuTheoThang.Designer.cs">
+      <DependentUpon>DoanhThuTheoThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\HocVienThieuHocPhi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\HocVienThieuHocPhi.Designer.cs">
+      <DependentUpon>HocVienThieuHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\LichHoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\LichHoc.Designer.cs">
+      <DependentUpon>LichHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\LuongNhanVien.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\LuongNhanVien.Designer.cs">
+      <DependentUpon>LuongNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\NhatKyCSKH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\NhatKyCSKH.Designer.cs">
+      <DependentUpon>NhatKyCSKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\SiSoLop.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\SiSoLop.Designer.cs">
+      <DependentUpon>SiSoLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\TiLeCSKH.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\TiLeCSKH.Designer.cs">
+      <DependentUpon>TiLeCSKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormChamSocKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormChamSocKhachHang.Designer.cs">
       <DependentUpon>FormChamSocKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDanhGiaHocTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDanhGiaHocTap.Designer.cs">
+      <DependentUpon>FormDanhGiaHocTap.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormDanhSachChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormDanhSachChucVu.Designer.cs">
       <DependentUpon>FormDanhSachChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormDoiMatKhau.Designer.cs">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormHoSoNhanVien.cs">
       <SubType>Form</SubType>
@@ -117,6 +235,12 @@
     <Compile Include="View\FormHoSoKhachHang.Designer.cs">
       <DependentUpon>FormHoSoKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormNhatKyCSKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormNhatKyCSKH.Designer.cs">
+      <DependentUpon>FormNhatKyCSKH.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormPhieuChi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +252,24 @@
     </Compile>
     <Compile Include="View\FormPhieuThu.Designer.cs">
       <DependentUpon>FormPhieuThu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQLKhuyenMai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQLKhuyenMai.Designer.cs">
+      <DependentUpon>FormQLKhuyenMai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQuanLyLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyLop.Designer.cs">
+      <DependentUpon>FormQuanLyLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyNguoiDung.Designer.cs">
+      <DependentUpon>FormQuanLyNguoiDung.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormThongTinHocTap.cs">
       <SubType>Form</SubType>
@@ -215,15 +357,11 @@
     <Compile Include="Object\TroGiang.cs" />
     <Compile Include="Control\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\FormThoiKhoaBieu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormThoiKhoaBieu.Designer.cs">
-      <DependentUpon>FormThoiKhoaBieu.cs</DependentUpon>
-    </Compile>
+    <Compile Include="View\IRefreshable.cs" />
     <EmbeddedResource Include="Component\ScheduleTask.resx">
       <DependentUpon>ScheduleTask.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -234,11 +372,56 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\ChiPhiTheoThang.resx">
+      <DependentUpon>ChiPhiTheoThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ChiTietHocPhi.resx">
+      <DependentUpon>ChiTietHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DanhSachKhachHang.resx">
+      <DependentUpon>DanhSachKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DoanhSoTheoThang.resx">
+      <DependentUpon>DoanhSoTheoThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DoanhThuTheoNam.resx">
+      <DependentUpon>DoanhThuTheoNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DoanhThuTheoThang.resx">
+      <DependentUpon>DoanhThuTheoThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\HocVienThieuHocPhi.resx">
+      <DependentUpon>HocVienThieuHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\LichHoc.resx">
+      <DependentUpon>LichHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\LuongNhanVien.resx">
+      <DependentUpon>LuongNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\NhatKyCSKH.resx">
+      <DependentUpon>NhatKyCSKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\SiSoLop.resx">
+      <DependentUpon>SiSoLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\TiLeCSKH.resx">
+      <DependentUpon>TiLeCSKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormChamSocKhachHang.resx">
       <DependentUpon>FormChamSocKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDanhGiaHocTap.resx">
+      <DependentUpon>FormDanhGiaHocTap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDanhSachChucVu.resx">
       <DependentUpon>FormDanhSachChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormDoiMatKhau.resx">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormHoSoNhanVien.resx">
       <DependentUpon>FormHoSoNhanVien.cs</DependentUpon>
@@ -246,8 +429,20 @@
     <EmbeddedResource Include="View\FormHoSoKhachHang.resx">
       <DependentUpon>FormHoSoKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormNhatKyCSKH.resx">
+      <DependentUpon>FormNhatKyCSKH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormPhieuChi.resx">
       <DependentUpon>FormPhieuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQLKhuyenMai.resx">
+      <DependentUpon>FormQLKhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQuanLyLop.resx">
+      <DependentUpon>FormQuanLyLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQuanLyNguoiDung.resx">
+      <DependentUpon>FormQuanLyNguoiDung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormThongTinHocTap.resx">
       <DependentUpon>FormThongTinHocTap.cs</DependentUpon>
@@ -284,9 +479,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormDanhSachLopHoc.resx">
       <DependentUpon>FormDanhSachLopHoc.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormThoiKhoaBieu.resx">
-      <DependentUpon>FormThoiKhoaBieu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -369,6 +561,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\test_schdule_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log_out_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Treetog-Junior-Document-archive.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

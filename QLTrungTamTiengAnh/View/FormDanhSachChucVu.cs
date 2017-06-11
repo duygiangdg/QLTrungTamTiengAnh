@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormDanhSachChucVu : FormInput
+    public partial class FormDanhSachChucVu : FormInput, IRefreshable
     {
         public FormDanhSachChucVu()
         {
@@ -24,7 +24,7 @@ namespace QLTrungTamTiengAnh.View
             RefreshData();
         }
 
-        private void RefreshData()
+        public void RefreshData()
         {
             DataTable dt = DataIO.GetData("SELECT * FROM vw_ChucVu");
             dgvDSChucVu.DataSource = dt;
@@ -61,9 +61,18 @@ namespace QLTrungTamTiengAnh.View
             {
                 DataGridViewRow row = dgvDSChucVu.SelectedRows[0];
                 string maChucVu = row.Cells["Mã CV"].Value.ToString();
-                DataIO.DeleteItem("tb_ChucVu", "MaChucVu = '" + maChucVu + "'");
-                MessageBox.Show("Xóa chức vụ thành công");
-                RefreshData();
+                if (maChucVu.Equals("CV01") || maChucVu.Equals("CV02"))
+                {
+                    MessageBox.Show("Đây là chức vụ quan trọng, không thể xóa!", "Lỗi",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    DataIO.DeleteItem("tb_ChucVu", "MaChucVu = '" + maChucVu + "'");
+                    MessageBox.Show("Xóa chức vụ thành công!", "Thành công",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    RefreshData();
+                }
             }
         }
 

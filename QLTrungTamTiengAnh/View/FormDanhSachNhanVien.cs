@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormDanhSachNhanVien : Form
+    public partial class FormDanhSachNhanVien : Form, IRefreshable
     {
         private Filter filter;
         public FormDanhSachNhanVien()
@@ -83,7 +83,7 @@ namespace QLTrungTamTiengAnh.View
             }
         }
 
-        private void RefreshData()
+        public void RefreshData()
         {
             SetFilter();
             string selectClause = "SELECT vw_NhanVien.* FROM vw_NhanVien, tb_NhanVien";
@@ -186,6 +186,12 @@ namespace QLTrungTamTiengAnh.View
             radNu.Checked = false;
             dtpNgayTaoTu.Text = "";
             dtpNgayTaoDen.Text = "";
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string query = txtSearch.Text;
+            dgvDSNhanVien.Search(query);
         }
     }
 }

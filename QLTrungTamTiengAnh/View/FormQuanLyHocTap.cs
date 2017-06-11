@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace QLTrungTamTiengAnh.View
 {
-    public partial class FormQuanLyHocTap : Form
+    public partial class FormQuanLyHocTap : Form, IRefreshable
     {
         private Filter filter;
         public FormQuanLyHocTap()
@@ -101,7 +101,7 @@ namespace QLTrungTamTiengAnh.View
             dgvDSHocVien.Search(query);
         }
 
-        private void RefreshData()
+        public void RefreshData()
         {
             SetFilter();
             string selectClause = "SELECT vw_KhachHang.* FROM vw_KhachHang, tb_KhachHang";
@@ -187,6 +187,90 @@ namespace QLTrungTamTiengAnh.View
             cbbNamSinh.DataSource = dtNamSinh;
             cbbNamSinh.DisplayMember = "NamSinh";
             cbbNamSinh.SelectedIndex = -1;*/
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (dgvDSHocVien.SelectedRows.Count == 1)
+            {
+                string maKhachHang = dgvDSHocVien.SelectedRows[0].Cells[0].Value.ToString();
+                FormHoSoKhachHang form = new FormHoSoKhachHang();
+                form.PutExtra(maKhachHang, true);
+                FormDieuHuong.Instance.CreateTab(form);
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn một học viên trong bảng để cập nhật trạng thái");
+            }
+        }
+
+        private void btnHuyDangKy_Click(object sender, EventArgs e)
+        {
+            if (dgvDSHocVien.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show(
+                    "Bạn có chắc chắn muốn hủy đăng ký " + dgvDSHocVien.SelectedRows.Count + " học viên?",
+                    "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow row in dgvDSHocVien.SelectedRows)
+                    {
+                        string maKhachHang = row.Cells[0].Value.ToString();
+                        DataIO.Execute("UPDATE tb_KhachHang SET TrangThai = N'Chưa học' WHERE MaKhachHang = '" + maKhachHang + "'");
+                    }
+                }
+                RefreshData();
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn học viên trong bảng để hủy đăng ký");
+            }
+        }
+
+        private void btnBaoLuu_Click(object sender, EventArgs e)
+        {
+            if (dgvDSHocVien.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show(
+                    "Bạn có chắc chắn muốn hủy bảo lưu học tập của " + dgvDSHocVien.SelectedRows.Count + " học viên?",
+                    "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow row in dgvDSHocVien.SelectedRows)
+                    {
+                        string maKhachHang = row.Cells[0].Value.ToString();
+                        DataIO.Execute("UPDATE tb_KhachHang SET TrangThai = N'Bảo lưu' WHERE MaKhachHang = '" + maKhachHang + "'");
+                    }
+                }
+                RefreshData();
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn học viên trong bảng để bảo lưu học tập");
+            }
+        }
+
+        private void btnKetThuc_Click(object sender, EventArgs e)
+        {
+            if (dgvDSHocVien.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show(
+                    "Bạn có chắc chắn " + dgvDSHocVien.SelectedRows.Count + " học viên đã kết thúc học khóa học?",
+                    "Xác nhận", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    foreach (DataGridViewRow row in dgvDSHocVien.SelectedRows)
+                    {
+                        string maKhachHang = row.Cells[0].Value.ToString();
+                        DataIO.Execute("UPDATE tb_KhachHang SET TrangThai = N'Kết thúc' WHERE MaKhachHang = '" + maKhachHang + "'");
+                    }
+                }
+                RefreshData();
+            }
+            else
+            {
+                MessageBox.Show("Hãy chọn học viên trong bảng để kết thúc khóa học");
+            }
         }
     }
 }

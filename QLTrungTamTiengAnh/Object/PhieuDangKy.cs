@@ -8,18 +8,59 @@ namespace QLTrungTamTiengAnh.Object
 {
     public class PhieuDangKy
     {
-        string soDangKy, maKhachHang;
-        int level, mucGiamHP;
-        DateTime ngayDangKy, ngayHen;
+        string soDangKy, maKhachHang, maHocPhan;
+        DateTime ngayDangKy;
 
-        public PhieuDangKy(string soDangKy, string maKhachHang, int level, int mucGiamHP, DateTime ngayDangKy, DateTime ngayHen)
+        public string SoDangKy
         {
-            this.soDangKy = soDangKy;
-            this.maKhachHang = maKhachHang;
-            this.level = level;
-            this.mucGiamHP = mucGiamHP;
-            this.ngayDangKy = ngayDangKy;
-            this.ngayHen = ngayHen;
+            get
+            {
+                return soDangKy;
+            }
+
+            set
+            {
+                soDangKy = value;
+            }
+        }
+
+        public string MaKhachHang
+        {
+            get
+            {
+                return maKhachHang;
+            }
+
+            set
+            {
+                maKhachHang = value;
+            }
+        }
+
+        public string MaHocPhan
+        {
+            get
+            {
+                return maHocPhan;
+            }
+
+            set
+            {
+                maHocPhan = value;
+            }
+        }
+
+        public DateTime NgayDangKy
+        {
+            get
+            {
+                return DateTime.Now;
+            }
+
+            set
+            {
+                ngayDangKy = value;
+            }
         }
     }
 }

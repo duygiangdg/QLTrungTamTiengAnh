@@ -38,15 +38,15 @@
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.comboBoxEx6 = new QLTrungTamTiengAnh.Component.XComboBox();
+            this.cbbXaPhuong = new QLTrungTamTiengAnh.Component.XComboBox();
             this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.dateTimeInput1 = new QLTrungTamTiengAnh.Component.XDateTimeInput();
             this.labelX16 = new DevComponents.DotNetBar.LabelX();
             this.radNu = new System.Windows.Forms.RadioButton();
-            this.comboBoxEx5 = new QLTrungTamTiengAnh.Component.XComboBox();
+            this.cbbQuanHuyen = new QLTrungTamTiengAnh.Component.XComboBox();
             this.radNam = new System.Windows.Forms.RadioButton();
-            this.comboBoxEx4 = new QLTrungTamTiengAnh.Component.XComboBox();
-            this.comboBoxEx7 = new QLTrungTamTiengAnh.Component.XComboBox();
+            this.cbbTinhThanh = new QLTrungTamTiengAnh.Component.XComboBox();
+            this.cbbChucVu = new QLTrungTamTiengAnh.Component.XComboBox();
             this.comboBoxEx1 = new QLTrungTamTiengAnh.Component.XComboBox();
             this.textBoxX8 = new QLTrungTamTiengAnh.Component.XTextBox();
             this.textBoxX6 = new QLTrungTamTiengAnh.Component.XTextBox();
@@ -257,15 +257,15 @@
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.comboBoxEx6);
+            this.groupPanel1.Controls.Add(this.cbbXaPhuong);
             this.groupPanel1.Controls.Add(this.labelX18);
             this.groupPanel1.Controls.Add(this.dateTimeInput1);
             this.groupPanel1.Controls.Add(this.labelX16);
             this.groupPanel1.Controls.Add(this.radNu);
-            this.groupPanel1.Controls.Add(this.comboBoxEx5);
+            this.groupPanel1.Controls.Add(this.cbbQuanHuyen);
             this.groupPanel1.Controls.Add(this.radNam);
-            this.groupPanel1.Controls.Add(this.comboBoxEx4);
-            this.groupPanel1.Controls.Add(this.comboBoxEx7);
+            this.groupPanel1.Controls.Add(this.cbbTinhThanh);
+            this.groupPanel1.Controls.Add(this.cbbChucVu);
             this.groupPanel1.Controls.Add(this.comboBoxEx1);
             this.groupPanel1.Controls.Add(this.textBoxX8);
             this.groupPanel1.Controls.Add(this.textBoxX6);
@@ -320,24 +320,24 @@
             // 
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel1.TabIndex = 34;
-            this.groupPanel1.Text = "Thông Tin Giảng Viên";
+            this.groupPanel1.Text = "Thông Tin Nhân Viên";
             // 
-            // comboBoxEx6
+            // cbbXaPhuong
             // 
-            this.comboBoxEx6.AutoInput = false;
-            this.comboBoxEx6.DisplayedName = null;
-            this.comboBoxEx6.DisplayMember = "Text";
-            this.comboBoxEx6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx6.FormattingEnabled = true;
-            this.comboBoxEx6.ItemHeight = 14;
-            this.comboBoxEx6.Location = new System.Drawing.Point(614, 167);
-            this.comboBoxEx6.Name = "comboBoxEx6";
-            this.comboBoxEx6.PropertyName = "PhuongXa";
-            this.comboBoxEx6.Required = false;
-            this.comboBoxEx6.Size = new System.Drawing.Size(136, 20);
-            this.comboBoxEx6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx6.TabIndex = 13;
-            this.comboBoxEx6.Type = "Text";
+            this.cbbXaPhuong.AutoInput = false;
+            this.cbbXaPhuong.DisplayedName = null;
+            this.cbbXaPhuong.DisplayMember = "Text";
+            this.cbbXaPhuong.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbXaPhuong.FormattingEnabled = true;
+            this.cbbXaPhuong.ItemHeight = 14;
+            this.cbbXaPhuong.Location = new System.Drawing.Point(614, 167);
+            this.cbbXaPhuong.Name = "cbbXaPhuong";
+            this.cbbXaPhuong.PropertyName = "PhuongXa";
+            this.cbbXaPhuong.Required = false;
+            this.cbbXaPhuong.Size = new System.Drawing.Size(136, 20);
+            this.cbbXaPhuong.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbXaPhuong.TabIndex = 13;
+            this.cbbXaPhuong.Type = "Text";
             // 
             // labelX18
             // 
@@ -426,22 +426,22 @@
             this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = false;
             // 
-            // comboBoxEx5
+            // cbbQuanHuyen
             // 
-            this.comboBoxEx5.AutoInput = false;
-            this.comboBoxEx5.DisplayedName = null;
-            this.comboBoxEx5.DisplayMember = "Text";
-            this.comboBoxEx5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx5.FormattingEnabled = true;
-            this.comboBoxEx5.ItemHeight = 14;
-            this.comboBoxEx5.Location = new System.Drawing.Point(369, 167);
-            this.comboBoxEx5.Name = "comboBoxEx5";
-            this.comboBoxEx5.PropertyName = "QuanHuyen";
-            this.comboBoxEx5.Required = false;
-            this.comboBoxEx5.Size = new System.Drawing.Size(143, 20);
-            this.comboBoxEx5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx5.TabIndex = 12;
-            this.comboBoxEx5.Type = "Text";
+            this.cbbQuanHuyen.AutoInput = false;
+            this.cbbQuanHuyen.DisplayedName = null;
+            this.cbbQuanHuyen.DisplayMember = "Text";
+            this.cbbQuanHuyen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbQuanHuyen.FormattingEnabled = true;
+            this.cbbQuanHuyen.ItemHeight = 14;
+            this.cbbQuanHuyen.Location = new System.Drawing.Point(369, 167);
+            this.cbbQuanHuyen.Name = "cbbQuanHuyen";
+            this.cbbQuanHuyen.PropertyName = "QuanHuyen";
+            this.cbbQuanHuyen.Required = false;
+            this.cbbQuanHuyen.Size = new System.Drawing.Size(143, 20);
+            this.cbbQuanHuyen.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbQuanHuyen.TabIndex = 12;
+            this.cbbQuanHuyen.Type = "Text";
             // 
             // radNam
             // 
@@ -456,40 +456,41 @@
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = false;
             // 
-            // comboBoxEx4
+            // cbbTinhThanh
             // 
-            this.comboBoxEx4.AutoInput = false;
-            this.comboBoxEx4.DisplayedName = null;
-            this.comboBoxEx4.DisplayMember = "Text";
-            this.comboBoxEx4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx4.FormattingEnabled = true;
-            this.comboBoxEx4.ItemHeight = 14;
-            this.comboBoxEx4.Location = new System.Drawing.Point(91, 167);
-            this.comboBoxEx4.Name = "comboBoxEx4";
-            this.comboBoxEx4.PropertyName = "TinhThanh";
-            this.comboBoxEx4.Required = false;
-            this.comboBoxEx4.Size = new System.Drawing.Size(165, 20);
-            this.comboBoxEx4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx4.TabIndex = 11;
-            this.comboBoxEx4.Type = "Text";
+            this.cbbTinhThanh.AutoInput = false;
+            this.cbbTinhThanh.DisplayedName = null;
+            this.cbbTinhThanh.DisplayMember = "Text";
+            this.cbbTinhThanh.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTinhThanh.FormattingEnabled = true;
+            this.cbbTinhThanh.ItemHeight = 14;
+            this.cbbTinhThanh.Location = new System.Drawing.Point(91, 167);
+            this.cbbTinhThanh.Name = "cbbTinhThanh";
+            this.cbbTinhThanh.PropertyName = "TinhThanh";
+            this.cbbTinhThanh.Required = false;
+            this.cbbTinhThanh.Size = new System.Drawing.Size(165, 20);
+            this.cbbTinhThanh.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbTinhThanh.TabIndex = 11;
+            this.cbbTinhThanh.Type = "Text";
             // 
-            // comboBoxEx7
+            // cbbChucVu
             // 
-            this.comboBoxEx7.AutoInput = true;
-            this.comboBoxEx7.DisplayedName = null;
-            this.comboBoxEx7.DisplayMember = "Text";
-            this.comboBoxEx7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxEx7.FormattingEnabled = true;
-            this.comboBoxEx7.ItemHeight = 14;
-            this.comboBoxEx7.Location = new System.Drawing.Point(538, 19);
-            this.comboBoxEx7.Name = "comboBoxEx7";
-            this.comboBoxEx7.PropertyName = "ChucVu";
-            this.comboBoxEx7.Required = false;
-            this.comboBoxEx7.Size = new System.Drawing.Size(212, 20);
-            this.comboBoxEx7.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.comboBoxEx7.TabIndex = 1;
-            this.comboBoxEx7.TabStop = false;
-            this.comboBoxEx7.Type = "Text";
+            this.cbbChucVu.AutoInput = false;
+            this.cbbChucVu.DisplayedName = "Chức vụ";
+            this.cbbChucVu.DisplayMember = "Text";
+            this.cbbChucVu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbChucVu.FormattingEnabled = true;
+            this.cbbChucVu.ItemHeight = 15;
+            this.cbbChucVu.Location = new System.Drawing.Point(538, 19);
+            this.cbbChucVu.Name = "cbbChucVu";
+            this.cbbChucVu.PropertyName = "MaChucVu";
+            this.cbbChucVu.Required = true;
+            this.cbbChucVu.Size = new System.Drawing.Size(212, 21);
+            this.cbbChucVu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cbbChucVu.TabIndex = 1;
+            this.cbbChucVu.TabStop = false;
+            this.cbbChucVu.Type = "List";
             // 
             // comboBoxEx1
             // 
@@ -812,6 +813,7 @@
             this.ClientSize = new System.Drawing.Size(862, 507);
             this.Name = "FormHoSoNhanVien";
             this.Text = "Hồ Sơ Nhân Viên";
+            this.Load += new System.EventHandler(this.FormHoSoNhanVien_Load);
             this.panel1.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
@@ -834,15 +836,15 @@
         private DevComponents.DotNetBar.LabelX labelX17;
         private DevComponents.DotNetBar.LabelX labelX13;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private Component.XComboBox comboBoxEx6;
+        private Component.XComboBox cbbXaPhuong;
         private DevComponents.DotNetBar.LabelX labelX18;
         private Component.XDateTimeInput dateTimeInput1;
         private DevComponents.DotNetBar.LabelX labelX16;
         private System.Windows.Forms.RadioButton radNu;
-        private Component.XComboBox comboBoxEx5;
+        private Component.XComboBox cbbQuanHuyen;
         private System.Windows.Forms.RadioButton radNam;
-        private Component.XComboBox comboBoxEx4;
-        private Component.XComboBox comboBoxEx7;
+        private Component.XComboBox cbbTinhThanh;
+        private Component.XComboBox cbbChucVu;
         private Component.XComboBox comboBoxEx1;
         private Component.XTextBox textBoxX8;
         private Component.XTextBox textBoxX6;

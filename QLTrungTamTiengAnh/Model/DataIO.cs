@@ -14,6 +14,27 @@ namespace QLTrungTamTiengAnh.Model
         private static SqlConnector con = new SqlConnector();
         private static SqlCommand cmd = new SqlCommand();
 
+        public static bool Execute(string query)
+        {
+            cmd.CommandText = query;
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = con.Connection;
+            try
+            {
+                con.OpenConn();
+                cmd.ExecuteNonQuery();
+                con.CloseConn();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+                return false;
+            }
+        }
+
         public static DataTable GetData(string selectQuery)
         {
             DataTable dt = new DataTable();
@@ -73,10 +94,10 @@ namespace QLTrungTamTiengAnh.Model
 
             foreach (PropertyInfo prop in properties)
             {
-                if (getCommandString(prop.GetValue(obj)) != null)
+                if (GetCommandString(prop.GetValue(obj)) != null)
                 {
                     colNames.Add(prop.Name);
-                    commandStrings.Add(getCommandString(prop.GetValue(obj)));
+                    commandStrings.Add(GetCommandString(prop.GetValue(obj)));
                 }
             }
 
@@ -123,10 +144,10 @@ namespace QLTrungTamTiengAnh.Model
 
             foreach (PropertyInfo prop in properties)
             {
-                if (!prop.Name.Equals(primaryKey) && getCommandString(prop.GetValue(obj)) != null)
+                if (!prop.Name.Equals(primaryKey) && GetCommandString(prop.GetValue(obj)) != null)
                 {
                     colNames.Add(prop.Name);
-                    commandStrings.Add(getCommandString(prop.GetValue(obj)));
+                    commandStrings.Add(GetCommandString(prop.GetValue(obj)));
                 }
             }
 
@@ -183,7 +204,70 @@ namespace QLTrungTamTiengAnh.Model
             return false;
         }
 
-        public static string getCommandString(object obj)
+        public static DataTable RunStoredProcParams(string procedure, string param, object value)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = procedure;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con.Connection;
+            cmd.Parameters.Add(new SqlParameter(param, value));
+
+            try
+            {
+                con.OpenConn();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                con.CloseConn();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+
+            return dt;
+        }
+
+        public static object AddItem(Type type, string procedure, string param1, string param2, string param3, string value1, string value2, string value3)
+        {
+            object obj = null;
+            DataTable dt = RunStoredProcParams(procedure, param1, param2, param3, value1, value2, value3);
+            if (dt != null)
+            {
+                obj = DataConverter.ConvertDataToArray(dt, type)[0];
+            }
+            return obj;
+        }
+
+        public static DataTable RunStoredProcParams(string procedure, string param1, string param2, string param3, string value1, string value2, string value3)
+        {
+            DataTable dt = new DataTable();
+            cmd.CommandText = procedure;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Connection = con.Connection;
+            cmd.Parameters.Add(new SqlParameter(param1, value1));
+            cmd.Parameters.Add(new SqlParameter(param2, value2));
+            cmd.Parameters.Add(new SqlParameter(param3, value3));
+
+            try
+            {
+                con.OpenConn();
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
+                con.CloseConn();
+            }
+            catch (Exception ex)
+            {
+                string mes = ex.Message;
+                cmd.Dispose();
+                con.CloseConn();
+            }
+
+            return dt;
+        }
+
+        public static string GetCommandString(object obj)
         {
             if (obj == null) return null;
             else if (obj.GetType() == typeof(string))
@@ -205,11 +289,7 @@ namespace QLTrungTamTiengAnh.Model
                 }
                 return "CONVERT(DATE, '" + dateTime.ToShortDateString() + "', 103)";
             }
-            else if (obj.GetType() == typeof(decimal))
-            {
-                return obj.ToString();
-            }
-            return null;
+            return obj.ToString();
         }
     }
 }
