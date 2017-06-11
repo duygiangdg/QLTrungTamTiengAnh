@@ -121,6 +121,7 @@
     <Compile Include="Object\KhuyenMai.cs" />
     <Compile Include="Object\LichTuan.cs" />
     <Compile Include="Object\NguoiDung.cs" />
+    <Compile Include="Object\PhieuChi.cs" />
     <Compile Include="Report\ChiPhiTheoThang.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -199,6 +200,18 @@
     <Compile Include="View\FormChamSocKhachHang.Designer.cs">
       <DependentUpon>FormChamSocKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormChiTietHocPhi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormChiTietHocPhi.Designer.cs">
+      <DependentUpon>FormChiTietHocPhi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormChiTietLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormChiTietLuong.Designer.cs">
+      <DependentUpon>FormChiTietLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,17 +272,35 @@
     <Compile Include="View\FormQLKhuyenMai.Designer.cs">
       <DependentUpon>FormQLKhuyenMai.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormQuanLyChi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyChi.Designer.cs">
+      <DependentUpon>FormQuanLyChi.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormQuanLyLop.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormQuanLyLop.Designer.cs">
       <DependentUpon>FormQuanLyLop.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\FormQuanLyLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyLuong.Designer.cs">
+      <DependentUpon>FormQuanLyLuong.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormQuanLyNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\FormQuanLyNguoiDung.Designer.cs">
       <DependentUpon>FormQuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormQuanLyThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormQuanLyThu.Designer.cs">
+      <DependentUpon>FormQuanLyThu.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormThongTinHocTap.cs">
       <SubType>Form</SubType>
@@ -330,12 +361,6 @@
     </Compile>
     <Compile Include="View\FormDanhSachKhachHang.Designer.cs">
       <DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\FormQuanLyHocPhi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\FormQuanLyHocPhi.Designer.cs">
-      <DependentUpon>FormQuanLyHocPhi.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormDanhSachLopHoc.cs">
       <SubType>Form</SubType>
@@ -411,6 +436,12 @@
     <EmbeddedResource Include="View\FormChamSocKhachHang.resx">
       <DependentUpon>FormChamSocKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormChiTietHocPhi.resx">
+      <DependentUpon>FormChiTietHocPhi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormChiTietLuong.resx">
+      <DependentUpon>FormChiTietLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -438,11 +469,20 @@
     <EmbeddedResource Include="View\FormQLKhuyenMai.resx">
       <DependentUpon>FormQLKhuyenMai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQuanLyChi.resx">
+      <DependentUpon>FormQuanLyChi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormQuanLyLop.resx">
       <DependentUpon>FormQuanLyLop.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQuanLyLuong.resx">
+      <DependentUpon>FormQuanLyLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormQuanLyNguoiDung.resx">
       <DependentUpon>FormQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormQuanLyThu.resx">
+      <DependentUpon>FormQuanLyThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormThongTinHocTap.resx">
       <DependentUpon>FormThongTinHocTap.cs</DependentUpon>
@@ -473,9 +513,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormDanhSachKhachHang.resx">
       <DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\FormQuanLyHocPhi.resx">
-      <DependentUpon>FormQuanLyHocPhi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormDanhSachLopHoc.resx">
       <DependentUpon>FormDanhSachLopHoc.cs</DependentUpon>
@@ -588,6 +625,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Treetog-Junior-Document-archive.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

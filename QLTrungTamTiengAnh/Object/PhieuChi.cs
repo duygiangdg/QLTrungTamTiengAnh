@@ -6,48 +6,48 @@ using System.Threading.Tasks;
 
 namespace QLTrungTamTiengAnh.Object
 {
-    public class PhieuThu
+    class PhieuChi
     {
-        string soPhieuThu, liDoThu, maKhachHang,bangChu,nhomKhoanThu,ghiChu;
+        string soPhieuChi, liDo, maNhanVien, bangChu, nhomKhoanChi, ghiChu;
         decimal soTien;
-        DateTime ngayThu;
+        DateTime ngayChi;
 
-        public string SoPhieuThu
+        public string SoPhieuChi
         {
             get
             {
-                return soPhieuThu;
+                return soPhieuChi;
             }
 
             set
             {
-                soPhieuThu = value;
+                soPhieuChi = value;
             }
         }
 
-        public string LiDoThu
+        public string LiDo
         {
             get
             {
-                return liDoThu;
+                return liDo;
             }
 
             set
             {
-                liDoThu = value;
+                liDo = value;
             }
         }
 
-        public string MaKhachHang
+        public string MaNhanVien
         {
             get
             {
-                return maKhachHang;
+                return maNhanVien;
             }
 
             set
             {
-                maKhachHang = value;
+                maNhanVien = value;
             }
         }
 
@@ -68,12 +68,12 @@ namespace QLTrungTamTiengAnh.Object
         {
             get
             {
-                return nhomKhoanThu;
+                return nhomKhoanChi;
             }
 
             set
             {
-                nhomKhoanThu = value;
+                nhomKhoanChi = value;
             }
         }
 
@@ -107,12 +107,12 @@ namespace QLTrungTamTiengAnh.Object
         {
             get
             {
-                return ngayThu;
+                return ngayChi;
             }
 
             set
             {
-                ngayThu = value;
+                ngayChi = value;
             }
         }
     }

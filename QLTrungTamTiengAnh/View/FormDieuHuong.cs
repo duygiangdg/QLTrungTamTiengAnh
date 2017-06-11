@@ -235,5 +235,25 @@ namespace QLTrungTamTiengAnh.View
             Report.SiSoLop report = new Report.SiSoLop();
             report.ShowPreviewDialog();
         }
+
+        private void btnQuanLyThu_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormQuanLyThu());
+        }
+
+        private void btnQuanLyChi_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormQuanLyChi());
+        }
+
+        private void btnQuanLyLuong_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormQuanLyLuong());
+        }
+
+        private void btnQLHocPhi_Click(object sender, EventArgs e)
+        {
+            CreateTab(new FormChiTietHocPhi());
+        }
     }
 }

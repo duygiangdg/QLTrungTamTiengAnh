@@ -1,6 +1,6 @@
 ﻿namespace QLTrungTamTiengAnh.View
 {
-    partial class FormPhieuChi
+    partial class FormPhieuChiTietLuong
     {
         /// <summary>
         /// Required designer variable.
@@ -33,15 +33,15 @@
             this.checkBoxX2 = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.labelX18 = new DevComponents.DotNetBar.LabelX();
             this.labelX22 = new DevComponents.DotNetBar.LabelX();
-            this.dateTimeInput1 = new DevComponents.Editors.DateTimeAdv.DateTimeInput();
-            this.comboBoxEx9 = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.dateTimeInput1 = new QLTrungTamTiengAnh.Component.XDateTimeInput();
+            this.comboBoxEx9 = new QLTrungTamTiengAnh.Component.XComboBox();
+            this.textBoxX9 = new QLTrungTamTiengAnh.Component.XTextBox();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX24 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX20 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX21 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.textBoxX1 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX2 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX24 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX20 = new QLTrungTamTiengAnh.Component.XTextBox();
+            this.textBoxX21 = new QLTrungTamTiengAnh.Component.XTextBox();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.labelX11 = new DevComponents.DotNetBar.LabelX();
@@ -50,7 +50,8 @@
             this.labelX34 = new DevComponents.DotNetBar.LabelX();
             this.labelX31 = new DevComponents.DotNetBar.LabelX();
             this.labelX32 = new DevComponents.DotNetBar.LabelX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.btnLuu = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.panel1.SuspendLayout();
             this.groupPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).BeginInit();
@@ -58,7 +59,9 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonX2);
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.buttonX1);
+            this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.groupPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.None;
             this.panel1.Size = new System.Drawing.Size(737, 313);
@@ -88,6 +91,7 @@
             this.groupPanel1.Controls.Add(this.labelX34);
             this.groupPanel1.Controls.Add(this.labelX31);
             this.groupPanel1.Controls.Add(this.labelX32);
+            this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.DrawTitleBox = false;
             this.groupPanel1.Location = new System.Drawing.Point(38, 19);
             this.groupPanel1.Name = "groupPanel1";
@@ -134,7 +138,7 @@
             this.xTextBox1.Location = new System.Drawing.Point(96, 69);
             this.xTextBox1.Name = "xTextBox1";
             this.xTextBox1.PreventEnterBeep = true;
-            this.xTextBox1.PropertyName = "";
+            this.xTextBox1.PropertyName = "SoTien";
             this.xTextBox1.Required = false;
             this.xTextBox1.Size = new System.Drawing.Size(123, 20);
             this.xTextBox1.TabIndex = 18;
@@ -182,6 +186,7 @@
             // 
             // dateTimeInput1
             // 
+            this.dateTimeInput1.AutoInput = true;
             // 
             // 
             // 
@@ -189,12 +194,12 @@
             this.dateTimeInput1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dateTimeInput1.ButtonDropDown.Shortcut = DevComponents.DotNetBar.eShortcut.AltDown;
             this.dateTimeInput1.ButtonDropDown.Visible = true;
+            this.dateTimeInput1.DisplayedName = null;
             this.dateTimeInput1.IsPopupCalendarOpen = false;
             this.dateTimeInput1.Location = new System.Drawing.Point(413, 14);
             // 
             // 
             // 
-            this.dateTimeInput1.MonthCalendar.AnnuallyMarkedDates = new System.DateTime[0];
             // 
             // 
             // 
@@ -213,8 +218,6 @@
             this.dateTimeInput1.MonthCalendar.CommandsBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dateTimeInput1.MonthCalendar.DisplayMonth = new System.DateTime(2017, 5, 1, 0, 0, 0, 0);
             this.dateTimeInput1.MonthCalendar.FirstDayOfWeek = System.DayOfWeek.Monday;
-            this.dateTimeInput1.MonthCalendar.MarkedDates = new System.DateTime[0];
-            this.dateTimeInput1.MonthCalendar.MonthlyMarkedDates = new System.DateTime[0];
             // 
             // 
             // 
@@ -223,36 +226,48 @@
             this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.dateTimeInput1.MonthCalendar.NavigationBackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.dateTimeInput1.MonthCalendar.TodayButtonVisible = true;
-            this.dateTimeInput1.MonthCalendar.WeeklyMarkedDays = new System.DayOfWeek[0];
             this.dateTimeInput1.Name = "dateTimeInput1";
+            this.dateTimeInput1.PropertyName = "NgayChi";
+            this.dateTimeInput1.Required = true;
             this.dateTimeInput1.Size = new System.Drawing.Size(206, 20);
             this.dateTimeInput1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.dateTimeInput1.TabIndex = 6;
+            this.dateTimeInput1.Type = "Text";
             // 
             // comboBoxEx9
             // 
+            this.comboBoxEx9.AutoInput = true;
+            this.comboBoxEx9.DisplayedName = null;
             this.comboBoxEx9.DisplayMember = "Text";
             this.comboBoxEx9.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxEx9.FormattingEnabled = true;
             this.comboBoxEx9.ItemHeight = 14;
             this.comboBoxEx9.Location = new System.Drawing.Point(136, 163);
             this.comboBoxEx9.Name = "comboBoxEx9";
+            this.comboBoxEx9.PropertyName = "NhomKhoanChi";
+            this.comboBoxEx9.Required = false;
             this.comboBoxEx9.Size = new System.Drawing.Size(293, 20);
             this.comboBoxEx9.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.comboBoxEx9.TabIndex = 0;
             this.comboBoxEx9.TabStop = false;
+            this.comboBoxEx9.Type = "Text";
             // 
             // textBoxX9
             // 
+            this.textBoxX9.AutoInput = true;
             // 
             // 
             // 
             this.textBoxX9.Border.Class = "TextBoxBorder";
             this.textBoxX9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX9.DisplayedName = null;
             this.textBoxX9.Location = new System.Drawing.Point(96, 8);
             this.textBoxX9.Name = "textBoxX9";
+            this.textBoxX9.PropertyName = "SoPhieuChi";
+            this.textBoxX9.Required = true;
             this.textBoxX9.Size = new System.Drawing.Size(102, 20);
             this.textBoxX9.TabIndex = 12;
+            this.textBoxX9.Type = "Text";
             // 
             // labelX14
             // 
@@ -269,63 +284,88 @@
             // 
             // textBoxX1
             // 
+            this.textBoxX1.AutoInput = true;
             // 
             // 
             // 
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX1.DisplayedName = null;
             this.textBoxX1.Location = new System.Drawing.Point(413, 40);
             this.textBoxX1.Name = "textBoxX1";
+            this.textBoxX1.PropertyName = "ChucVu";
+            this.textBoxX1.Required = false;
             this.textBoxX1.Size = new System.Drawing.Size(206, 20);
             this.textBoxX1.TabIndex = 7;
+            this.textBoxX1.Type = "Text";
             // 
             // textBoxX2
             // 
+            this.textBoxX2.AutoInput = true;
             // 
             // 
             // 
             this.textBoxX2.Border.Class = "TextBoxBorder";
             this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX2.DisplayedName = null;
             this.textBoxX2.Location = new System.Drawing.Point(96, 37);
             this.textBoxX2.Name = "textBoxX2";
+            this.textBoxX2.PropertyName = "HoTen";
+            this.textBoxX2.Required = false;
             this.textBoxX2.Size = new System.Drawing.Size(206, 20);
             this.textBoxX2.TabIndex = 1;
+            this.textBoxX2.Type = "Text";
             // 
             // textBoxX24
             // 
+            this.textBoxX24.AutoInput = false;
             // 
             // 
             // 
             this.textBoxX24.Border.Class = "TextBoxBorder";
             this.textBoxX24.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX24.DisplayedName = null;
             this.textBoxX24.Location = new System.Drawing.Point(294, 66);
             this.textBoxX24.Name = "textBoxX24";
+            this.textBoxX24.PropertyName = "BangChu";
+            this.textBoxX24.Required = true;
             this.textBoxX24.Size = new System.Drawing.Size(325, 20);
             this.textBoxX24.TabIndex = 1;
+            this.textBoxX24.Type = "Text";
             // 
             // textBoxX20
             // 
+            this.textBoxX20.AutoInput = false;
             // 
             // 
             // 
             this.textBoxX20.Border.Class = "TextBoxBorder";
             this.textBoxX20.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX20.DisplayedName = null;
             this.textBoxX20.Location = new System.Drawing.Point(96, 134);
             this.textBoxX20.Name = "textBoxX20";
+            this.textBoxX20.PropertyName = "GhiChu";
+            this.textBoxX20.Required = false;
             this.textBoxX20.Size = new System.Drawing.Size(525, 20);
             this.textBoxX20.TabIndex = 7;
+            this.textBoxX20.Type = "Text";
             // 
             // textBoxX21
             // 
+            this.textBoxX21.AutoInput = false;
             // 
             // 
             // 
             this.textBoxX21.Border.Class = "TextBoxBorder";
             this.textBoxX21.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.textBoxX21.DisplayedName = null;
             this.textBoxX21.Location = new System.Drawing.Point(96, 98);
             this.textBoxX21.Name = "textBoxX21";
+            this.textBoxX21.PropertyName = "LyDo";
+            this.textBoxX21.Required = false;
             this.textBoxX21.Size = new System.Drawing.Size(525, 20);
             this.textBoxX21.TabIndex = 8;
+            this.textBoxX21.Type = "Text";
             // 
             // labelX9
             // 
@@ -431,16 +471,28 @@
             this.labelX32.TabIndex = 1;
             this.labelX32.Text = "Lý do:";
             // 
-            // buttonX2
+            // btnLuu
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(530, 266);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(75, 23);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 37;
-            this.buttonX2.Text = "In phiếu";
+            this.btnLuu.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnLuu.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnLuu.Location = new System.Drawing.Point(530, 266);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnLuu.TabIndex = 37;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(624, 266);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(75, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 38;
+            this.buttonX1.Text = "In phiếu";
             // 
             // FormPhieuChi
             // 
@@ -448,7 +500,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(739, 315);
             this.Name = "FormPhieuChi";
-            this.Text = "FormPhieuChi";
+            this.Text = "Phiếu Chi Tiền";
             this.panel1.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dateTimeInput1)).EndInit();
@@ -463,15 +515,15 @@
         private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX2;
         private DevComponents.DotNetBar.LabelX labelX18;
         private DevComponents.DotNetBar.LabelX labelX22;
-        private DevComponents.Editors.DateTimeAdv.DateTimeInput dateTimeInput1;
-        private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxEx9;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX9;
+        private QLTrungTamTiengAnh.Component.XDateTimeInput dateTimeInput1;
+        private QLTrungTamTiengAnh.Component.XComboBox comboBoxEx9;
+        private QLTrungTamTiengAnh.Component.XTextBox textBoxX9;
         private DevComponents.DotNetBar.LabelX labelX14;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX24;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX20;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX21;
+        private QLTrungTamTiengAnh.Component.XTextBox textBoxX1;
+        private QLTrungTamTiengAnh.Component.XTextBox textBoxX2;
+        private QLTrungTamTiengAnh.Component.XTextBox textBoxX24;
+        private QLTrungTamTiengAnh.Component.XTextBox textBoxX20;
+        private QLTrungTamTiengAnh.Component.XTextBox textBoxX21;
         private DevComponents.DotNetBar.LabelX labelX9;
         private DevComponents.DotNetBar.LabelX labelX12;
         private DevComponents.DotNetBar.LabelX labelX11;
@@ -480,6 +532,7 @@
         private DevComponents.DotNetBar.LabelX labelX34;
         private DevComponents.DotNetBar.LabelX labelX31;
         private DevComponents.DotNetBar.LabelX labelX32;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX btnLuu;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }
